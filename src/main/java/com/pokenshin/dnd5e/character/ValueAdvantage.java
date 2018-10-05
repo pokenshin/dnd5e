@@ -1,4 +1,4 @@
-package com.pokenshin.dnd5e;
+package com.pokenshin.dnd5e.character;
 
 public class ValueAdvantage {
     public int value;

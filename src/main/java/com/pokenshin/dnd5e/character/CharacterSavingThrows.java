@@ -1,7 +1,5 @@
 package com.pokenshin.dnd5e.character;
 
-import com.pokenshin.dnd5e.ValueAdvantage;
-
 public class CharacterSavingThrows {
     private ValueAdvantage strength;
     private ValueAdvantage dexterity;

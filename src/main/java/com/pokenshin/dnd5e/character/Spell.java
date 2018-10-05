@@ -1,4 +1,4 @@
-package com.pokenshin.dnd5e;
+package com.pokenshin.dnd5e.character;
 
 import com.pokenshin.dnd5e.character.CharacterClass;
 

@@ -1,7 +1,5 @@
 package com.pokenshin.dnd5e.character;
 
-import com.pokenshin.dnd5e.Dice;
-
 import java.util.ArrayList;
 import java.util.List;
 

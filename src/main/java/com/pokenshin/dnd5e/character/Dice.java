@@ -1,4 +1,4 @@
-package com.pokenshin.dnd5e;
+package com.pokenshin.dnd5e.character;
 
 public class Dice {
     private int sides;

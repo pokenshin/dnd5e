@@ -1,6 +1,6 @@
 package com.pokenshin.dnd5e.character;
 
-import com.pokenshin.dnd5e.Dice;
+import com.pokenshin.dnd5e.character.races.CharacterRace;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -114,7 +114,7 @@ public class Character {
         this.level = 0;
         this.background = "";
         this.playerName = "";
-        this.race = new CharacterRace();
+        this.race = null;
         this.alignment = "";
         this.experience = 0;
         this.strength = new CharacterAbility();
