@@ -1,9 +1,9 @@
-package com.pokenshin.dnd5e.character.races;
+package com.pokenshin.dnd5e.character;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public abstract class CharacterRace {
+public class CharacterRace {
     private int id;
     private List<Integer> abilityIncrease;
     private int ageMax;
