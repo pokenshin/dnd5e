@@ -1,0 +1,31 @@
+{
+  "id": 2,
+  "name": "Elf",
+  "abilityIncrease": [
+    0,
+    2,
+    0,
+    0,
+    0,
+    0
+  ],
+  "ageMax": 750,
+  "alignments": [
+    "Neutral Good",
+    "Chaotic Good",
+    "True Neutral",
+    "Chaotic Neutral"
+  ],
+  "size": "Medium",
+  "speed": 30,
+  "otherTraits": [
+    "Darkvision",
+    "Keen Senses",
+    "Fey Ancestry",
+    "Trance"
+  ],
+  "languages": [
+    "Common",
+    "Elvish"
+  ]
+}
