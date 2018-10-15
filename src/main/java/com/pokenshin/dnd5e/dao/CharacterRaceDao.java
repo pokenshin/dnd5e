@@ -6,12 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
-public class RaceDao implements Dao<CharacterRace> {
+public class CharacterRaceDao implements Dao<CharacterRace> {
     private List<CharacterRace> races = new ArrayList<>();
-
-    public RaceDao(){
-        //TODO: populate the races property with data from a database
-    }
 
     @Override
     public Optional<CharacterRace> get(long id) {

@@ -1,8 +1,6 @@
 package com.pokenshin.dnd5e.util;
 
 import com.pokenshin.dnd5e.character.CharacterRace;
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
