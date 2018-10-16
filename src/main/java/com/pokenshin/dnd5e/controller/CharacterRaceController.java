@@ -2,7 +2,9 @@ package com.pokenshin.dnd5e.controller;
 
 import com.pokenshin.dnd5e.character.CharacterRace;
 import com.pokenshin.dnd5e.dao.CharacterRaceDao;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
@@ -12,9 +14,10 @@ import java.util.Optional;
 public class CharacterRaceController {
     public CharacterRaceDao dao;
 
-    @RequestMapping("/race/getHuman")
-    public Optional<CharacterRace> getHuman(){
-        return dao.get(0);
+    //TODO: Transform this into a generate(int index)
+    @RequestMapping("/race/{id}")
+    public Optional<CharacterRace> get(@PathVariable("id") int id){
+        return dao.get(id);
     }
 
     @RequestMapping("/race/getElf")

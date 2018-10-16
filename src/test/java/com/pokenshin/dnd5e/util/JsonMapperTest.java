@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class JsonMapperTest {
-
     @Test
     void getRace() {
         JsonMapper mapper = new JsonMapper();

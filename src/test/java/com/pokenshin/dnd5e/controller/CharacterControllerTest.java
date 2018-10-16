@@ -50,7 +50,7 @@ class CharacterControllerTest {
 
     @Test
     void generateHuman() {
-        Optional<CharacterRace> result = controller.getHuman();
+        Optional<CharacterRace> result = controller.get(1);
         assertTrue(result.isPresent());
         assertEquals(1, result.get().getId());
         assertEquals("Human", result.get().getName());

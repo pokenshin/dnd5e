@@ -4,6 +4,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pokenshin.dnd5e.character.CharacterRace;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class JsonMapper {
     private String jsonPath = "json/";
