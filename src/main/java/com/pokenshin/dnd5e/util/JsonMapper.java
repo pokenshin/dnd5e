@@ -29,10 +29,15 @@ public class JsonMapper {
     }
 
     public Map<Integer, CharacterRace> getAllRaces(){
-        //TODO: Make this dynamically get all files in the /races folder and transform them into stuff
         Map<Integer, CharacterRace> result = new HashMap<>();
-        result.put(1, this.getRace("human.json"));
-        result.put(2, this.getRace("elf.json"));
+        ClassLoader classLoader = JsonMapper.class.getClassLoader();
+        String[] fileList = new File(Objects.requireNonNull(classLoader.getResource(basePath + racesPath)).getFile()).list();
+        if (fileList != null){
+            for (String fileName: fileList ) {
+                CharacterRace race = this.getRace(fileName);
+                result.put(race.getId(), race);
+            }
+        }
         return result;
     }
 }
