@@ -3,26 +3,25 @@ package com.pokenshin.dnd5e.dao;
 import com.pokenshin.dnd5e.character.CharacterRace;
 import com.pokenshin.dnd5e.util.JsonMapper;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 public class CharacterRaceDao implements Dao<CharacterRace> {
+    private Map racesMap;
     private List<CharacterRace> races = new ArrayList<>();
 
     //TODO: get this data from a database instead of json files
     public CharacterRaceDao(){
+        this.racesMap = new HashMap<Integer, CharacterRace>();
         JsonMapper mapper = new JsonMapper();
-        this.races.add(mapper.getRace("/races/human.json"));
-        this.races.add(mapper.getRace("/races/elf.json"));
+        this.racesMap = mapper.getAllRaces();
     }
 
     @Override
-    public Optional<CharacterRace> get(long id) {
-        if (races.size() > 0){
-            return Optional.ofNullable(races.get((int) id - 1));
+    public CharacterRace get(int id) {
+        if (racesMap.size() > 0){
+            return (CharacterRace)racesMap.get(id);
         } else {
-            return Optional.ofNullable(new CharacterRace());
+            return null;
         }
     }
 

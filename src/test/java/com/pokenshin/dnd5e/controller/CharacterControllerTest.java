@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class CharacterControllerTest {
     //Mocks
     @Mock
-    public CharacterRaceDao dao = new CharacterRaceDao();
+    private CharacterRaceDao dao = new CharacterRaceDao();
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();
     private ArrayList<CharacterRace> raceList;
@@ -39,7 +39,7 @@ class CharacterControllerTest {
     private void prepareMock() {
         MockitoAnnotations.initMocks(this);
         Mockito.when(dao.getAll()).thenReturn(this.raceList);
-        Mockito.when(dao.get(0)).thenReturn(Optional.ofNullable(this.raceList.get(0)));
+        Mockito.when(dao.get(0)).thenReturn(this.raceList.get(0));
     }
 
     private void createRaceList() {
@@ -50,9 +50,8 @@ class CharacterControllerTest {
 
     @Test
     void generateHuman() {
-        Optional<CharacterRace> result = controller.get(1);
-        assertTrue(result.isPresent());
-        assertEquals(1, result.get().getId());
-        assertEquals("Human", result.get().getName());
+        CharacterRace result = controller.get(1);
+        assertEquals(1, result.getId());
+        assertEquals("Human", result.getName());
     }
 }
