@@ -1,0 +1,23 @@
+{
+  "id": 4,
+  "name": "Aarakocra",
+  "abilityIncrease": [
+    0,
+    2,
+    0,
+    0,
+    1,
+    0
+  ],
+  "ageMax": 30,
+  "size": "Medium",
+  "speed": 25,
+  "otherTraits": [
+    "Talons"
+  ],
+  "languages": [
+    "Common",
+    "Aarakocra",
+    "Auran"
+  ]
+}

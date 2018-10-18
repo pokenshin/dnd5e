@@ -1,25 +1,24 @@
 {
-  "id": 2,
-  "name": "Elf",
+  "id": 9,
+  "name": "Tiefling",
   "abilityIncrease": [
     0,
-    2,
     0,
     0,
+    1,
     0,
-    0
+    2
   ],
-  "ageMax": 750,
+  "ageMax": 120,
   "size": "Medium",
   "speed": 30,
   "otherTraits": [
     "Darkvision",
-    "Keen Senses",
-    "Fey Ancestry",
-    "Trance"
+    "Hellish Resistance",
+    "Infernal Legacy"
   ],
   "languages": [
     "Common",
-    "Elvish"
+    "Infernal"
   ]
 }

@@ -1,25 +1,26 @@
 {
-  "id": 2,
-  "name": "Elf",
+  "id": 7,
+  "name": "Half-Elf",
   "abilityIncrease": [
     0,
-    2,
     0,
     0,
     0,
-    0
+    0,
+    2
   ],
-  "ageMax": 750,
+  "ageMax": 180,
   "size": "Medium",
   "speed": 30,
   "otherTraits": [
+    "Skill Versatility",
     "Darkvision",
-    "Keen Senses",
     "Fey Ancestry",
-    "Trance"
+    "Ability Score Versatility"
   ],
   "languages": [
     "Common",
-    "Elvish"
+    "Elvish",
+    "Custom"
   ]
 }

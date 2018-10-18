@@ -1,0 +1,26 @@
+{
+  "id": 5,
+  "name": "Dragonborn",
+  "hitDice":{
+    "sides": 12,
+    "rolls": 1
+  },
+  "startingHP": 12,
+  "armorProficiency": [
+    "Light",
+    "Medium",
+    "Shields"
+  ],
+  "weaponProficiency": [
+    "Simple",
+    "Martial"
+  ],
+  "tools":[
+
+  ],
+  "savingThrows": {
+    "strength": {
+      "value": 
+    }
+  }
+}

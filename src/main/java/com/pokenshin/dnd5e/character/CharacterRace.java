@@ -8,7 +8,6 @@ public class CharacterRace {
     private String name;
     private List<Integer> abilityIncrease;
     private int ageMax;
-    private List<String> alignments;
     private String size;
     private int speed;
 
@@ -17,12 +16,11 @@ public class CharacterRace {
     private List<String> otherTraits;
     private List<String> languages;
 
-    public CharacterRace(int id, List<Integer> abilityIncrease, String name, int ageMax, List<String> alignments, String size, int speed, List<String> otherTraits, List<String> languages) {
+    public CharacterRace(int id, List<Integer> abilityIncrease, String name, int ageMax, String size, int speed, List<String> otherTraits, List<String> languages) {
         this.id = id;
         this.name = name;
         this.abilityIncrease = abilityIncrease;
         this.ageMax = ageMax;
-        this.alignments = alignments;
         this.size = size;
         this.speed = speed;
         this.otherTraits = otherTraits;
@@ -34,7 +32,6 @@ public class CharacterRace {
         this.name = "";
         this.abilityIncrease = new ArrayList<>();
         this.ageMax = 0;
-        this.alignments = new ArrayList<>();
         this.size = "";
         this.speed = 0;
         this.otherTraits = new ArrayList<>();
@@ -71,14 +68,6 @@ public class CharacterRace {
 
     public void setAgeMax(int ageMax) {
         this.ageMax = ageMax;
-    }
-
-    public List<String> getAlignments() {
-        return alignments;
-    }
-
-    public void setAlignments(List<String> alignments) {
-        this.alignments = alignments;
     }
 
     public String getSize() {

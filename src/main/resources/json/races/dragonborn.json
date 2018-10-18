@@ -1,25 +1,24 @@
 {
-  "id": 2,
-  "name": "Elf",
+  "id": 5,
+  "name": "Dragonborn",
   "abilityIncrease": [
-    0,
     2,
     0,
     0,
     0,
-    0
+    0,
+    1
   ],
-  "ageMax": 750,
+  "ageMax": 80,
   "size": "Medium",
   "speed": 30,
   "otherTraits": [
-    "Darkvision",
-    "Keen Senses",
-    "Fey Ancestry",
-    "Trance"
+    "Draconic Ancestral",
+    "Breath Weapon",
+    "Damage Resistance"
   ],
   "languages": [
     "Common",
-    "Elvish"
+    "Draconic"
   ]
 }

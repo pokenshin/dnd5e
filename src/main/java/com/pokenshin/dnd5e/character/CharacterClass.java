@@ -11,13 +11,13 @@ public class CharacterClass {
     private List<String> armorProficiency;
     private List<String> weaponProficiency;
     private List<String> tools;
-    private List<CharacterSavingThrows> savingThrows;
+    private CharacterSavingThrows savingThrows;
     private List<String> skills;
     private List<CharacterItem> startingEquip;
     private CharacterCurrency startingMoney;
     private List<String> levelingPerks;
 
-    public CharacterClass(int id, String name, Dice hitDice, int startingHP, List<String> armorProficiency, List<String> weaponProficiency, List<String> tools, List<CharacterSavingThrows> savingThrows, List<String> skills, List<CharacterItem> startingEquip, CharacterCurrency startingMoney, List<String> levelingPerks) {
+    public CharacterClass(int id, String name, Dice hitDice, int startingHP, List<String> armorProficiency, List<String> weaponProficiency, List<String> tools, CharacterSavingThrows savingThrows, List<String> skills, List<CharacterItem> startingEquip, CharacterCurrency startingMoney, List<String> levelingPerks) {
         this.id = id;
         this.name = name;
         this.hitDice = hitDice;
@@ -40,7 +40,7 @@ public class CharacterClass {
         this.armorProficiency = new ArrayList<>();
         this.weaponProficiency = new ArrayList<>();
         this.tools = new ArrayList<>();
-        this.savingThrows = new ArrayList<>();
+        this.savingThrows = new CharacterSavingThrows();
         this.skills = new ArrayList<>();
         this.startingEquip = new ArrayList<>();
         this.startingMoney = new CharacterCurrency();
@@ -103,11 +103,11 @@ public class CharacterClass {
         this.tools = tools;
     }
 
-    public List<CharacterSavingThrows> getSavingThrows() {
+    public CharacterSavingThrows getSavingThrows() {
         return savingThrows;
     }
 
-    public void setSavingThrows(List<CharacterSavingThrows> savingThrows) {
+    public void setSavingThrows(CharacterSavingThrows savingThrows) {
         this.savingThrows = savingThrows;
     }
 

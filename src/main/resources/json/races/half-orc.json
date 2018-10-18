@@ -1,25 +1,25 @@
 {
-  "id": 2,
-  "name": "Elf",
+  "id": 8,
+  "name": "Half-Orc",
   "abilityIncrease": [
-    0,
     2,
     0,
+    1,
     0,
     0,
-    0
+    1
   ],
-  "ageMax": 750,
+  "ageMax": 75,
   "size": "Medium",
   "speed": 30,
   "otherTraits": [
     "Darkvision",
-    "Keen Senses",
-    "Fey Ancestry",
-    "Trance"
+    "Menacing",
+    "Relentless Endurance",
+    "Savage Attacks"
   ],
   "languages": [
     "Common",
-    "Elvish"
+    "Orcish"
   ]
 }
