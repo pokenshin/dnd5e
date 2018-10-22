@@ -1,6 +1,6 @@
 {
-  "id": 5,
-  "name": "Dragonborn",
+  "id": 1,
+  "name": "Barbarian",
   "hitDice":{
     "sides": 12,
     "rolls": 1
@@ -19,8 +19,51 @@
 
   ],
   "savingThrows": {
-    "strength": {
-      "value": 
-    }
-  }
+    "strength": true,
+    "dexterity": false,
+    "constitution": true,
+    "intelligence": false,
+    "wisdom": false,
+    "charisma": false
+  },
+  "skills":[
+    "Animal Handling",
+    "Athletics",
+    "Intimidation",
+    "Nature",
+    "Perception",
+    "Survival"
+  ],
+  "startingEquip":[
+
+  ],
+  "startingMoney":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "levelingPerks":[
+    "Rage, Unarmored Defense",
+    "Reckless Attack, Danger Sense",
+    "Primal Path",
+    "Ability Score Improvement",
+    "Extra Attack, Fast Movement",
+    "Path Feature",
+    "Feral Instinct",
+    "Ability Score Improvement",
+    "Brutal Critical (1d)",
+    "Path Feature",
+    "Relentless",
+    "Ability Score Improvement",
+    "Brutal Critical (2d)",
+    "Path Feature",
+    "Persistent Rage",
+    "Ability Score Improvement",
+    "Brutal Critical (3d)",
+    "Indomitable Might",
+    "Ability Score Improvement",
+    "Primal Champion"
+  ]
 }

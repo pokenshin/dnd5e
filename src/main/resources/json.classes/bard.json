@@ -1,0 +1,67 @@
+{
+  "id": 2,
+  "name": "Bard",
+  "hitDice":{
+    "sides": 8,
+    "rolls": 1
+  },
+  "startingHP": 8,
+  "armorProficiency": [
+    "Light"
+  ],
+  "weaponProficiency": [
+    "Simple",
+    "Crossbows",
+    "Longswords",
+    "Rapiers",
+    "Shortswords"
+  ],
+  "tools":[
+    "3 Musical Instruments"
+  ],
+  "savingThrows": {
+    "strength": false,
+    "dexterity": true,
+    "constitution": false,
+    "intelligence": false,
+    "wisdom": false,
+    "charisma": true
+  },
+  "skills":[
+    "Any",
+    "Any",
+    "Any"
+  ],
+  "startingEquip":[
+
+  ],
+  "startingMoney":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "levelingPerks":[
+    "Spellcasting, Bardic Inspiration (d6)",
+    "Jack of All Trades, Song of Rest (d6)",
+    "Bard College, Expertise",
+    "Ability Score Improvement",
+    "Bardic Inspiration (d8), Font of Inspiration",
+    "Countercharm, Bard College Feature",
+    "",
+    "Ability Score Improvement",
+    "Song of Rest (d8)",
+    "Bardic Inspiration (d10), Expertise, Magical Secrets",
+    "",
+    "Ability Score Improvement",
+    "Song of Rest (d10)",
+    "Magical Secrets, Bard College Feature",
+    "Bardic Inspiration (d12)",
+    "Ability Score Improvement",
+    "Song of Rest (d12)",
+    "Magical Secrets",
+    "Ability Score Improvement",
+    "Superior Inspiration"
+  ]
+}
