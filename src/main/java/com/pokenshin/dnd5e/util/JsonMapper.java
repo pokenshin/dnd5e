@@ -28,8 +28,8 @@ public class JsonMapper {
         return race;
     }
 
-    public Map<Integer, CharacterRace> getAllRaces(){
-        Map<Integer, CharacterRace> result = new HashMap<>();
+    public HashMap<Integer, CharacterRace> getAllRaces(){
+        HashMap<Integer, CharacterRace> result = new HashMap<>();
         ClassLoader classLoader = JsonMapper.class.getClassLoader();
         String[] fileList = new File(Objects.requireNonNull(classLoader.getResource(basePath + racesPath)).getFile()).list();
         if (fileList != null){

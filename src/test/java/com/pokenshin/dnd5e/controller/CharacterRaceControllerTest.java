@@ -13,39 +13,44 @@ import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CharacterControllerTest {
+class CharacterRaceControllerTest {
     //Mocks
     @Mock
     private CharacterRaceDao dao = new CharacterRaceDao();
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();
-    private ArrayList<CharacterRace> raceList;
+    private Map<Integer, CharacterRace> raceList;
 
     private CharacterRaceController controller;
 
     private CharacterCalculator calculator;
     @BeforeEach
-    void setUp() {
+    void setUp() throws IOException {
         createRaceList();
         prepareMock();
         controller = new CharacterRaceController(dao);
     }
 
     private void prepareMock() {
-        MockitoAnnotations.initMocks(this);
-        Mockito.when(dao.getAll()).thenReturn(this.raceList);
-        Mockito.when(dao.get(0)).thenReturn(this.raceList.get(0));
+//        MockitoAnnotations.initMocks(this);
+//        Mockito.when(dao.getAll()).thenReturn(this.raceList);
+//        Mockito.when(dao.get(0)).thenReturn(this.raceList.get(0));
     }
 
-    private void createRaceList() {
+    private void createRaceList(){
         JsonMapper mapper = new JsonMapper();
-        raceList = new ArrayList<>();
-        raceList.add(mapper.getRace("races/human.json"));
+        raceList = mapper.getAllRaces();
     }
 
     @Test
