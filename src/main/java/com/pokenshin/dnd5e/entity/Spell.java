@@ -1,6 +1,6 @@
-package com.pokenshin.dnd5e.character;
+package com.pokenshin.dnd5e.entity;
 
-import com.pokenshin.dnd5e.character.CharacterClass;
+import com.pokenshin.dnd5e.entity.CharacterClass;
 
 import java.util.ArrayList;
 import java.util.List;

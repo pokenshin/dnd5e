@@ -1,9 +1,9 @@
-package com.pokenshin.dnd5e.character;
+package com.pokenshin.dnd5e.entity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CharacterItem {
+public class Item {
     private int id;
     private String nome;
     private String description;
@@ -22,7 +22,7 @@ public class CharacterItem {
     private String damageType;
     private int range;
 
-    public CharacterItem(int id, String nome, String description, int weight, String rarity, int value, List<String> properties, List<String> modifiers, boolean isCursed, int armorClass, String slot, String type, boolean stealthAdvantage, int minStrength, Dice damage, String damageType, int range) {
+    public Item(int id, String nome, String description, int weight, String rarity, int value, List<String> properties, List<String> modifiers, boolean isCursed, int armorClass, String slot, String type, boolean stealthAdvantage, int minStrength, Dice damage, String damageType, int range) {
         this.id = id;
         this.nome = nome;
         this.description = description;
@@ -42,7 +42,7 @@ public class CharacterItem {
         this.range = range;
     }
 
-    public CharacterItem(){
+    public Item(){
         this.id = 0;
         this.nome = "";
         this.description = "";

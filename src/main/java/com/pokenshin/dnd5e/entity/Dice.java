@@ -1,8 +1,15 @@
-package com.pokenshin.dnd5e.character;
+package com.pokenshin.dnd5e.entity;
+
+import java.util.Random;
 
 public class Dice {
     private int sides;
     private int rolls;
+
+    public int getResult() {
+        Random rng = new Random();
+        return sides * (1 + rng.nextInt(sides)) ;
+    }
 
     public Dice(int value, int rolls) {
         this.sides = value;
@@ -33,4 +40,5 @@ public class Dice {
     public String toString(){
         return this.rolls + "d" + this.sides;
     }
+
 }

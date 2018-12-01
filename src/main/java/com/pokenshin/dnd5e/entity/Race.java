@@ -1,9 +1,9 @@
-package com.pokenshin.dnd5e.character;
+package com.pokenshin.dnd5e.entity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class CharacterRace {
+public class Race {
     private int id;
     private String name;
     private List<Integer> abilityIncrease;
@@ -16,7 +16,7 @@ public class CharacterRace {
     private List<String> otherTraits;
     private List<String> languages;
 
-    public CharacterRace(int id, List<Integer> abilityIncrease, String name, int ageMax, String size, int speed, List<String> otherTraits, List<String> languages) {
+    public Race(int id, List<Integer> abilityIncrease, String name, int ageMax, String size, int speed, List<String> otherTraits, List<String> languages) {
         this.id = id;
         this.name = name;
         this.abilityIncrease = abilityIncrease;
@@ -27,7 +27,7 @@ public class CharacterRace {
         this.languages = languages;
     }
 
-    public CharacterRace(){
+    public Race(){
         this.id = 0;
         this.name = "";
         this.abilityIncrease = new ArrayList<>();

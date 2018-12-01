@@ -1,26 +1,18 @@
 package com.pokenshin.dnd5e.controller;
 
-import com.pokenshin.dnd5e.character.CharacterCalculator;
-import com.pokenshin.dnd5e.character.CharacterRace;
+import com.pokenshin.dnd5e.business.CharacterCalculator;
+import com.pokenshin.dnd5e.entity.Race;
 import com.pokenshin.dnd5e.dao.CharacterRaceDao;
 import com.pokenshin.dnd5e.util.JsonMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 import org.junit.Rule;
-import org.mockito.Mockito;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.MockitoJUnit;
 import org.mockito.junit.MockitoRule;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Map;
-import java.util.Optional;
-import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -30,7 +22,7 @@ class CharacterRaceControllerTest {
     private CharacterRaceDao dao = new CharacterRaceDao();
     @Rule
     public MockitoRule mockitoRule = MockitoJUnit.rule();
-    private Map<Integer, CharacterRace> raceList;
+    private Map<Integer, Race> raceList;
 
     private CharacterRaceController controller;
 
@@ -55,7 +47,7 @@ class CharacterRaceControllerTest {
 
     @Test
     void generateHuman() {
-        CharacterRace result = controller.get(1);
+        Race result = controller.get(1);
         assertEquals(1, result.getId());
         assertEquals("Human", result.getName());
     }

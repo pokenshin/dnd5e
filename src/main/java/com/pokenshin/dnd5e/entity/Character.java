@@ -1,4 +1,4 @@
-package com.pokenshin.dnd5e.character;
+package com.pokenshin.dnd5e.entity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -9,7 +9,7 @@ public class Character {
     private int level;
     private String background;
     private String playerName;
-    private CharacterRace race;
+    private Race race;
     private String alignment;
     private int experience;
     private CharacterAbility strength;
@@ -36,7 +36,7 @@ public class Character {
     private int deathSavesFailures;
     private List<CharacterAttack> attacks;
     private CharacterCurrency currency;
-    private List<CharacterItem> equipment;
+    private List<Item> equipment;
     private List<String> traits;
     private List<String> ideals;
     private List<String> bonds;
@@ -51,10 +51,10 @@ public class Character {
     private String appearance;
     private List<String> allies;
     private String backstory;
-    private List<CharacterItem> treasure;
+    private List<Item> treasure;
     private CharacterSpellcastingClass spellcasting;
 
-    public Character(int id, String characterName, int level, String background, String playerName, CharacterRace race, String alignment, int experience, CharacterAbility strength, CharacterAbility dexterity, CharacterAbility constitution, CharacterAbility intelligence, CharacterAbility wisdom, CharacterAbility charisma, int inspiration, int proficiencyBonus, CharacterSavingThrows savingThrows, CharacterSkills skills, int perception, List<String> proficiencies, int armorClass, int initiative, int speed, int hpCurrent, int hpMax, int hpTemporary, Dice hitDice, int totalHitDice, int deathSavesSuccess, int deathSavesFailures, List<CharacterAttack> attacks, CharacterCurrency currency, List<CharacterItem> equipment, List<String> traits, List<String> ideals, List<String> bonds, List<String> flaws, List<String> features, int age, int height, int weight, String eyes, String skin, String hair, String appearance, List<String> allies, String backstory, List<CharacterItem> treasure, CharacterSpellcastingClass spellcasting) {
+    public Character(int id, String characterName, int level, String background, String playerName, Race race, String alignment, int experience, CharacterAbility strength, CharacterAbility dexterity, CharacterAbility constitution, CharacterAbility intelligence, CharacterAbility wisdom, CharacterAbility charisma, int inspiration, int proficiencyBonus, CharacterSavingThrows savingThrows, CharacterSkills skills, int perception, List<String> proficiencies, int armorClass, int initiative, int speed, int hpCurrent, int hpMax, int hpTemporary, Dice hitDice, int totalHitDice, int deathSavesSuccess, int deathSavesFailures, List<CharacterAttack> attacks, CharacterCurrency currency, List<Item> equipment, List<String> traits, List<String> ideals, List<String> bonds, List<String> flaws, List<String> features, int age, int height, int weight, String eyes, String skin, String hair, String appearance, List<String> allies, String backstory, List<Item> treasure, CharacterSpellcastingClass spellcasting) {
         this.id = id;
         this.characterName = characterName;
         this.level = level;
@@ -198,11 +198,11 @@ public class Character {
         this.playerName = playerName;
     }
 
-    public CharacterRace getRace() {
+    public Race getRace() {
         return race;
     }
 
-    public void setRace(CharacterRace race) {
+    public void setRace(Race race) {
         this.race = race;
     }
 
@@ -414,11 +414,11 @@ public class Character {
         this.currency = currency;
     }
 
-    public List<CharacterItem> getEquipment() {
+    public List<Item> getEquipment() {
         return equipment;
     }
 
-    public void setEquipment(List<CharacterItem> equipment) {
+    public void setEquipment(List<Item> equipment) {
         this.equipment = equipment;
     }
 
@@ -534,11 +534,11 @@ public class Character {
         this.backstory = backstory;
     }
 
-    public List<CharacterItem> getTreasure() {
+    public List<Item> getTreasure() {
         return treasure;
     }
 
-    public void setTreasure(List<CharacterItem> treasure) {
+    public void setTreasure(List<Item> treasure) {
         this.treasure = treasure;
     }
 
