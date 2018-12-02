@@ -11,10 +11,11 @@
   ],
   "ageMax": 100,
   "size": "Medium",
-  "speed": 40,
-  "otherTraits": [],
+  "speed": 30,
+  "otherTraits": [
+    "Extra Language Slot"
+  ],
   "languages": [
-    "Common",
-    "Custom"
+    "Common"
   ]
 }

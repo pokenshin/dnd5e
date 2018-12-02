@@ -53,8 +53,10 @@ public class Character {
     private String backstory;
     private List<Item> treasure;
     private CharacterSpellcastingClass spellcasting;
+    private String size;
+    private List<String> languages;
 
-    public Character(int id, String characterName, int level, String background, String playerName, Race race, String alignment, int experience, CharacterAbility strength, CharacterAbility dexterity, CharacterAbility constitution, CharacterAbility intelligence, CharacterAbility wisdom, CharacterAbility charisma, int inspiration, int proficiencyBonus, CharacterSavingThrows savingThrows, CharacterSkills skills, int perception, List<String> proficiencies, int armorClass, int initiative, int speed, int hpCurrent, int hpMax, int hpTemporary, Dice hitDice, int totalHitDice, int deathSavesSuccess, int deathSavesFailures, List<CharacterAttack> attacks, CharacterCurrency currency, List<Item> equipment, List<String> traits, List<String> ideals, List<String> bonds, List<String> flaws, List<String> features, int age, int height, int weight, String eyes, String skin, String hair, String appearance, List<String> allies, String backstory, List<Item> treasure, CharacterSpellcastingClass spellcasting) {
+    public Character(int id, String characterName, int level, String background, String playerName, Race race, String alignment, int experience, CharacterAbility strength, CharacterAbility dexterity, CharacterAbility constitution, CharacterAbility intelligence, CharacterAbility wisdom, CharacterAbility charisma, int inspiration, int proficiencyBonus, CharacterSavingThrows savingThrows, CharacterSkills skills, int perception, List<String> proficiencies, int armorClass, int initiative, int speed, int hpCurrent, int hpMax, int hpTemporary, Dice hitDice, int totalHitDice, int deathSavesSuccess, int deathSavesFailures, List<CharacterAttack> attacks, CharacterCurrency currency, List<Item> equipment, List<String> traits, List<String> ideals, List<String> bonds, List<String> flaws, List<String> features, int age, int height, int weight, String eyes, String skin, String hair, String appearance, List<String> allies, String backstory, List<Item> treasure, CharacterSpellcastingClass spellcasting, String size, List<String> languages) {
         this.id = id;
         this.characterName = characterName;
         this.level = level;
@@ -104,6 +106,8 @@ public class Character {
         this.backstory = backstory;
         this.treasure = treasure;
         this.spellcasting = spellcasting;
+        this.size = size;
+        this.languages = languages;
     }
 
     public Character() {
@@ -115,12 +119,12 @@ public class Character {
         this.race = null;
         this.alignment = "";
         this.experience = 0;
-        this.strength = new CharacterAbility();
-        this.dexterity = new CharacterAbility();
-        this.constitution = new CharacterAbility();
-        this.intelligence = new CharacterAbility();
-        this.wisdom = new CharacterAbility();
-        this.charisma = new CharacterAbility();
+        this.strength = new CharacterAbility(12, 1);
+        this.dexterity = new CharacterAbility(12, 1);
+        this.constitution = new CharacterAbility(12, 1);
+        this.intelligence = new CharacterAbility(12, 1);
+        this.wisdom = new CharacterAbility(12, 1);
+        this.charisma = new CharacterAbility(12, 1);
         this.inspiration = 0;
         this.proficiencyBonus = 0;
         this.savingThrows = new CharacterSavingThrows();
@@ -156,10 +160,28 @@ public class Character {
         this.backstory = "";
         this.treasure = new ArrayList<>();
         this.spellcasting = new CharacterSpellcastingClass();
+        this.size = "";
+        this.languages = new ArrayList<>();
+    }
+
+    public List<String> getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(List<String> languages) {
+        this.languages = languages;
     }
 
     public int getId() {
         return id;
+    }
+
+    public String getSize() {
+        return size;
+    }
+
+    public void setSize(String size) {
+        this.size = size;
     }
 
     public void setId(int id) {

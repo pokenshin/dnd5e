@@ -79,6 +79,7 @@ public class CharacterBusiness {
     }
 
     public Character applyRace(Character character, Race race){
+        character.setRace(race);
         character.setSpeed(race.getSpeed());
         character.getStrength().setValue(character.getStrength().getValue() + race.getAbilityIncrease().get(0));
         character.getStrength().setModifier(this.getModifier(race.getAbilityIncrease().get(0)));
@@ -92,11 +93,10 @@ public class CharacterBusiness {
         character.getWisdom().setModifier(this.getModifier(race.getAbilityIncrease().get(4)));
         character.getCharisma().setValue(character.getCharisma().getValue() + race.getAbilityIncrease().get(5));
         character.getCharisma().setModifier(this.getModifier(race.getAbilityIncrease().get(5)));
+        character.setSize(race.getSize());
+        character.getTraits().addAll(race.getOtherTraits());
+        character.getLanguages().addAll(race.getLanguages());
 
         return character;
     }
-
-
-
-
 }
