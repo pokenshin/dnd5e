@@ -1,6 +1,6 @@
 package com.pokenshin.dnd5e.controller;
 
-import com.pokenshin.dnd5e.business.CharacterCalculator;
+import com.pokenshin.dnd5e.business.CharacterBusiness;
 import com.pokenshin.dnd5e.entity.Race;
 import com.pokenshin.dnd5e.dao.CharacterRaceDao;
 import com.pokenshin.dnd5e.util.JsonMapper;
@@ -26,7 +26,7 @@ class CharacterRaceControllerTest {
 
     private CharacterRaceController controller;
 
-    private CharacterCalculator calculator;
+    private CharacterBusiness calculator;
     @BeforeEach
     void setUp() throws IOException {
         createRaceList();

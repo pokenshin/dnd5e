@@ -12,12 +12,12 @@ public class Character {
     private Race race;
     private String alignment;
     private int experience;
-    private int strength;
-    private int dexterity;
-    private int constitution;
-    private int intelligence;
-    private int wisdom;
-    private int charisma;
+    private CharacterAbility strength;
+    private CharacterAbility dexterity;
+    private CharacterAbility constitution;
+    private CharacterAbility intelligence;
+    private CharacterAbility wisdom;
+    private CharacterAbility charisma;
     private int inspiration;
     private int proficiencyBonus;
     private CharacterSavingThrows savingThrows;
@@ -54,7 +54,7 @@ public class Character {
     private List<Item> treasure;
     private CharacterSpellcastingClass spellcasting;
 
-    public Character(int id, String characterName, int level, String background, String playerName, Race race, String alignment, int experience, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, int inspiration, int proficiencyBonus, CharacterSavingThrows savingThrows, CharacterSkills skills, int perception, List<String> proficiencies, int armorClass, int initiative, int speed, int hpCurrent, int hpMax, int hpTemporary, Dice hitDice, int totalHitDice, int deathSavesSuccess, int deathSavesFailures, List<CharacterAttack> attacks, CharacterCurrency currency, List<Item> equipment, List<String> traits, List<String> ideals, List<String> bonds, List<String> flaws, List<String> features, int age, int height, int weight, String eyes, String skin, String hair, String appearance, List<String> allies, String backstory, List<Item> treasure, CharacterSpellcastingClass spellcasting) {
+    public Character(int id, String characterName, int level, String background, String playerName, Race race, String alignment, int experience, CharacterAbility strength, CharacterAbility dexterity, CharacterAbility constitution, CharacterAbility intelligence, CharacterAbility wisdom, CharacterAbility charisma, int inspiration, int proficiencyBonus, CharacterSavingThrows savingThrows, CharacterSkills skills, int perception, List<String> proficiencies, int armorClass, int initiative, int speed, int hpCurrent, int hpMax, int hpTemporary, Dice hitDice, int totalHitDice, int deathSavesSuccess, int deathSavesFailures, List<CharacterAttack> attacks, CharacterCurrency currency, List<Item> equipment, List<String> traits, List<String> ideals, List<String> bonds, List<String> flaws, List<String> features, int age, int height, int weight, String eyes, String skin, String hair, String appearance, List<String> allies, String backstory, List<Item> treasure, CharacterSpellcastingClass spellcasting) {
         this.id = id;
         this.characterName = characterName;
         this.level = level;
@@ -115,12 +115,12 @@ public class Character {
         this.race = null;
         this.alignment = "";
         this.experience = 0;
-        this.strength = 0;
-        this.dexterity = 0;
-        this.constitution = 0;
-        this.intelligence = 0;
-        this.wisdom = 0;
-        this.charisma = 0;
+        this.strength = new CharacterAbility();
+        this.dexterity = new CharacterAbility();
+        this.constitution = new CharacterAbility();
+        this.intelligence = new CharacterAbility();
+        this.wisdom = new CharacterAbility();
+        this.charisma = new CharacterAbility();
         this.inspiration = 0;
         this.proficiencyBonus = 0;
         this.savingThrows = new CharacterSavingThrows();
@@ -222,51 +222,51 @@ public class Character {
         this.experience = experience;
     }
 
-    public int getStrength() {
+    public CharacterAbility getStrength() {
         return strength;
     }
 
-    public void setStrength(int strength) {
+    public void setStrength(CharacterAbility strength) {
         this.strength = strength;
     }
 
-    public int getDexterity() {
+    public CharacterAbility getDexterity() {
         return dexterity;
     }
 
-    public void setDexterity(int dexterity) {
+    public void setDexterity(CharacterAbility dexterity) {
         this.dexterity = dexterity;
     }
 
-    public int getConstitution() {
+    public CharacterAbility getConstitution() {
         return constitution;
     }
 
-    public void setConstitution(int constitution) {
+    public void setConstitution(CharacterAbility constitution) {
         this.constitution = constitution;
     }
 
-    public int getIntelligence() {
+    public CharacterAbility getIntelligence() {
         return intelligence;
     }
 
-    public void setIntelligence(int intelligence) {
+    public void setIntelligence(CharacterAbility intelligence) {
         this.intelligence = intelligence;
     }
 
-    public int getWisdom() {
+    public CharacterAbility getWisdom() {
         return wisdom;
     }
 
-    public void setWisdom(int wisdom) {
+    public void setWisdom(CharacterAbility wisdom) {
         this.wisdom = wisdom;
     }
 
-    public int getCharisma() {
+    public CharacterAbility getCharisma() {
         return charisma;
     }
 
-    public void setCharisma(int charisma) {
+    public void setCharisma(CharacterAbility charisma) {
         this.charisma = charisma;
     }
 
