@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CharacterBusinessTest {
-    CharacterBusiness business;
+    private CharacterBusiness business;
 
     @BeforeEach
     void SetUp(){
@@ -29,5 +29,13 @@ class CharacterBusinessTest {
         assertEquals(12, character.getIntelligence().getValue());
         assertEquals(12, character.getWisdom().getValue());
         assertEquals(12, character.getCharisma().getValue());
+    }
+
+    @Test
+    void getModifier() {
+        assertEquals(2, business.getModifier(14));
+        assertEquals(10, business.getModifier(30));
+        assertEquals(-2, business.getModifier(7));
+        assertEquals(-5, business.getModifier(1));
     }
 }
