@@ -3,8 +3,9 @@ package com.pokenshin.dnd5e.business;
 import com.pokenshin.dnd5e.entity.CharacterAbility;
 import com.pokenshin.dnd5e.entity.Character;
 import com.pokenshin.dnd5e.entity.Race;
+import com.pokenshin.dnd5e.util.JsonMapper;
 
-import java.util.Random;
+import java.util.Map;
 
 public class CharacterBusiness {
     /**
@@ -45,10 +46,11 @@ public class CharacterBusiness {
      */
     public Character generateRandomCharacter(){
         Character result = new Character();
-        Random rng = new Random();
+        Randomizer randomizer = new Randomizer();
 
         result.setLevel(1);
         result.setExperience(0);
+
         //TODO: Define a random Race and apply its bonuses
         //TODO: Define a random Class and apply its bonuses
         //TODO: Define a random background and apply its bonuses
@@ -67,6 +69,18 @@ public class CharacterBusiness {
     }
 
     /**
+     * Applies a random race into a Character object
+     * @param character The character that will have a random race applied.
+     * @return Character object with a random race applied
+     */
+    public Character applyRandomRace(Character character){
+        Randomizer randomizer = new Randomizer();
+        Race randomRace = randomizer.getRandomRace();
+        character = this.applyRace(character, randomRace);
+        return character;
+    }
+
+    /**
      * Returns an ability score modifier according to the value
      * @param value The ability score value
      * @return An integer that represents the modifier score
@@ -78,6 +92,12 @@ public class CharacterBusiness {
             return (value / 2) - 5;
     }
 
+    /**
+     * Applies a race with its modifiers and traits to a Character object
+     * @param character The Character object that will get a new race
+     * @param race The Race object that will be applied to the Character object
+     * @return A Character object with the race applied to it.
+     */
     public Character applyRace(Character character, Race race){
         character.setRace(race);
         character.setSpeed(race.getSpeed());

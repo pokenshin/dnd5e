@@ -1,23 +1,24 @@
 {
-  "id": 4,
-  "name": "Aarakocra",
+  "id": 7,
+  "name": "Halfling",
   "abilityIncrease": [
     0,
     2,
     0,
     0,
-    1,
+    0,
     0
   ],
-  "ageMax": 30,
-  "size": "Medium",
+  "ageMax": 150,
+  "size": "Small",
   "speed": 25,
   "otherTraits": [
-    "Talons"
+    "Lucky",
+    "Bravery",
+    "Halfling Agility"
   ],
   "languages": [
     "Common",
-    "Aarakocra",
-    "Auran"
+    "Halfling"
   ]
 }

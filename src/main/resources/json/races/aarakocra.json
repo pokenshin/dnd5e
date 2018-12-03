@@ -1,23 +1,23 @@
 {
-  "id": 4,
-  "name": "Gnome",
+  "id": 1,
+  "name": "Aarakocra",
   "abilityIncrease": [
-    0,
-    0,
     0,
     2,
     0,
+    0,
+    1,
     0
   ],
-  "ageMax": 400,
-  "size": "Small",
+  "ageMax": 30,
+  "size": "Medium",
   "speed": 25,
   "otherTraits": [
-    "Darkvision",
-    "Gnome Cunning"
+    "Talons"
   ],
   "languages": [
     "Common",
-    "Gnomish"
+    "Aarakocra",
+    "Auran"
   ]
 }
