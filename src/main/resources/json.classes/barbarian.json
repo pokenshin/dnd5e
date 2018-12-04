@@ -26,14 +26,26 @@
     "wisdom": false,
     "charisma": false
   },
-  "skills":[
-    "Animal Handling",
-    "Athletics",
-    "Intimidation",
-    "Nature",
-    "Perception",
-    "Survival"
-  ],
+  "skills": {
+    "acrobatics": false,
+    "animalHandling": true,
+    "arcana": false,
+    "athletics": true,
+    "deception": false,
+    "history": false,
+    "insight": false,
+    "intimidation": true,
+    "investigation": false,
+    "medicine": false,
+    "nature": true,
+    "perception": true,
+    "performance": false,
+    "persuasion": false,
+    "religion": false,
+    "sleightOfHand": false,
+    "stealth": false,
+    "survival": true
+  },
   "startingEquip":[
 
   ],

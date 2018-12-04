@@ -1,5 +1,7 @@
 package com.pokenshin.dnd5e.entity;
 
+import com.pokenshin.dnd5e.entity.*;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,12 +14,12 @@ public class CharacterClass {
     private List<String> weaponProficiency;
     private List<String> tools;
     private CharacterSavingThrows savingThrows;
-    private List<String> skills;
+    private CharacterSkills skills;
     private List<Item> startingEquip;
     private CharacterCurrency startingMoney;
     private List<String> levelingPerks;
 
-    public CharacterClass(int id, String name, Dice hitDice, int startingHP, List<String> armorProficiency, List<String> weaponProficiency, List<String> tools, CharacterSavingThrows savingThrows, List<String> skills, List<Item> startingEquip, CharacterCurrency startingMoney, List<String> levelingPerks) {
+    public CharacterClass(int id, String name, Dice hitDice, int startingHP, List<String> armorProficiency, List<String> weaponProficiency, List<String> tools, CharacterSavingThrows savingThrows, CharacterSkills skills, List<Item> startingEquip, CharacterCurrency startingMoney, List<String> levelingPerks) {
         this.id = id;
         this.name = name;
         this.hitDice = hitDice;
@@ -41,7 +43,7 @@ public class CharacterClass {
         this.weaponProficiency = new ArrayList<>();
         this.tools = new ArrayList<>();
         this.savingThrows = new CharacterSavingThrows();
-        this.skills = new ArrayList<>();
+        this.skills = new CharacterSkills();
         this.startingEquip = new ArrayList<>();
         this.startingMoney = new CharacterCurrency();
         this.levelingPerks = new ArrayList<>();
@@ -111,11 +113,11 @@ public class CharacterClass {
         this.savingThrows = savingThrows;
     }
 
-    public List<String> getSkills() {
+    public CharacterSkills getSkills() {
         return skills;
     }
 
-    public void setSkills(List<String> skills) {
+    public void setSkills(CharacterSkills skills) {
         this.skills = skills;
     }
 

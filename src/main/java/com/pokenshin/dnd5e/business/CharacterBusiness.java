@@ -2,10 +2,8 @@ package com.pokenshin.dnd5e.business;
 
 import com.pokenshin.dnd5e.entity.CharacterAbility;
 import com.pokenshin.dnd5e.entity.Character;
+import com.pokenshin.dnd5e.entity.CharacterClass;
 import com.pokenshin.dnd5e.entity.Race;
-import com.pokenshin.dnd5e.util.JsonMapper;
-
-import java.util.Map;
 
 public class CharacterBusiness {
     /**
@@ -50,8 +48,7 @@ public class CharacterBusiness {
 
         result.setLevel(1);
         result.setExperience(0);
-
-        //TODO: Define a random Race and apply its bonuses
+        this.applyRace(result, randomizer.getRandomRace());
         //TODO: Define a random Class and apply its bonuses
         //TODO: Define a random background and apply its bonuses
         //TODO: Roll Ability Scores and assign them according to the class
@@ -119,4 +116,21 @@ public class CharacterBusiness {
 
         return character;
     }
+
+    /**
+     * Applies a CharacterClass object to a Character object
+     * @param character The Character object that will be affected
+     * @param characterClass The CharacterClass that will be applied to the Character object
+     * @return A Character object with the CharacterClass applied to it
+     */
+/*    public Character applyCharacterClass(Character character, CharacterClass characterClass){
+        character.setCharacterClass(characterClass);
+        character.setHitDice(characterClass.getHitDice());
+        character.setHpMax(characterClass.getStartingHP());
+        character.getProficiencies().addAll(characterClass.getArmorProficiency());
+        character.getProficiencies().addAll(characterClass.getWeaponProficiency());
+        character.getProficiencies().addAll(characterClass.getTools());
+        character.setSavingThrows(characterClass.getSavingThrows());
+        character.setSkills();
+    }*/
 }

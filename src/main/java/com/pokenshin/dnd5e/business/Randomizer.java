@@ -1,5 +1,6 @@
 package com.pokenshin.dnd5e.business;
 
+import com.pokenshin.dnd5e.entity.CharacterClass;
 import com.pokenshin.dnd5e.entity.Race;
 import com.pokenshin.dnd5e.util.JsonMapper;
 
@@ -27,6 +28,12 @@ public class Randomizer {
     public Race getRandomRace(){
         JsonMapper mapper = new JsonMapper();
         Map<Integer, Race> raceList = mapper.getAllRaces();
+        return raceList.get(rng.nextInt(raceList.size()));
+    }
+
+    public CharacterClass getRandomClass(){
+        JsonMapper mapper = new JsonMapper();
+        Map<Integer, CharacterClass> raceList = mapper.getAllCharacterClasses();
         return raceList.get(rng.nextInt(raceList.size()));
     }
 }
