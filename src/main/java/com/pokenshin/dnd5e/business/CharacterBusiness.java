@@ -123,7 +123,7 @@ public class CharacterBusiness {
      * @param characterClass The CharacterClass that will be applied to the Character object
      * @return A Character object with the CharacterClass applied to it
      */
-/*    public Character applyCharacterClass(Character character, CharacterClass characterClass){
+    public Character applyCharacterClass(Character character, CharacterClass characterClass){
         character.setCharacterClass(characterClass);
         character.setHitDice(characterClass.getHitDice());
         character.setHpMax(characterClass.getStartingHP());
@@ -131,6 +131,6 @@ public class CharacterBusiness {
         character.getProficiencies().addAll(characterClass.getWeaponProficiency());
         character.getProficiencies().addAll(characterClass.getTools());
         character.setSavingThrows(characterClass.getSavingThrows());
-        character.setSkills();
-    }*/
+        return character;
+   }
 }

@@ -11,8 +11,8 @@ public class Dice {
         return sides * (1 + rng.nextInt(sides)) ;
     }
 
-    public Dice(int value, int rolls) {
-        this.sides = value;
+    public Dice(int sides, int rolls) {
+        this.sides = sides;
         this.rolls = rolls;
     }
 
