@@ -1,0 +1,133 @@
+{
+  "id": 7,
+  "name": "Paladin",
+  "hitDice":{
+    "sides": 10,
+    "rolls": 1
+  },
+  "startingHP": 10,
+  "armorProficiency": [
+    "All Armors",
+    "Shields"
+  ],
+  "weaponProficiency": [
+    "Simple",
+    "Martial"
+  ],
+  "tools":[
+  ],
+  "savingThrows": {
+    "strength": false,
+    "dexterity": false,
+    "constitution": false,
+    "intelligence": false,
+    "wisdom": true,
+    "charisma": true
+  },
+  "skills": {
+    "acrobatics": {
+      "value": 0,
+      "advantage": false
+    },
+    "animalHandling": {
+      "value": 0,
+      "advantage": false
+    },
+    "arcana": {
+      "value": 0,
+      "advantage": false
+    },
+    "athletics": {
+      "value": 0,
+      "advantage": true
+    },
+    "deception": {
+      "value": 0,
+      "advantage": false
+    },
+    "history": {
+      "value": 0,
+      "advantage": false
+    },
+    "insight": {
+      "value": 0,
+      "advantage": true
+    },
+    "intimidation": {
+      "value": 0,
+      "advantage": true
+    },
+    "investigation": {
+      "value": 0,
+      "advantage": false
+    },
+    "medicine": {
+      "value": 0,
+      "advantage": true
+    },
+    "nature": {
+      "value": 0,
+      "advantage": false
+    },
+    "perception": {
+      "value": 0,
+      "advantage": false
+    },
+    "performance": {
+      "value": 0,
+      "advantage": false
+    },
+    "persuasion": {
+      "value": 0,
+      "advantage": true
+    },
+    "religion": {
+      "value": 0,
+      "advantage": false
+    },
+    "sleightOfHand": {
+      "value": 0,
+      "advantage": false
+    },
+    "stealth": {
+      "value": 0,
+      "advantage": false
+    },
+    "survival": {
+      "value": 0,
+      "advantage": false
+    }
+  },
+  "startingEquip":[
+
+  ],
+  "startingMoney":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "levelingPerks":[
+    "Divine Sense, Lay on Hands",
+    "Fighting Style, Spellcasting, Divine Smite",
+    "Divine Health, Sacred Oath",
+    "Ability Score Improvement",
+    "Extra Attack",
+    "Aura of Protection",
+    "Sacred Oath Feature",
+    "Ability Score Improvement",
+    "",
+    "Aura of Courage",
+    "Improved Divine Smite",
+    "Ability Score Improvement",
+    "",
+    "Cleansing Touch",
+    "Sacred Oath Feature",
+    "Ability Score Improvement",
+    "",
+    "Aura Improvements",
+    "Ability Score Improvement",
+    "Sacred Oath Feature"
+  ]
+}

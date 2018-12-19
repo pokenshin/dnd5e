@@ -17,4 +17,9 @@ class RandomizerTest {
     void getRandomRace() {
         assertNotNull(randomizer.getRandomRace());
     }
+
+    @Test
+    void getRandomClass() {
+        assertNotNull(randomizer.getRandomClass());
+    }
 }

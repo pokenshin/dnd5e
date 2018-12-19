@@ -28,24 +28,78 @@
     "charisma": true
   },
   "skills": {
-    "acrobatics": false,
-    "animalHandling": true,
-    "arcana": false,
-    "athletics": false,
-    "deception": false,
-    "history": false,
-    "insight": false,
-    "intimidation": false,
-    "investigation": false,
-    "medicine": false,
-    "nature": false,
-    "perception": true,
-    "performance": false,
-    "persuasion": false,
-    "religion": false,
-    "sleightOfHand": false,
-    "stealth": false,
-    "survival": false
+    "acrobatics": {
+      "value": 0,
+      "advantage": false
+    },
+    "animalHandling": {
+      "value": 0,
+      "advantage": true
+    },
+    "arcana": {
+      "value": 0,
+      "advantage": false
+    },
+    "athletics": {
+      "value": 0,
+      "advantage": false
+    },
+    "deception": {
+      "value": 0,
+      "advantage": false
+    },
+    "history": {
+      "value": 0,
+      "advantage": false
+    },
+    "insight": {
+      "value": 0,
+      "advantage": false
+    },
+    "intimidation": {
+      "value": 0,
+      "advantage": false
+    },
+    "investigation": {
+      "value": 0,
+      "advantage": false
+    },
+    "medicine": {
+      "value": 0,
+      "advantage": false
+    },
+    "nature": {
+      "value": 0,
+      "advantage": false
+    },
+    "perception": {
+      "value": 0,
+      "advantage": true
+    },
+    "performance": {
+      "value": 0,
+      "advantage": false
+    },
+    "persuasion": {
+      "value": 0,
+      "advantage": false
+    },
+    "religion": {
+      "value": 0,
+      "advantage": false
+    },
+    "sleightOfHand": {
+      "value": 0,
+      "advantage": false
+    },
+    "stealth": {
+      "value": 0,
+      "advantage": false
+    },
+    "survival": {
+      "value": 0,
+      "advantage": false
+    }
   },
   "startingEquip":[
 

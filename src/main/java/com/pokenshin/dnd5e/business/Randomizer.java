@@ -11,13 +11,6 @@ public class Randomizer {
     private Random rng;
 
     public Randomizer(){
-        initRandom();
-    }
-
-    /**
-     * Initializes the RNG variable.
-     */
-    private void initRandom(){
         rng = new Random();
     }
 

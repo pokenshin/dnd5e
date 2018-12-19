@@ -1,0 +1,130 @@
+{
+  "id": 11,
+  "name": "Warlock",
+  "hitDice":{
+    "sides": 8,
+    "rolls": 1
+  },
+  "startingHP": 8,
+  "armorProficiency": [
+  ],
+  "weaponProficiency": [
+
+  ],
+  "tools":[
+  ],
+  "savingThrows": {
+    "strength": false,
+    "dexterity": false,
+    "constitution": true,
+    "intelligence": false,
+    "wisdom": false,
+    "charisma": true
+  },
+  "skills": {
+    "acrobatics": {
+      "value": 0,
+      "advantage": false
+    },
+    "animalHandling": {
+      "value": 0,
+      "advantage": false
+    },
+    "arcana": {
+      "value": 0,
+      "advantage": true
+    },
+    "athletics": {
+      "value": 0,
+      "advantage": false
+    },
+    "deception": {
+      "value": 0,
+      "advantage": true
+    },
+    "history": {
+      "value": 0,
+      "advantage": true
+    },
+    "insight": {
+      "value": 0,
+      "advantage": false
+    },
+    "intimidation": {
+      "value": 0,
+      "advantage": true
+    },
+    "investigation": {
+      "value": 0,
+      "advantage": true
+    },
+    "medicine": {
+      "value": 0,
+      "advantage": false
+    },
+    "nature": {
+      "value": 0,
+      "advantage": true
+    },
+    "perception": {
+      "value": 0,
+      "advantage": false
+    },
+    "performance": {
+      "value": 0,
+      "advantage": false
+    },
+    "persuasion": {
+      "value": 0,
+      "advantage": false
+    },
+    "religion": {
+      "value": 0,
+      "advantage": true
+    },
+    "sleightOfHand": {
+      "value": 0,
+      "advantage": false
+    },
+    "stealth": {
+      "value": 0,
+      "advantage": false
+    },
+    "survival": {
+      "value": 0,
+      "advantage": false
+    }
+  },
+  "startingEquip":[
+
+  ],
+  "startingMoney":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "levelingPerks":[
+    "Otherwordly Patron, Pact Magic",
+    "Eldritch Invocations",
+    "Pact Boon",
+    "Ability Score Improvement",
+    "",
+    "Otherwordly Patron Feature",
+    "",
+    "Ability Score Improvement",
+    "",
+    "Otherwordly Patron Feature",
+    "Mystic Arcanum (6th Level)",
+    "Ability Score Improvement",
+    "Mystic Arcanum (7th Level)",
+    "Otherwordly Patron Feature",
+    "Mystic Arcanum (8th Level)",
+    "Ability Score Improvement",
+    "Mystic Arcanum (9th Level)",
+    "",
+    "Ability Score Improvement",
+    "Eldritch Master"
+  ]
+}

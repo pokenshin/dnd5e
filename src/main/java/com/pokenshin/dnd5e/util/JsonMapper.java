@@ -61,7 +61,7 @@ public class JsonMapper {
     public HashMap<Integer,CharacterClass> getAllCharacterClasses() {
         HashMap<Integer, CharacterClass> result = new HashMap<>();
         ClassLoader classLoader = JsonMapper.class.getClassLoader();
-        String[] fileList = new File(Objects.requireNonNull(classLoader.getResource(basePath + racesPath)).getFile()).list();
+        String[] fileList = new File(Objects.requireNonNull(classLoader.getResource(basePath + classPath)).getFile()).list();
         if (fileList != null){
             for (String fileName: fileList ) {
                 CharacterClass characterClass = this.getCharacterClass(fileName);

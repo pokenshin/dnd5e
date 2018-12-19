@@ -1,0 +1,134 @@
+{
+  "id": 10,
+  "name": "Sorcerer",
+  "hitDice":{
+    "sides": 6,
+    "rolls": 1
+  },
+  "startingHP": 6,
+  "armorProficiency": [
+  ],
+  "weaponProficiency": [
+    "Daggers",
+    "Darts",
+    "Slings",
+    "Quarterstaffs",
+    "Light Crossbows"
+  ],
+  "tools":[
+  ],
+  "savingThrows": {
+    "strength": false,
+    "dexterity": false,
+    "constitution": true,
+    "intelligence": false,
+    "wisdom": false,
+    "charisma": true
+  },
+  "skills": {
+    "acrobatics": {
+      "value": 0,
+      "advantage": false
+    },
+    "animalHandling": {
+      "value": 0,
+      "advantage": false
+    },
+    "arcana": {
+      "value": 0,
+      "advantage": true
+    },
+    "athletics": {
+      "value": 0,
+      "advantage": false
+    },
+    "deception": {
+      "value": 0,
+      "advantage": true
+    },
+    "history": {
+      "value": 0,
+      "advantage": false
+    },
+    "insight": {
+      "value": 0,
+      "advantage": true
+    },
+    "intimidation": {
+      "value": 0,
+      "advantage": true
+    },
+    "investigation": {
+      "value": 0,
+      "advantage": false
+    },
+    "medicine": {
+      "value": 0,
+      "advantage": false
+    },
+    "nature": {
+      "value": 0,
+      "advantage": false
+    },
+    "perception": {
+      "value": 0,
+      "advantage": false
+    },
+    "performance": {
+      "value": 0,
+      "advantage": false
+    },
+    "persuasion": {
+      "value": 0,
+      "advantage": true
+    },
+    "religion": {
+      "value": 0,
+      "advantage": true
+    },
+    "sleightOfHand": {
+      "value": 0,
+      "advantage": false
+    },
+    "stealth": {
+      "value": 0,
+      "advantage": false
+    },
+    "survival": {
+      "value": 0,
+      "advantage": false
+    }
+  },
+  "startingEquip":[
+
+  ],
+  "startingMoney":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "levelingPerks":[
+    "Spellcasting, Sorcerous Origin",
+    "Font of Magic",
+    "Metamagic",
+    "Ability Score Improvement",
+    "",
+    "Sorcerous Origin Feature",
+    "",
+    "Ability Score Improvement",
+    "",
+    "Metamagic",
+    "",
+    "Ability Score Improvement",
+    "",
+    "Sorcerous Origin Feature",
+    "",
+    "Ability Score Improvement",
+    "Metamagic",
+    "Sorcerous Origin Feature",
+    "Ability Score Improvement",
+    "Sorcerous Restoration"
+  ]
+}

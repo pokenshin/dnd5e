@@ -1,0 +1,136 @@
+{
+  "id": 9,
+  "name": "Rogue",
+  "hitDice":{
+    "sides": 8,
+    "rolls": 1
+  },
+  "startingHP": 8,
+  "armorProficiency": [
+    "Light"
+  ],
+  "weaponProficiency": [
+    "Simple",
+    "Hand Crossbows",
+    "Longswords",
+    "Rapiers",
+    "Shortswords"
+  ],
+  "tools":[
+    "Thieve's Tools"
+  ],
+  "savingThrows": {
+    "strength": false,
+    "dexterity": true,
+    "constitution": false,
+    "intelligence": true,
+    "wisdom": false,
+    "charisma": false
+  },
+  "skills": {
+    "acrobatics": {
+      "value": 0,
+      "advantage": true
+    },
+    "animalHandling": {
+      "value": 0,
+      "advantage": false
+    },
+    "arcana": {
+      "value": 0,
+      "advantage": false
+    },
+    "athletics": {
+      "value": 0,
+      "advantage": true
+    },
+    "deception": {
+      "value": 0,
+      "advantage": true
+    },
+    "history": {
+      "value": 0,
+      "advantage": false
+    },
+    "insight": {
+      "value": 0,
+      "advantage": true
+    },
+    "intimidation": {
+      "value": 0,
+      "advantage": true
+    },
+    "investigation": {
+      "value": 0,
+      "advantage": true
+    },
+    "medicine": {
+      "value": 0,
+      "advantage": false
+    },
+    "nature": {
+      "value": 0,
+      "advantage": false
+    },
+    "perception": {
+      "value": 0,
+      "advantage": true
+    },
+    "performance": {
+      "value": 0,
+      "advantage": true
+    },
+    "persuasion": {
+      "value": 0,
+      "advantage": true
+    },
+    "religion": {
+      "value": 0,
+      "advantage": false
+    },
+    "sleightOfHand": {
+      "value": 0,
+      "advantage": true
+    },
+    "stealth": {
+      "value": 0,
+      "advantage": true
+    },
+    "survival": {
+      "value": 0,
+      "advantage": false
+    }
+  },
+  "startingEquip":[
+
+  ],
+  "startingMoney":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "levelingPerks":[
+    "Expertise, Sneak Attack, Thieves's Cant",
+    "Cunning Action",
+    "Roguish Archetype",
+    "Ability Score Improvement",
+    "Uncanny Dodge",
+    "Expertise",
+    "Evasion",
+    "Ability Score Improvement",
+    "Roguish Archetype Feature",
+    "Ability Score Improvement",
+    "Reliable Talent",
+    "Ability Score Improvement",
+    "Roguish Archetype Feature",
+    "Blindsense",
+    "Slippery Mind",
+    "Ability Score Improvement",
+    "Roguish Archetype Feature",
+    "Elusive",
+    "Ability Score Improvement",
+    "Stroke of Luck"
+  ]
+}
