@@ -12,6 +12,16 @@
   "ageMax": 30,
   "size": "Medium",
   "speed": 25,
+  "baseHeight": 180,
+  "heightModifier":{
+    "sides": 10,
+    "rolls": 2
+  },
+  "baseWeight": 80,
+  "weightModifier":{
+    "sides": 10,
+    "rolls": 2
+  },
   "otherTraits": [
     "Talons"
   ],

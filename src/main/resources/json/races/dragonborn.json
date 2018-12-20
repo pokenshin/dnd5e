@@ -12,6 +12,16 @@
   "ageMax": 80,
   "size": "Medium",
   "speed": 30,
+  "baseHeight": 167,
+  "heightModifier":{
+    "sides": 8,
+    "rolls": 2
+  },
+  "baseWeight": 80,
+  "weightModifier":{
+    "sides": 10,
+    "rolls": 2
+  },
   "otherTraits": [
     "Draconic Ancestral",
     "Breath Weapon",

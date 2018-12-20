@@ -1,11 +1,13 @@
 package com.pokenshin.dnd5e.business;
 
 import com.pokenshin.dnd5e.entity.CharacterClass;
+import com.pokenshin.dnd5e.entity.Dice;
 import com.pokenshin.dnd5e.entity.Race;
 import com.pokenshin.dnd5e.util.JsonMapper;
 
 import java.util.Map;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Randomizer {
     private Random rng;
@@ -28,7 +30,14 @@ public class Randomizer {
     public CharacterClass getRandomClass(){
         JsonMapper mapper = new JsonMapper();
         Map<Integer, CharacterClass> classList = mapper.getAllCharacterClasses();
-        CharacterClass characterClass = classList.get(rng.nextInt(classList.size() + 1));
+        CharacterClass characterClass = classList.get(ThreadLocalRandom.current().nextInt(classList.size() + 1));
         return characterClass;
+    }
+
+    public int getRandomHeight(Race race){
+        int result = race.getBaseHeight();
+        DiceBusiness dice = new DiceBusiness(race.getHeightModifier());
+        result = result + dice.getRoll();
+        return result;
     }
 }

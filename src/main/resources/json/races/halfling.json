@@ -12,6 +12,16 @@
   "ageMax": 150,
   "size": "Small",
   "speed": 25,
+  "baseHeight": 82,
+  "heightModifier":{
+    "sides": 4,
+    "rolls": 2
+  },
+  "baseWeight": 15,
+  "weightModifier":{
+    "sides": 4,
+    "rolls": 1
+  },
   "otherTraits": [
     "Lucky",
     "Bravery",

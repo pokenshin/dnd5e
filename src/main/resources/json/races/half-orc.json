@@ -12,6 +12,16 @@
   "ageMax": 75,
   "size": "Medium",
   "speed": 30,
+  "baseHeight": 125,
+  "heightModifier":{
+    "sides": 10,
+    "rolls": 2
+  },
+  "baseWeight": 140,
+  "weightModifier":{
+    "sides": 6,
+    "rolls": 2
+  },
   "otherTraits": [
     "Darkvision",
     "Menacing",

@@ -12,6 +12,16 @@
   "ageMax": 180,
   "size": "Medium",
   "speed": 30,
+  "baseHeight": 150,
+  "heightModifier":{
+    "sides": 8,
+    "rolls": 2
+  },
+  "baseWeight": 110,
+  "weightModifier":{
+    "sides": 4,
+    "rolls": 2
+  },
   "otherTraits": [
     "Skill Versatility",
     "Darkvision",

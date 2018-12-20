@@ -11,6 +11,16 @@
   ],
   "ageMax": 400,
   "size": "Small",
+  "baseHeight": 65,
+  "heightModifier":{
+    "sides": 4,
+    "rolls": 2
+  },
+  "baseWeight": 35,
+  "weightModifier":{
+    "sides": 4,
+    "rolls": 1
+  },
   "speed": 25,
   "otherTraits": [
     "Darkvision",

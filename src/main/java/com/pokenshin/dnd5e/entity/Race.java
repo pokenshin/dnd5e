@@ -10,13 +10,14 @@ public class Race {
     private int ageMax;
     private String size;
     private int speed;
-
-
-
+    private int baseHeight;
+    private Dice heightModifier;
+    private int baseWeight;
+    private Dice weightModifier;
     private List<String> otherTraits;
     private List<String> languages;
 
-    public Race(int id, List<Integer> abilityIncrease, String name, int ageMax, String size, int speed, List<String> otherTraits, List<String> languages) {
+    public Race(int id, List<Integer> abilityIncrease, String name, int ageMax, String size, int speed, List<String> otherTraits, List<String> languages, int baseHeight, Dice heightModifier, int baseWeight, Dice weightModifier) {
         this.id = id;
         this.name = name;
         this.abilityIncrease = abilityIncrease;
@@ -25,6 +26,10 @@ public class Race {
         this.speed = speed;
         this.otherTraits = otherTraits;
         this.languages = languages;
+        this.baseHeight = baseHeight;
+        this.heightModifier = heightModifier;
+        this.baseWeight = baseWeight;
+        this.weightModifier = weightModifier;
     }
 
     public Race(){
@@ -100,5 +105,36 @@ public class Race {
 
     public void setLanguages(List<String> languages) {
         this.languages = languages;
+    }
+    public int getBaseHeight() {
+        return baseHeight;
+    }
+
+    public void setBaseHeight(int baseHeight) {
+        this.baseHeight = baseHeight;
+    }
+
+    public Dice getHeightModifier() {
+        return heightModifier;
+    }
+
+    public void setHeightModifier(Dice heightModifier) {
+        this.heightModifier = heightModifier;
+    }
+
+    public int getBaseWeight() {
+        return baseWeight;
+    }
+
+    public void setBaseWeight(int baseWeight) {
+        this.baseWeight = baseWeight;
+    }
+
+    public Dice getWeightModifier() {
+        return weightModifier;
+    }
+
+    public void setWeightModifier(Dice weightModifier) {
+        this.weightModifier = weightModifier;
     }
 }

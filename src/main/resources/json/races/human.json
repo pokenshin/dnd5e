@@ -12,6 +12,16 @@
   "ageMax": 100,
   "size": "Medium",
   "speed": 30,
+  "baseHeight": 145,
+  "heightModifier":{
+    "sides": 10,
+    "rolls": 2
+  },
+  "baseWeight": 50,
+  "weightModifier":{
+    "sides": 4,
+    "rolls": 2
+  },
   "otherTraits": [
     "Extra Language Slot"
   ],

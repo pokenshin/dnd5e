@@ -12,6 +12,16 @@
   "ageMax": 750,
   "size": "Medium",
   "speed": 30,
+  "baseHeight": 140,
+  "heightModifier":{
+    "sides": 10,
+    "rolls": 2
+  },
+  "baseWeight": 40,
+  "weightModifier":{
+    "sides": 4,
+    "rolls": 1
+  },
   "otherTraits": [
     "Darkvision",
     "Keen Senses",
