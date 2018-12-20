@@ -49,6 +49,7 @@ public class CharacterBusiness {
         result.setLevel(1);
         result.setExperience(0);
         this.applyRace(result, randomizer.getRandomRace());
+        this.applyCharacterClass(result, randomizer.getRandomClass());
         //TODO: Define a random Class and apply its bonuses
         //TODO: Define a random background and apply its bonuses
         //TODO: Roll Ability Scores and assign them according to the class

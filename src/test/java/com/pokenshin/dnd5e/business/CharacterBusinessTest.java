@@ -74,6 +74,10 @@ class CharacterBusinessTest {
     void generateRandomCharacter() {
         character = business.generateRandomCharacter();
         assertNotNull(character);
+        assertEquals(1, character.getLevel());
+        assertEquals(0, character.getExperience());
+        assertNotEquals("", character.getRace().getName());
+        assertNotEquals("", character.getCharacterClass().getName());
     }
 
     @Test
