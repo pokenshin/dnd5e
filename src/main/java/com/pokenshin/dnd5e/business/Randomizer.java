@@ -21,12 +21,14 @@ public class Randomizer {
     public Race getRandomRace(){
         JsonMapper mapper = new JsonMapper();
         Map<Integer, Race> raceList = mapper.getAllRaces();
-        return raceList.get(rng.nextInt(raceList.size()));
+        Race race = raceList.get(rng.nextInt(raceList.size() + 1));
+        return race;
     }
 
     public CharacterClass getRandomClass(){
         JsonMapper mapper = new JsonMapper();
-        Map<Integer, CharacterClass> raceList = mapper.getAllCharacterClasses();
-        return raceList.get(rng.nextInt(raceList.size()));
+        Map<Integer, CharacterClass> classList = mapper.getAllCharacterClasses();
+        CharacterClass characterClass = classList.get(rng.nextInt(classList.size() + 1));
+        return characterClass;
     }
 }
