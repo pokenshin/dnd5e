@@ -1,7 +1,9 @@
 package com.pokenshin.dnd5e.business;
 
+import com.pokenshin.dnd5e.controller.CharacterRaceController;
 import com.pokenshin.dnd5e.entity.CharacterAbility;
 import com.pokenshin.dnd5e.entity.Character;
+import com.pokenshin.dnd5e.entity.CharacterClass;
 import com.pokenshin.dnd5e.entity.Race;
 import com.pokenshin.dnd5e.util.JsonMapper;
 import org.junit.Before;
@@ -13,6 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class CharacterBusinessTest {
     private CharacterBusiness business;
+    private Character character;
 
     @BeforeEach
     void SetUp(){
@@ -21,9 +24,7 @@ class CharacterBusinessTest {
 
     @Test
     void resetAbilityScores() {
-        Character character = new Character();
-
-        character = business.resetAbilityScores(character);
+        character = business.resetAbilityScores(new Character());
 
         assertEquals(12, character.getStrength().getValue());
         assertEquals(12, character.getDexterity().getValue());
@@ -43,11 +44,10 @@ class CharacterBusinessTest {
 
     @Test
     void applyRace() {
-        Character character = new Character();
         JsonMapper mapper = new JsonMapper();
         Race human = mapper.getRace("human.json");
 
-        character = business.applyRace(character, human);
+        character = business.applyRace(new Character(), human);
 
         assertEquals("Human", character.getRace().getName());
         assertEquals(13, character.getStrength().getValue());
@@ -60,5 +60,34 @@ class CharacterBusinessTest {
         assertEquals(30, character.getSpeed());
         assertEquals(1, character.getTraits().size());
         assertEquals(1, character.getLanguages().size());
+    }
+
+    @Test
+    void resetCharacter() {
+        character = business.resetCharacter(new Character());
+        assertEquals(1, character.getLevel());
+        assertEquals(0, character.getExperience());
+    }
+
+
+    @Test
+    void generateRandomCharacter() {
+        character = business.generateRandomCharacter();
+        assertNotNull(character);
+    }
+
+    @Test
+    void applyRandomRace() {
+        character = business.applyRandomRace(new Character());
+        assertNotEquals(0, character.getRace().getId());
+    }
+
+    @Test
+    void applyCharacterClass() {
+        JsonMapper mapper = new JsonMapper();
+        CharacterClass fighter = mapper.getCharacterClass("fighter.json");
+        character = business.applyCharacterClass(new Character(), fighter);
+        assertEquals("Fighter", character.getCharacterClass().getName());
+        assertEquals("1d10", character.getHitDice().toString());
     }
 }

@@ -9,8 +9,8 @@ class JsonMapperTest {
     @Test
     void getRace() {
         JsonMapper mapper = new JsonMapper();
-        Race human = mapper.getRace("races/human.json");
-        assertEquals(1, human.getId());
+        Race human = mapper.getRace("human.json");
+        assertEquals(8, human.getId());
         assertEquals("Human", human.getName());
     }
 }
