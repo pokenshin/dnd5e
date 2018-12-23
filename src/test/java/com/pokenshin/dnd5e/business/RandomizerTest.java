@@ -33,4 +33,13 @@ class RandomizerTest {
         assertTrue(height > 140);
         assertTrue(height < 161);
     }
+
+    @Test
+    void getRandomWeight(){
+        JsonMapper mapper = new JsonMapper();
+        Race elf =  mapper.getRace("elf.json");
+        int weight = randomizer.getRandomWeight(elf);
+        assertTrue(weight > 40);
+        assertTrue(weight < 44);
+    }
 }

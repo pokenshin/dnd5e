@@ -1,0 +1,141 @@
+{
+  "id": 1,
+  "name": "Acolyte",
+  "skillProficiencies": {
+    "acrobatics": {
+      "value": 0,
+      "advantage": false
+    },
+    "animalHandling": {
+      "value": 0,
+      "advantage": false
+    },
+    "arcana": {
+      "value": 0,
+      "advantage": false
+    },
+    "athletics": {
+      "value": 0,
+      "advantage": false
+    },
+    "deception": {
+      "value": 0,
+      "advantage": false
+    },
+    "history": {
+      "value": 0,
+      "advantage": false
+    },
+    "insight": {
+      "value": 0,
+      "advantage": true
+    },
+    "intimidation": {
+      "value": 0,
+      "advantage": false
+    },
+    "investigation": {
+      "value": 0,
+      "advantage": false
+    },
+    "medicine": {
+      "value": 0,
+      "advantage": false
+    },
+    "nature": {
+      "value": 0,
+      "advantage": false
+    },
+    "perception": {
+      "value": 0,
+      "advantage": false
+    },
+    "performance": {
+      "value": 0,
+      "advantage": false
+    },
+    "persuasion": {
+      "value": 0,
+      "advantage": false
+    },
+    "religion": {
+      "value": 0,
+      "advantage": true
+    },
+    "sleightOfHand": {
+      "value": 0,
+      "advantage": false
+    },
+    "stealth": {
+      "value": 0,
+      "advantage": false
+    },
+    "survival": {
+      "value": 0,
+      "advantage": false
+    }
+  },
+  "toolProficiencies":[
+    "Disguise Kit",
+    "Forgery Kit"
+  ],
+  "languages": [
+    "Custom 1",
+    "Custom 2"
+  ],
+  "equipment":[
+    "1 Holy Symbol",
+    "1 Prayer Book or 1 Prayer Wheel",
+    "5 Sticks of Incense",
+    "1 Vestiment",
+    "1 Set of Common Clothes",
+    "1 Belt Pouch"
+  ],
+  "startingMoney":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 15,
+    "platinum": 0
+  },
+  "features":[
+    "Shelter of the Faithful"
+  ],
+  "additionalTraits": [
+    ""
+  ],
+  "personalityTraits":[
+    "I idolize a particular hero of my faith, and constatly refer to that person's deeds and example.",
+    "I can find common ground between the fiercest enemies, empathizing with them and always working toward peace.",
+    "I see omens in every event and action. The gods try to speak to us, we just need to listen.",
+    "Nothing can shake my optimistic attitude.",
+    "I quote (or misquote) sacred texts and proverbs in almost every situation",
+    "I am tolerant (or intolerant) of other faiths and respect (or condemn) the worship of other gods",
+    "I've enjoyed fine food, drink and high society among my temple's elite. Rough living grates on me.",
+    "I've spent so long in the temple that I have littel pratical experience dealing with people in the outside world"
+  ],
+  "ideals":[
+    "[Lawful]: Tradition. The ancient traditions of worship and sacrifice muyst be preserved and upheld.",
+    "[Good]: Charity. I always try to help those in need, no matter what the personal cost.",
+    "[Chaotic]: Change. We must help bring about the changes the gods are constatly working in the world.",
+    "[Lawful]: Power. I hope to one day rise in the top of my faith's religious hierarchy.",
+    "[Lawful]: Faith. I trust that my deity will guide my actions. I have faith that if I work hard, things will go well.",
+    "[Any]: Aspiration. I seek to prove myself worthy of my god's favor by matching my actions against his or her teachings."
+  ],
+  "bonds":[
+    "I would die to recover an ancient relic of my faith that was long lost ago.",
+    "I will someday get revenge on the corrupt temple hierarchy who branded me a heretic.",
+    "I owe my life to the priest who took me in when my parents died.",
+    "Everything I do is for the common people.",
+    "I will do anything to protect the temple where I served.",
+    "I seek to preserve a sacred text that my enemies consider heretical and seek to destroy."
+  ],
+  "flaws":[
+    "I judge others harshly and myself even more severely.",
+    "I put too much trust in those who wield power within my temple's hierarchy.",
+    "My piety sometimes leads me to blindly trust those that profess faith in my god.",
+    "I am inflexible in my thinking.",
+    "I am suspicious of strangers and expect the worst in them.",
+    "Once I pick a goal, I become obsessed with it to the detrimet of everything else in my life."
+  ]
+}

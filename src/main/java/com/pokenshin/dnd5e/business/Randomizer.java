@@ -23,20 +23,27 @@ public class Randomizer {
     public Race getRandomRace(){
         JsonMapper mapper = new JsonMapper();
         Map<Integer, Race> raceList = mapper.getAllRaces();
-        Race race = raceList.get(rng.nextInt(raceList.size() + 1));
+        Race race = raceList.get(ThreadLocalRandom.current().nextInt(1, raceList.size()));
         return race;
     }
 
     public CharacterClass getRandomClass(){
         JsonMapper mapper = new JsonMapper();
         Map<Integer, CharacterClass> classList = mapper.getAllCharacterClasses();
-        CharacterClass characterClass = classList.get(ThreadLocalRandom.current().nextInt(classList.size() + 1));
+        CharacterClass characterClass = classList.get(ThreadLocalRandom.current().nextInt(1,classList.size()));
         return characterClass;
     }
 
     public int getRandomHeight(Race race){
         int result = race.getBaseHeight();
         DiceBusiness dice = new DiceBusiness(race.getHeightModifier());
+        result = result + dice.getRoll();
+        return result;
+    }
+
+    public int getRandomWeight(Race race){
+        int result = race.getBaseWeight();
+        DiceBusiness dice = new DiceBusiness(race.getWeightModifier());
         result = result + dice.getRoll();
         return result;
     }
