@@ -80,8 +80,8 @@
     "Forgery Kit"
   ],
   "languages": [
-    "Custom 1",
-    "Custom 2"
+    "Any",
+    "Any"
   ],
   "equipment":[
     "1 Holy Symbol",
@@ -114,14 +114,12 @@
     "I've enjoyed fine food, drink and high society among my temple's elite. Rough living grates on me.",
     "I've spent so long in the temple that I have littel pratical experience dealing with people in the outside world"
   ],
-  "ideals":[
-    "[Lawful]: Tradition. The ancient traditions of worship and sacrifice muyst be preserved and upheld.",
-    "[Good]: Charity. I always try to help those in need, no matter what the personal cost.",
-    "[Chaotic]: Change. We must help bring about the changes the gods are constatly working in the world.",
-    "[Lawful]: Power. I hope to one day rise in the top of my faith's religious hierarchy.",
-    "[Lawful]: Faith. I trust that my deity will guide my actions. I have faith that if I work hard, things will go well.",
-    "[Any]: Aspiration. I seek to prove myself worthy of my god's favor by matching my actions against his or her teachings."
-  ],
+  "idealGood": "Charity. I always try to help those in need, no matter what the personal cost.",
+  "idealEvil": "Prosecution. I accuse, denounce and execute people that don't share my faith",
+  "idealLawful": "Tradition. The ancient traditions of worship and sacrifice muyst be preserved and upheld.",
+  "idealChaotic": "Change. We must help bring about the changes the gods are constatly working in the world.",
+  "idealNeutral": "Faith. I trust that my deity will guide my actions. I have faith that if I work hard, things will go well.",
+  "idealAny": "Power. I hope to one day rise in the top of my faith's religious hierarchy.",
   "bonds":[
     "I would die to recover an ancient relic of my faith that was long lost ago.",
     "I will someday get revenge on the corrupt temple hierarchy who branded me a heretic.",

@@ -120,14 +120,12 @@
     "I misuse long words in an attempt to sound smarter.",
     "I get bored easily. When am I going to get on with my destiny?"
   ],
-  "ideals":[
-    "[Good] - Respect. People deserve to be treated with dignity and respect.",
-    "[Lawful] - Fairness. No one should get preferential treatment before the law, and no one is above the law.",
-    "[Chaotic] - Freedom. Tyrants must not be allowed to oppress the people.",
-    "[Evil] - Might. If I become strong, I can take what I want—what I deserve.",
-    "[Neutral] - Sincerity. There’s no good in pretending to be something I’m not.",
-    "[Any] - Destiny. Nothing and no one can steer me away from my higher calling."
-  ],
+  "idealGood": "Respect. People deserve to be treated with dignity and respect.",
+  "idealEvil": "Might. If I become strong, I can take what I want—what I deserve.",
+  "idealLawful": "Fairness. No one should get preferential treatment before the law, and no one is above the law.",
+  "idealChaotic": "Freedom. Tyrants must not be allowed to oppress the people.",
+  "idealNeutral": "Sincerity. There’s no good in pretending to be something I’m not.",
+  "idealAny": "Destiny. Nothing and no one can steer me away from my higher calling.",
   "bonds":[
     "I have a family, but I have no idea where they are. One day, I hope to see them again.",
     "I worked the land, I love the land, and I will protect the land.",

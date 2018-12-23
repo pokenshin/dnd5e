@@ -79,7 +79,7 @@
     "Artisan's Tools"
   ],
   "languages": [
-    "Custom"
+    "Any"
   ],
   "equipment":[
     "1 Set of Artisan Tools",
@@ -129,14 +129,12 @@
     "I don’t part with my money easily and will haggle tirelessly to get the best deal possible.",
     "I’m well known for my work, and I want to make sure everyone appreciates it. I'm always taken aback when people haven’t heard of me."
   ],
-  "ideals":[
-    "[Lawful] - Community. It is the duty of all civilized people to strengthen the bonds of community and the security of civilization.",
-    "[Good] - Generosity. My talents were given to me so that I could use them to benefit the world.",
-    "[Chaotic] - Freedom. Everyone should be free to pursue his or her own livelihood.",
-    "[Evil] - Greed. I’m only in it for the money.",
-    "[Neutral] - People. I’m committed to the people I care about, not to ideals.",
-    "[Any] - Aspiration. I work hard to be the best there is at my craft."
-  ],
+  "idealGood": "Generosity. My talents were given to me so that I could use them to benefit the world.",
+  "idealEvil": "Greed. I’m only in it for the money.",
+  "idealLawful": "Community. It is the duty of all civilized people to strengthen the bonds of community and the security of civilization.",
+  "idealChaotic": "Freedom. Everyone should be free to pursue his or her own livelihood.",
+  "idealNeutral": "People. I’m committed to the people I care about, not to ideals.",
+  "idealAny": "Aspiration. I work hard to be the best there is at my craft.",
   "bonds":[
     "The workshop where I learned my trade is the most important place in the world to me.",
     "I created a great work for someone, and then found them unworthy to receive it. I’m still looking for someone worthy.",

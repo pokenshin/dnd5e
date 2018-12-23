@@ -114,14 +114,12 @@
     "I keep multiple holy symbols on me and invoke whatever deity might come in useful at any given moment.",
     "I pocket anything I see that might have some value."
   ],
-  "ideals":[
-    "[Chaotic] - Independence. I am a free spirit - no one tells me what to do.",
-    "[Lawful] - Fairness. I never target people who can't afford to lose a few coins.",
-    "[Good] - Charity. I distribute the money I acquire to the people who really need it.",
-    "[Chaotic] - Creativity. I never run the same con twice.",
-    "[Good] - Friendship. Material goods come and go. Bonds of friendship last forever.",
-    "[Any] - Aspiration. I'm determined to make something of myself."
-  ],
+  "idealGood": "Charity. I distribute the money I acquire to the people who really need it.",
+  "idealEvil": "Material. Friendships come and go. Material goods last until I die.",
+  "idealLawful": "Fairness. I never target people who can't afford to lose a few coins.",
+  "idealChaotic": "Independence. I am a free spirit - no one tells me what to do.",
+  "idealNeutral": "Creativity. I never run the same con twice.",
+  "idealAny": "Aspiration. I'm determined to make something of myself.",
   "bonds":[
     "I fleeced the wrong person and must work to ensure that this individual never crosses path with me or those I care about",
     "I owe everything to my mentor - a horrible person who's probably rotting in jail somewhere.",

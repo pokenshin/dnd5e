@@ -117,14 +117,12 @@
     "The best way to get me to do something is to tell me I can't do it.",
     "I blow up at the slightest insult."
   ],
-  "ideals":[
-    "[Lawful] - Honor. I don’t steal from others in the trade.",
-    "[Chaotic] - Freedom. Chains are meant to be broken, as are those who would forge them.",
-    "[Good] - Charity. I steal from the wealthy so that I can help people in need.",
-    "[Evil] - Greed. I will do whatever it takes to become wealthy.",
-    "[Neutral] - People. I’m loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care.",
-    "[Good] - Redemption. There’s a spark of good in everyone."
-  ],
+  "idealGood": "Charity. I steal from the wealthy so that I can help people in need.",
+  "idealEvil": "Greed. I will do whatever it takes to become wealthy.",
+  "idealLawful": "Honor. I don’t steal from others in the trade.",
+  "idealChaotic": "Freedom. Chains are meant to be broken, as are those who would forge them.",
+  "idealNeutral": "People. I’m loyal to my friends, not to any ideals, and everyone else can take a trip down the Styx for all I care.",
+  "idealAny": "Redemption. There’s a spark of good in everyone.",
   "bonds":[
     "I’m trying to pay off an old debt I owe to a generous benefactor.",
     "My ill-gotten gains go to support my family.",

@@ -119,14 +119,12 @@
     "I’ll settle for nothing less than perfection.",
     "I change my mood or my mind as quickly as I change key in a song."
   ],
-  "ideals":[
-    "[Good] - Beauty. When I perform, I make the world better than it was.",
-    "[Lawful] - Tradition. The stories, legends, and songs of the past must never be forgotten, for they teach us who we are.",
-    "[Chaotic] - Creativity. The world is in need of new ideas and bold action.",
-    "[Evil] Greed. I’m only in it for the money and fame.",
-    "[Neutral] People. I like seeing the smiles on people’s faces when I perform. That’s all that matters.",
-    "[Any] Honesty. Art should reflect the soul; it should come from within and reveal who we really are."
-  ],
+  "idealGood": "Beauty. When I perform, I make the world better than it was.",
+  "ideal[Evil": "Greed. I’m only in it for the money and fame.",
+  "idealLawful": "Tradition. The stories, legends, and songs of the past must never be forgotten, for they teach us who we are.",
+  "idealChaotic": "Creativity. The world is in need of new ideas and bold action.",
+  "idealNeutral": "People. I like seeing the smiles on people’s faces when I perform. That’s all that matters.",
+  "idealAny": "Honesty. Art should reflect the soul; it should come from within and reveal who we really are.",
   "bonds":[
     "My instrument is my most treasured possession, and it reminds me of someone I love.",
     "Someone stole my precious instrument, and someday I’ll get it back.",
