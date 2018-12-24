@@ -1,5 +1,6 @@
 package com.pokenshin.dnd5e.business;
 
+import com.pokenshin.dnd5e.entity.CharacterBackground;
 import com.pokenshin.dnd5e.entity.CharacterClass;
 import com.pokenshin.dnd5e.entity.Dice;
 import com.pokenshin.dnd5e.entity.Race;
@@ -8,6 +9,7 @@ import com.pokenshin.dnd5e.util.JsonMapper;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
+import java.util.prefs.BackingStoreException;
 
 public class Randomizer {
     private Random rng;
@@ -46,5 +48,12 @@ public class Randomizer {
         DiceBusiness dice = new DiceBusiness(race.getWeightModifier());
         result = result + dice.getRoll();
         return result;
+    }
+
+    public CharacterBackground getRandomBackground(){
+        JsonMapper mapper = new JsonMapper();
+        Map<Integer, CharacterBackground> bgList = mapper.getAllCharacterBackgrounds();
+        CharacterBackground background = bgList.get(ThreadLocalRandom.current().nextInt(1, bgList.size()));
+        return background;
     }
 }

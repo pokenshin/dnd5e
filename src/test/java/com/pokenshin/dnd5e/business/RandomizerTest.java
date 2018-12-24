@@ -42,4 +42,9 @@ class RandomizerTest {
         assertTrue(weight > 40);
         assertTrue(weight < 44);
     }
+
+    @Test
+    void getRandomBackground() {
+        assertNotNull(randomizer.getRandomBackground());
+    }
 }
