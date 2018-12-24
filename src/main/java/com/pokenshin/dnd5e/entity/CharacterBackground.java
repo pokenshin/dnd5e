@@ -1,5 +1,6 @@
 package com.pokenshin.dnd5e.entity;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CharacterBackground {
@@ -9,6 +10,7 @@ public class CharacterBackground {
     private List<String> toolProficiencies;
     private List<String> languages;
     private List<String> equipment;
+    private CharacterCurrency startingMoney;
     private List<String> features;
     private List<String> additionalTraits;
     private List<String> personalityTraits;
@@ -21,13 +23,14 @@ public class CharacterBackground {
     private List<String> bonds;
     private List<String> flaws;
 
-    public CharacterBackground(int id, String name, CharacterSkills skillProficiencies, List<String> toolProficiencies, List<String> languages, List<String> equipment, List<String> features, List<String> additionalTraits, List<String> personalityTraits, String idealGood, String idealEvil, String idealLawful, String idealChaotic, String idealNeutral, String idealAny, List<String> bonds, List<String> flaws) {
+    public CharacterBackground(int id, String name, CharacterSkills skillProficiencies, List<String> toolProficiencies, List<String> languages, List<String> equipment, CharacterCurrency startingMoney, List<String> features, List<String> additionalTraits, List<String> personalityTraits, String idealGood, String idealEvil, String idealLawful, String idealChaotic, String idealNeutral, String idealAny, List<String> bonds, List<String> flaws) {
         this.id = id;
         this.name = name;
         this.skillProficiencies = skillProficiencies;
         this.toolProficiencies = toolProficiencies;
         this.languages = languages;
         this.equipment = equipment;
+        this.startingMoney = startingMoney;
         this.features = features;
         this.additionalTraits = additionalTraits;
         this.personalityTraits = personalityTraits;
@@ -40,6 +43,29 @@ public class CharacterBackground {
         this.bonds = bonds;
         this.flaws = flaws;
     }
+
+    public CharacterBackground() {
+        this.id = 0;
+        this.name = "";
+        this.skillProficiencies = new CharacterSkills();
+        this.toolProficiencies = new ArrayList<>();
+        this.languages = new ArrayList<>();
+        this.equipment = new ArrayList<>();
+        this.startingMoney = new CharacterCurrency();
+        this.features = new ArrayList<>();
+        this.additionalTraits = new ArrayList<>();
+        this.personalityTraits = new ArrayList<>();
+        this.idealGood = "";
+        this.idealEvil = "";
+        this.idealLawful = "";
+        this.idealChaotic = "";
+        this.idealNeutral = "";
+        this.idealAny = "";
+        this.bonds = new ArrayList<>();
+        this.flaws = new ArrayList<>();
+    }
+
+
 
     public int getId() {
         return id;
@@ -87,6 +113,14 @@ public class CharacterBackground {
 
     public void setEquipment(List<String> equipment) {
         this.equipment = equipment;
+    }
+
+    public CharacterCurrency getStartingMoney() {
+        return startingMoney;
+    }
+
+    public void setStartingMoney(CharacterCurrency startingMoney) {
+        this.startingMoney = startingMoney;
     }
 
     public List<String> getFeatures() {

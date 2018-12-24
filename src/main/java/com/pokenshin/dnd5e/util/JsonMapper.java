@@ -1,6 +1,7 @@
 package com.pokenshin.dnd5e.util;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.pokenshin.dnd5e.entity.CharacterBackground;
 import com.pokenshin.dnd5e.entity.CharacterClass;
 import com.pokenshin.dnd5e.entity.Race;
 
@@ -12,6 +13,7 @@ public class JsonMapper {
     private String basePath = "json/";
     private String racesPath = "races/";
     private String classPath = "classes/";
+    private String backgroundPath = "backgrounds/";
 
     public Race getRace(String fileName){
         Race race = new Race();
@@ -45,6 +47,22 @@ public class JsonMapper {
         return characterClass;
     }
 
+    public CharacterBackground getCharacterBackground(String fileName) {
+        CharacterBackground characterBackground = new CharacterBackground();
+        ObjectMapper objectMapper = new ObjectMapper();
+        ClassLoader classLoader = JsonMapper.class.getClassLoader();
+
+        File file;
+        file = new File(Objects.requireNonNull(classLoader.getResource(basePath + backgroundPath + fileName)).getFile());
+        try {
+            characterBackground = objectMapper.readValue(file, CharacterBackground.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return characterBackground;
+    }
+
     public HashMap<Integer, Race> getAllRaces(){
         HashMap<Integer, Race> result = new HashMap<>();
         ClassLoader classLoader = JsonMapper.class.getClassLoader();
@@ -66,6 +84,19 @@ public class JsonMapper {
             for (String fileName: fileList ) {
                 CharacterClass characterClass = this.getCharacterClass(fileName);
                 result.put(characterClass.getId(), characterClass);
+            }
+        }
+        return result;
+    }
+
+    public HashMap<Integer, CharacterBackground> getAllCharacterBackgrounds(){
+        HashMap<Integer, CharacterBackground> result = new HashMap<>();
+        ClassLoader classLoader = JsonMapper.class.getClassLoader();
+        String[] fileList = new File(Objects.requireNonNull(classLoader.getResource(basePath + backgroundPath)).getFile()).list();
+        if (fileList != null){
+            for (String fileName: fileList ) {
+                CharacterBackground characterBackground = this.getCharacterBackground(fileName);
+                result.put(characterBackground.getId(), characterBackground);
             }
         }
         return result;
