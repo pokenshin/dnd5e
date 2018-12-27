@@ -1,9 +1,9 @@
 package com.pokenshin.dnd5e.business;
 
-import com.pokenshin.dnd5e.entity.CharacterAbility;
+import com.pokenshin.dnd5e.entity.*;
 import com.pokenshin.dnd5e.entity.Character;
-import com.pokenshin.dnd5e.entity.CharacterClass;
-import com.pokenshin.dnd5e.entity.Race;
+
+import java.lang.reflect.Field;
 
 public class CharacterBusiness {
     /**
@@ -50,6 +50,7 @@ public class CharacterBusiness {
         result.setExperience(0);
         this.applyRace(result, randomizer.getRandomRace());
         this.applyCharacterClass(result, randomizer.getRandomClass());
+        this.applyBackground(result, randomizer.getRandomBackground());
         //TODO: Define a random background and apply its bonuses
         //TODO: Roll Ability Scores and assign them according to the class
         //TODO: Define initiative (dex modifier)
@@ -63,6 +64,54 @@ public class CharacterBusiness {
         //TODO: Define Name, Alignment, Personality, Goals, Bonds, Flaws
 
         return result;
+    }
+
+    /**
+     * Applies a predetermined CharacterBackground to a Character
+     * @param character The character that will have a CharacterBackground applied.
+     * @param background The background that will be applied to the character;
+     * @return Character object with the CharacterObject applied to it
+     */
+
+    private void applyBackground(Character character, CharacterBackground background) {
+        character.setBackground(background.getName());
+        character = this.addCharacterSkillAdvantages(character, background.getSkillProficiencies());
+        character.getProficiencies().addAll(background.getToolProficiencies());
+        character.getLanguages().addAll(background.getLanguages());
+        character.getEquipment().addAll(background.getEquipment());
+        //this.addMoney(character, background.getStartingMoney());
+        character.getFeatures().addAll(background.getFeatures());
+        //TODO: create a getRandomPersonalityTrait in Randomizer and call it here.
+        //TODO: create a getRandomAdditionalTrait in Randomizer and call it here.
+        //TODO: create a getRandomIdeal in Randomizer and call it here.
+        //TODO: create a getRandomBond in Randomizer and call it here.
+        //TODO: create a getRandomFlaw in Randomizer and call it here.
+
+
+    }
+
+    public Character addCharacterSkillAdvantages(Character character, CharacterSkills skillProficiencies){
+        //TODO: do this more gracefully
+        character.getSkills().getAcrobatics().setAdvantage(skillProficiencies.getAcrobatics().isAdvantage());
+        character.getSkills().getAnimalHandling().setAdvantage(skillProficiencies.getAnimalHandling().isAdvantage());
+        character.getSkills().getArcana().setAdvantage(skillProficiencies.getArcana().isAdvantage());
+        character.getSkills().getAthletics().setAdvantage((skillProficiencies.getAthletics().isAdvantage()));
+        character.getSkills().getDeception().setAdvantage(skillProficiencies.getDeception().isAdvantage());
+        character.getSkills().getHistory().setAdvantage(skillProficiencies.getHistory().isAdvantage());
+        character.getSkills().getInsight().setAdvantage(skillProficiencies.getInsight().isAdvantage());
+        character.getSkills().getIntimidation().setAdvantage(skillProficiencies.getInsight().isAdvantage());
+        character.getSkills().getInvestigation().setAdvantage(skillProficiencies.getInsight().isAdvantage());
+        character.getSkills().getMedicine().setAdvantage(skillProficiencies.getMedicine().isAdvantage());
+        character.getSkills().getNature().setAdvantage(skillProficiencies.getNature().isAdvantage());
+        character.getSkills().getPerception().setAdvantage(skillProficiencies.getPerception().isAdvantage());
+        character.getSkills().getPerformance().setAdvantage(skillProficiencies.getPerformance().isAdvantage());
+        character.getSkills().getPersuasion().setAdvantage(skillProficiencies.getPersuasion().isAdvantage());
+        character.getSkills().getReligion().setAdvantage(skillProficiencies.getReligion().isAdvantage());
+        character.getSkills().getSleightOfHand().setAdvantage(skillProficiencies.getSleightOfHand().isAdvantage());
+        character.getSkills().getStealth().setAdvantage(skillProficiencies.getStealth().isAdvantage());
+        character.getSkills().getSurvival().setAdvantage(skillProficiencies.getSurvival().isAdvantage());
+
+        return character;
     }
 
     /**
