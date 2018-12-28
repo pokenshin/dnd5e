@@ -58,7 +58,9 @@ public class Randomizer {
     }
 
     public String getRandomListItemString(List<String> list){
-        return list.get(ThreadLocalRandom.current().nextInt(0, list.size()));
+        if (list.size() > 0){
+            return list.get(ThreadLocalRandom.current().nextInt(0, list.size()));
+        } else return null;
     }
 
     public String getRandomAlignment() {

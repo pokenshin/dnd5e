@@ -6,11 +6,6 @@ public class Dice {
     private int sides;
     private int rolls;
 
-    public int getResult() {
-        Random rng = new Random();
-        return sides * (1 + rng.nextInt(sides)) ;
-    }
-
     public Dice(String dice){
         this.rolls = Integer.parseInt(dice.split("d")[0]);
         this.sides = Integer.parseInt(dice.split("d")[1]);

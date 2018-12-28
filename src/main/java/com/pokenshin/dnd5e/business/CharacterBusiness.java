@@ -53,9 +53,6 @@ public class CharacterBusiness {
         result.setAlignment(randomizer.getRandomAlignment());
         result.setCharacterName("Random Character");
         result.setPlayerName("The Computer");
-        this.applyRace(result, randomizer.getRandomRace());
-        this.applyCharacterClass(result, randomizer.getRandomClass());
-        this.applyBackground(result, randomizer.getRandomBackground());
         result.getStrength().setValue(abilityScoreDice.getRoll());
         result.getStrength().setModifier(this.getModifier(result.getStrength().getValue()));
         result.getDexterity().setValue(abilityScoreDice.getRoll());
@@ -68,6 +65,10 @@ public class CharacterBusiness {
         result.getWisdom().setModifier(this.getModifier(result.getWisdom().getValue()));
         result.getCharisma().setValue(abilityScoreDice.getRoll());
         result.getCharisma().setModifier(this.getModifier(result.getCharisma().getValue()));
+        this.applyRace(result, randomizer.getRandomRace());
+        this.applyCharacterClass(result, randomizer.getRandomClass());
+        this.applyBackground(result, randomizer.getRandomBackground());
+
         result = this.calculateNewCharacter(result);
         //TODO: Define spells if applicable. Based on class. Spell attack bonus = primary spellcasting stat + proficiency bonus.
 
@@ -263,17 +264,17 @@ public class CharacterBusiness {
         character.setRace(race);
         character.setSpeed(race.getSpeed());
         character.getStrength().setValue(character.getStrength().getValue() + race.getAbilityIncrease().get(0));
-        character.getStrength().setModifier(this.getModifier(race.getAbilityIncrease().get(0)));
+        character.getStrength().setModifier(this.getModifier(character.getStrength().getValue()));
         character.getDexterity().setValue(character.getDexterity().getValue() + race.getAbilityIncrease().get(1));
-        character.getDexterity().setModifier(this.getModifier(race.getAbilityIncrease().get(1)));
+        character.getDexterity().setModifier(this.getModifier(character.getDexterity().getValue()));
         character.getConstitution().setValue(character.getConstitution().getValue() + race.getAbilityIncrease().get(2));
-        character.getConstitution().setModifier(this.getModifier(race.getAbilityIncrease().get(2)));
+        character.getConstitution().setModifier(this.getModifier(character.getConstitution().getValue()));
         character.getIntelligence().setValue(character.getIntelligence().getValue() + race.getAbilityIncrease().get(3));
-        character.getIntelligence().setModifier(this.getModifier(race.getAbilityIncrease().get(3)));
+        character.getIntelligence().setModifier(this.getModifier(character.getIntelligence().getValue()));
         character.getWisdom().setValue(character.getWisdom().getValue() + race.getAbilityIncrease().get(4));
-        character.getWisdom().setModifier(this.getModifier(race.getAbilityIncrease().get(4)));
+        character.getWisdom().setModifier(this.getModifier(character.getWisdom().getValue()));
         character.getCharisma().setValue(character.getCharisma().getValue() + race.getAbilityIncrease().get(5));
-        character.getCharisma().setModifier(this.getModifier(race.getAbilityIncrease().get(5)));
+        character.getCharisma().setModifier(this.getModifier(character.getCharisma().getValue()));
         character.setSize(race.getSize());
         character.getTraits().addAll(race.getOtherTraits());
         character.getLanguages().addAll(race.getLanguages());
