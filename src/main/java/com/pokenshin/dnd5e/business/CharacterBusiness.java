@@ -3,6 +3,9 @@ package com.pokenshin.dnd5e.business;
 import com.pokenshin.dnd5e.entity.*;
 import com.pokenshin.dnd5e.entity.Character;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CharacterBusiness {
     /**
      * Resets a Character to its initial values
@@ -71,9 +74,10 @@ public class CharacterBusiness {
      * @return Character object with the CharacterObject applied to it
      */
 
-    public void applyBackground(Character character, CharacterBackground background) {
+    public Character applyBackground(Character character, CharacterBackground background) {
         CharacterCurrencyBusiness characterCurrencyBusiness = new CharacterCurrencyBusiness();
         Randomizer rng = new Randomizer();
+        List<String> possibleIdeals = new ArrayList<>();
 
         character.setBackground(background.getName());
         character = this.addCharacterSkillAdvantages(character, background.getSkillProficiencies());
@@ -83,14 +87,29 @@ public class CharacterBusiness {
         character.setCurrency(characterCurrencyBusiness.addMoney(character.getCurrency(), background.getStartingMoney()));
         character.getFeatures().addAll(background.getFeatures());
         character.getTraits().add(rng.getRandomListItemString(background.getPersonalityTraits()));
+        character.getTraits().add(rng.getRandomListItemString(background.getAdditionalTraits()));
 
-        //TODO: create a getRandomPersonalityTrait in Randomizer and call it here.
-        //TODO: create a getRandomAdditionalTrait in Randomizer and call it here.
-        //TODO: create a getRandomIdeal in Randomizer and call it here.
-        //TODO: create a getRandomBond in Randomizer and call it here.
-        //TODO: create a getRandomFlaw in Randomizer and call it here.
+        if (character.getAlignment().contains("Lawful"))
+            possibleIdeals.add((background.getIdealLawful()));
 
+        if (character.getAlignment().contains("Good"))
+            possibleIdeals.add(background.getIdealGood());
 
+        if (character.getAlignment().contains("Chaotic"))
+            possibleIdeals.add(background.getIdealChaotic());
+
+        if (character.getAlignment().contains("Evil"))
+            possibleIdeals.add(background.getIdealEvil());
+
+        if (character.getAlignment().contains("Neutral"))
+            possibleIdeals.add(background.getIdealNeutral());
+
+        possibleIdeals.add(background.getIdealAny());
+        character.getIdeals().add(rng.getRandomListItemString(possibleIdeals));
+        character.getFlaws().add(rng.getRandomListItemString(background.getFlaws()));
+        character.getBonds().add(rng.getRandomListItemString(background.getBonds()));
+
+        return character;
     }
 
     /**

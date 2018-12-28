@@ -101,4 +101,26 @@ class CharacterBusinessTest {
         assertFalse(character.getSkills().getHistory().isAdvantage());
         assertTrue(character.getSkills().getStealth().isAdvantage());
     }
+
+    @Test
+    void applyBackground(){
+        JsonMapper mapper = new JsonMapper();
+        CharacterBackground background = mapper.getCharacterBackground("outlander.json");
+        character = new Character();
+        character.setAlignment("Neutral Good");
+        character = business.applyBackground(character, background);
+
+        assertEquals("Outlander", character.getBackground());
+        assertFalse(character.getSkills().getArcana().isAdvantage());
+        assertTrue(character.getSkills().getAthletics().isAdvantage());
+        assertTrue(character.getProficiencies().stream().anyMatch(str -> str.trim().equals("Musical Instrument")));
+        assertTrue(character.getEquipment().stream().anyMatch(str -> str.trim().equals("1 Staff")));
+        assertEquals(10, character.getCurrency().getGold());
+        assertTrue(character.getFeatures().stream().anyMatch(str -> str.trim().equals("Wanderer")));
+        assertFalse(character.getTraits().isEmpty());
+        assertFalse(character.getIdeals().isEmpty());
+        assertFalse(character.getIdeals().stream().anyMatch(str -> str.trim().equals("Change. Life is like the seasons, in constant change, and we must change with it.")));
+        assertFalse(character.getBonds().isEmpty());
+        assertFalse(character.getFlaws().isEmpty());
+    }
 }
