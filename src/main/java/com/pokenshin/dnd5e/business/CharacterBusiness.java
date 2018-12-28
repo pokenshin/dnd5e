@@ -73,7 +73,7 @@ public class CharacterBusiness {
      * @return Character object with the CharacterObject applied to it
      */
 
-    private void applyBackground(Character character, CharacterBackground background) {
+    public void applyBackground(Character character, CharacterBackground background) {
         character.setBackground(background.getName());
         character = this.addCharacterSkillAdvantages(character, background.getSkillProficiencies());
         character.getProficiencies().addAll(background.getToolProficiencies());
@@ -96,8 +96,6 @@ public class CharacterBusiness {
      * @param skillProficiencies
      * @return an updated Character Object
      */
-
-
     public Character addCharacterSkillAdvantages(Character character, CharacterSkills skillProficiencies){
         //TODO: do this more gracefully
         if (!character.getSkills().getAcrobatics().isAdvantage() && skillProficiencies.getAcrobatics().isAdvantage())
