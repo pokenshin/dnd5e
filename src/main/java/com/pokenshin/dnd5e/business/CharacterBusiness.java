@@ -46,14 +46,36 @@ public class CharacterBusiness {
     public Character generateRandomCharacter(){
         Character result = new Character();
         Randomizer randomizer = new Randomizer();
+        DiceBusiness abilityScoreDice = new DiceBusiness(new Dice(6, 3));
 
         result.setLevel(1);
         result.setExperience(0);
+        result.setAlignment(randomizer.getRandomAlignment());
+        result.setCharacterName("Random Character");
+        result.setPlayerName("The Computer");
         this.applyRace(result, randomizer.getRandomRace());
         this.applyCharacterClass(result, randomizer.getRandomClass());
         this.applyBackground(result, randomizer.getRandomBackground());
-        //TODO: Define a random background and apply its bonuses
-        //TODO: Roll Ability Scores and assign them according to the class
+        result.getStrength().setValue(abilityScoreDice.getRoll());
+        result.getStrength().setModifier(this.getModifier(result.getStrength().getValue()));
+        result.getDexterity().setValue(abilityScoreDice.getRoll());
+        result.getDexterity().setModifier(this.getModifier(result.getDexterity().getValue()));
+        result.getConstitution().setValue(abilityScoreDice.getRoll());
+        result.getConstitution().setModifier(this.getModifier(result.getConstitution().getValue()));
+        result.getIntelligence().setValue(abilityScoreDice.getRoll());
+        result.getIntelligence().setModifier(this.getModifier(result.getIntelligence().getValue()));
+        result.getWisdom().setValue(abilityScoreDice.getRoll());
+        result.getWisdom().setModifier(this.getModifier(result.getWisdom().getValue()));
+        result.getCharisma().setValue(abilityScoreDice.getRoll());
+        result.getCharisma().setModifier(this.getModifier(result.getCharisma().getValue()));
+        //TODO: Call CalculateCharacter function
+
+
+
+        return result;
+    }
+
+    public Character calculateCharacter(Character character){
         //TODO: Define initiative (dex modifier)
         //TODO: Define Passive Wisdom (10 + wis modifier)
         //TODO: Define HP (Roll Hit dice + con modifier)
@@ -62,10 +84,11 @@ public class CharacterBusiness {
         //TODO: Define Armor Class (armor rating + dex mod if light armor, +2 dex bonus if medium, 0 dex bonus if heavy)
         //TODO: Define attack bonus (str mod (melee) or dex mod (ranged) + proficiency bonus). Damage = weapon + str or dex mod
         //TODO: Define spells if applicable. Based on class. Spell attack bonus = primary spellcasting stat + proficiency bonus.
-        //TODO: Define Name, Alignment, Personality, Goals, Bonds, Flaws
 
-        return result;
+        return character;
     }
+
+
 
     /**
      * Applies a predetermined CharacterBackground to a Character

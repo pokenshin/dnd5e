@@ -1,11 +1,10 @@
 package com.pokenshin.dnd5e.business;
 
-import com.pokenshin.dnd5e.entity.CharacterBackground;
-import com.pokenshin.dnd5e.entity.CharacterClass;
-import com.pokenshin.dnd5e.entity.Dice;
-import com.pokenshin.dnd5e.entity.Race;
+import com.pokenshin.dnd5e.entity.*;
+import com.pokenshin.dnd5e.entity.Character;
 import com.pokenshin.dnd5e.util.JsonMapper;
 
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
@@ -60,5 +59,10 @@ public class Randomizer {
 
     public String getRandomListItemString(List<String> list){
         return list.get(ThreadLocalRandom.current().nextInt(0, list.size()));
+    }
+
+    public String getRandomAlignment() {
+        List<String> possibleAligments = Arrays.asList("Lawful Good", "Lawful Neutral", "Lawful Evil", "Neutral Good", "True Neutral", "Neutral Evil", "Chaotic Good", "Chaotic Neutral", "Chaotic Evil");
+        return this.getRandomListItemString(possibleAligments);
     }
 }

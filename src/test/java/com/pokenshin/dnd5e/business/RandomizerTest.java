@@ -57,4 +57,9 @@ class RandomizerTest {
         List<String> bonds = mapper.getCharacterBackground("acolyte.json").getBonds();
         assertNotNull(randomizer.getRandomListItemString(bonds));
     }
+
+    @Test
+    void getRandomAlignment(){
+        assertNotNull(randomizer.getRandomAlignment());
+    }
 }
