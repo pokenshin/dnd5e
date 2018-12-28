@@ -99,6 +99,7 @@ public class CharacterBusiness {
             }
             i += 1;
         }
+        character.setProficiencyBonus(this.calculateProficiencyBonus(character));
         character = this.calculateSkillValues(character);
 
         character.getSkills().getAcrobatics().setValue(character.getDexterity().getModifier());
@@ -110,6 +111,12 @@ public class CharacterBusiness {
         //TODO: Define Armor Class (armor rating + dex mod if light armor, +2 dex bonus if medium, 0 dex bonus if heavy)
         //TODO: Attack bonus (str mod (melee) or dex mod (ranged) + proficiency bonus). Damage = weapon + str or dex mod
         return character;
+    }
+
+    public int calculateProficiencyBonus(Character character) {
+        int bonus = (character.getLevel() / 4) + 2;
+
+        return bonus;
     }
 
     public Character calculateSkillValues(Character character){

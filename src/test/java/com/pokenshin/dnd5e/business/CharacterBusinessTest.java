@@ -196,4 +196,12 @@ class CharacterBusinessTest {
         assertFalse(character.getSkills().getPersuasion().isAdvantage());
         assertEquals(-1, character.getSkills().getPersuasion().getValue());
     }
+
+    @Test
+    void calculateProficiencyBonus(){
+        character = new Character();
+        character.setLevel(1);
+        character.setProficiencyBonus(business.calculateProficiencyBonus(character));
+        assertEquals(2, character.getProficiencyBonus());
+    }
 }
