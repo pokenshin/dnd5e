@@ -1,6 +1,7 @@
 package com.pokenshin.dnd5e.entity;
 
 public class CharacterSavingThrows {
+    //TODO: change these to ValueAdvantage
     private boolean strength;
     private boolean dexterity;
     private boolean constitution;

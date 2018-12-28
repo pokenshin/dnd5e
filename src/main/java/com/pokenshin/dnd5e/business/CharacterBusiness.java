@@ -98,11 +98,40 @@ public class CharacterBusiness {
             }
             i += 1;
         }
+        character = this.calculateSkillValues(character);
+
+        character.getSkills().getAcrobatics().setValue(character.getDexterity().getModifier());
+        character.getSkills().getSurvival().setValue(character.getWisdom().getModifier());
+        character.getSkills().getStealth().setValue(character.getDexterity().getModifier());
+        character.getSkills().getSleightOfHand().setValue(character.getDexterity().getModifier());
+        character.getSkills().getReligion().setValue(character.getIntelligence().getModifier());
+
         //TODO: Define Armor Class (armor rating + dex mod if light armor, +2 dex bonus if medium, 0 dex bonus if heavy)
         //TODO: Attack bonus (str mod (melee) or dex mod (ranged) + proficiency bonus). Damage = weapon + str or dex mod
         return character;
     }
 
+    public Character calculateSkillValues(Character character){
+        character.getSkills().getAcrobatics().setValue((character.getSkills().getAcrobatics().isAdvantage()) ? character.getDexterity().getModifier() + character.getProficiencyBonus() : character.getDexterity().getModifier());
+        character.getSkills().getAnimalHandling().setValue((character.getSkills().getAnimalHandling().isAdvantage()) ? character.getWisdom().getModifier() + character.getProficiencyBonus() : character.getWisdom().getModifier());
+        character.getSkills().getArcana().setValue((character.getSkills().getArcana().isAdvantage()) ? character.getIntelligence().getModifier() + character.getProficiencyBonus() : character.getIntelligence().getModifier());
+        character.getSkills().getAthletics().setValue((character.getSkills().getAthletics().isAdvantage()) ? character.getStrength().getModifier() + character.getProficiencyBonus() : character.getStrength().getModifier());
+        character.getSkills().getDeception().setValue((character.getSkills().getDeception().isAdvantage()) ? character.getCharisma().getModifier() + character.getProficiencyBonus() : character.getCharisma().getModifier());
+        character.getSkills().getHistory().setValue((character.getSkills().getHistory().isAdvantage()) ? character.getIntelligence().getModifier() + character.getProficiencyBonus() : character.getIntelligence().getModifier());
+        character.getSkills().getInsight().setValue((character.getSkills().getInsight().isAdvantage()) ? character.getWisdom().getModifier() + character.getProficiencyBonus() : character.getWisdom().getModifier());
+        character.getSkills().getIntimidation().setValue((character.getSkills().getIntimidation().isAdvantage()) ? character.getCharisma().getModifier() + character.getProficiencyBonus() : character.getCharisma().getModifier());
+        character.getSkills().getInvestigation().setValue((character.getSkills().getInvestigation().isAdvantage()) ? character.getIntelligence().getModifier() + character.getProficiencyBonus() : character.getIntelligence().getModifier());
+        character.getSkills().getMedicine().setValue((character.getSkills().getMedicine().isAdvantage()) ? character.getWisdom().getModifier() + character.getProficiencyBonus() : character.getWisdom().getModifier());
+        character.getSkills().getNature().setValue((character.getSkills().getNature().isAdvantage()) ? character.getIntelligence().getModifier() + character.getProficiencyBonus() : character.getIntelligence().getModifier());
+        character.getSkills().getPerception().setValue((character.getSkills().getPerception().isAdvantage()) ? character.getWisdom().getModifier() + character.getProficiencyBonus() : character.getWisdom().getModifier());
+        character.getSkills().getPersuasion().setValue((character.getSkills().getPersuasion().isAdvantage()) ? character.getCharisma().getModifier() + character.getProficiencyBonus() : character.getCharisma().getModifier());
+        character.getSkills().getReligion().setValue((character.getSkills().getReligion().isAdvantage()) ? character.getIntelligence().getModifier() + character.getProficiencyBonus() : character.getIntelligence().getModifier());
+        character.getSkills().getSleightOfHand().setValue((character.getSkills().getSleightOfHand().isAdvantage()) ? character.getDexterity().getModifier() + character.getProficiencyBonus() : character.getDexterity().getModifier());
+        character.getSkills().getStealth().setValue((character.getSkills().getStealth().isAdvantage()) ? character.getDexterity().getModifier() + character.getProficiencyBonus() : character.getDexterity().getModifier());
+        character.getSkills().getSurvival().setValue((character.getSkills().getSurvival().isAdvantage()) ? character.getWisdom().getModifier() + character.getProficiencyBonus() : character.getWisdom().getModifier());
+
+        return character;
+    }
 
 
     /**

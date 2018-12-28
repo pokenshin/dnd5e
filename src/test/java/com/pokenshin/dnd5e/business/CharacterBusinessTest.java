@@ -76,6 +76,19 @@ class CharacterBusinessTest {
         assertEquals(0, character.getExperience());
         assertNotEquals("", character.getRace().getName());
         assertNotEquals("", character.getCharacterClass().getName());
+        assertNotEquals("", character.getBackground());
+        assertTrue(character.getStrength().getValue() > 0);
+        assertTrue(character.getStrength().getValue() < 19);
+        assertTrue(character.getDexterity().getValue() > 0);
+        assertTrue(character.getDexterity().getValue() < 19);
+        assertTrue(character.getConstitution().getValue() > 0);
+        assertTrue(character.getConstitution().getValue() < 19);
+        assertTrue(character.getIntelligence().getValue() > 0);
+        assertTrue(character.getIntelligence().getValue() < 19);
+        assertTrue(character.getWisdom().getValue() > 0);
+        assertTrue(character.getWisdom().getValue() < 19);
+        assertTrue(character.getCharisma().getValue() > 0);
+        assertTrue(character.getCharisma().getValue() < 19);
     }
 
     @Test
@@ -155,5 +168,32 @@ class CharacterBusinessTest {
         assertTrue(character.getHpMax() > 3);
         assertTrue(character.getHpMax() > 0);
         assertEquals(3, character.getLanguages().size());
+    }
+
+    @Test
+    void calculateSkillValues(){
+        JsonMapper mapper = new JsonMapper();
+        CharacterSkills skills = mapper.getCharacterBackground("acolyte.json").getSkillProficiencies();
+        character = new Character();
+        character.getStrength().setValue(10);
+        character.getStrength().setModifier(0);
+        character.getDexterity().setValue(12);
+        character.getDexterity().setModifier(1);
+        character.getConstitution().setValue(14);
+        character.getConstitution().setModifier(2);
+        character.getIntelligence().setValue(16);
+        character.getIntelligence().setModifier(3);
+        character.getWisdom().setValue(18);
+        character.getWisdom().setModifier(4);
+        character.getCharisma().setValue(8);
+        character.getCharisma().setModifier(-1);
+        character.setSkills(skills);
+        character.setProficiencyBonus(3);
+        character = business.calculateSkillValues(character);
+
+        assertTrue(character.getSkills().getReligion().isAdvantage());
+        assertEquals(6, character.getSkills().getReligion().getValue());
+        assertFalse(character.getSkills().getPersuasion().isAdvantage());
+        assertEquals(-1, character.getSkills().getPersuasion().getValue());
     }
 }
