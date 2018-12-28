@@ -4,10 +4,7 @@ import com.pokenshin.dnd5e.entity.*;
 import com.pokenshin.dnd5e.entity.Character;
 import com.pokenshin.dnd5e.util.JsonMapper;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.prefs.BackingStoreException;
 
@@ -66,5 +63,27 @@ public class Randomizer {
     public String getRandomAlignment() {
         List<String> possibleAligments = Arrays.asList("Lawful Good", "Lawful Neutral", "Lawful Evil", "Neutral Good", "True Neutral", "Neutral Evil", "Chaotic Good", "Chaotic Neutral", "Chaotic Evil");
         return this.getRandomListItemString(possibleAligments);
+    }
+
+    public Character generateBalancedAbilityScores(int totalPoints, Character character){
+        if (totalPoints < 6)
+            totalPoints = 6;
+        totalPoints -= 6;
+        List<Integer> values = Arrays.asList(1,1,1,1,1,1);
+        int iteration = 0;
+
+        while(iteration < totalPoints){
+            int position = ThreadLocalRandom.current().nextInt(0, 5);
+            values.set(position, values.get(position) + 1);
+            iteration += 1;
+        }
+        character.getStrength().setValue(values.get(0));
+        character.getDexterity().setValue(values.get(1));
+        character.getConstitution().setValue(values.get(2));
+        character.getIntelligence().setValue(values.get(3));
+        character.getWisdom().setValue(values.get(4));
+        character.getCharisma().setValue(values.get(5));
+
+        return character;
     }
 }

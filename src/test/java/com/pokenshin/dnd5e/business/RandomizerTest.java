@@ -1,6 +1,7 @@
 package com.pokenshin.dnd5e.business;
 
 import com.pokenshin.dnd5e.entity.Race;
+import com.pokenshin.dnd5e.entity.Character;
 import com.pokenshin.dnd5e.util.JsonMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -61,5 +62,17 @@ class RandomizerTest {
     @Test
     void getRandomAlignment(){
         assertNotNull(randomizer.getRandomAlignment());
+    }
+
+    @Test
+    void generateBalancedAbilityScores(){
+        Character character = new Character();
+        character = randomizer.generateBalancedAbilityScores(72, character);
+        assertTrue(character.getStrength().getValue() > 0);
+        assertTrue(character.getDexterity().getValue() > 0);
+        assertTrue(character.getIntelligence().getValue() > 0);
+        assertTrue(character.getConstitution().getValue() > 0);
+        assertTrue(character.getWisdom().getValue() > 0);
+        assertTrue(character.getCharisma().getValue() > 0);
     }
 }

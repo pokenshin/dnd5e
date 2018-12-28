@@ -46,24 +46,19 @@ public class CharacterBusiness {
     public Character generateRandomCharacter(){
         Character result = new Character();
         Randomizer randomizer = new Randomizer();
-        DiceBusiness abilityScoreDice = new DiceBusiness(new Dice(6, 3));
+        int totalAbilityValues = 72;
 
         result.setLevel(1);
         result.setExperience(0);
         result.setAlignment(randomizer.getRandomAlignment());
         result.setCharacterName("Random Character");
         result.setPlayerName("The Computer");
-        result.getStrength().setValue(abilityScoreDice.getRoll());
+        result = randomizer.generateBalancedAbilityScores(totalAbilityValues, result);
         result.getStrength().setModifier(this.getModifier(result.getStrength().getValue()));
-        result.getDexterity().setValue(abilityScoreDice.getRoll());
         result.getDexterity().setModifier(this.getModifier(result.getDexterity().getValue()));
-        result.getConstitution().setValue(abilityScoreDice.getRoll());
         result.getConstitution().setModifier(this.getModifier(result.getConstitution().getValue()));
-        result.getIntelligence().setValue(abilityScoreDice.getRoll());
         result.getIntelligence().setModifier(this.getModifier(result.getIntelligence().getValue()));
-        result.getWisdom().setValue(abilityScoreDice.getRoll());
         result.getWisdom().setModifier(this.getModifier(result.getWisdom().getValue()));
-        result.getCharisma().setValue(abilityScoreDice.getRoll());
         result.getCharisma().setModifier(this.getModifier(result.getCharisma().getValue()));
         this.applyRace(result, randomizer.getRandomRace());
         this.applyCharacterClass(result, randomizer.getRandomClass());
