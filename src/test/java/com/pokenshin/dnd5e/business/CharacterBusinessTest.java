@@ -123,4 +123,37 @@ class CharacterBusinessTest {
         assertFalse(character.getBonds().isEmpty());
         assertFalse(character.getFlaws().isEmpty());
     }
+
+    @Test
+    void calculateNewCharacter(){
+        character = new Character();
+        character.getStrength().setValue(10);
+        character.getStrength().setModifier(0);
+        character.getDexterity().setValue(12);
+        character.getDexterity().setModifier(1);
+        character.getConstitution().setValue(14);
+        character.getConstitution().setModifier(2);
+        character.getIntelligence().setValue(16);
+        character.getIntelligence().setModifier(3);
+        character.getWisdom().setValue(18);
+        character.getWisdom().setModifier(4);
+        character.getCharisma().setValue(8);
+        character.getCharisma().setModifier(-1);
+        character.setAlignment("True Neutral");
+        character.setHitDice(new Dice("1d10"));
+        character.getLanguages().add("Elvish");
+        character.getLanguages().add("Dwarvish");
+        character.getLanguages().add("Gnomish");
+        character.getLanguages().add("Demon");
+        character.getLanguages().add("English");
+
+        character = business.calculateNewCharacter(character);
+
+        assertEquals(1, character.getInitiative());
+        assertEquals(14, character.getPerception());
+        assertTrue(character.getHpMax() < 13);
+        assertTrue(character.getHpMax() > 3);
+        assertTrue(character.getHpMax() > 0);
+        assertEquals(3, character.getLanguages().size());
+    }
 }

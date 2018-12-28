@@ -68,23 +68,38 @@ public class CharacterBusiness {
         result.getWisdom().setModifier(this.getModifier(result.getWisdom().getValue()));
         result.getCharisma().setValue(abilityScoreDice.getRoll());
         result.getCharisma().setModifier(this.getModifier(result.getCharisma().getValue()));
-        //TODO: Call CalculateCharacter function
-
-
+        result = this.calculateNewCharacter(result);
+        //TODO: Define spells if applicable. Based on class. Spell attack bonus = primary spellcasting stat + proficiency bonus.
 
         return result;
     }
 
-    public Character calculateCharacter(Character character){
-        //TODO: Define initiative (dex modifier)
-        //TODO: Define Passive Wisdom (10 + wis modifier)
-        //TODO: Define HP (Roll Hit dice + con modifier)
-        //TODO: Define languages (common + int modifier), restricted by race.
-        //TODO: Define starting equipment from class/background
-        //TODO: Define Armor Class (armor rating + dex mod if light armor, +2 dex bonus if medium, 0 dex bonus if heavy)
-        //TODO: Define attack bonus (str mod (melee) or dex mod (ranged) + proficiency bonus). Damage = weapon + str or dex mod
-        //TODO: Define spells if applicable. Based on class. Spell attack bonus = primary spellcasting stat + proficiency bonus.
+    public Character calculateNewCharacter(Character character){
+        DiceBusiness hitDice = new DiceBusiness(character.getHitDice());
+        List<String> baseLanguages = character.getLanguages();
 
+        //Initiative = dex modifier
+        character.setInitiative(character.getDexterity().getModifier());
+        //Passive Perception = 10 + wis modifier
+        character.setPerception(10 + character.getWisdom().getModifier());
+        //HP = Hit Dice roll + con modifier
+        character.setHpMax(hitDice.getRoll() + character.getConstitution().getModifier());
+        if (character.getHpMax() < 1)
+            character.setHpMax(1);
+        //Languages = Common + Int Modifier
+        character.setLanguages(new ArrayList<>());
+        character.getLanguages().add("Common");
+        while(character.getLanguages().size() < character.getIntelligence().getModifier()){
+            int i = 0;
+            if (i + 1 < baseLanguages.size()) {
+                character.getLanguages().add(baseLanguages.get(i));
+            } else{
+                character.getLanguages().add("Any");
+            }
+            i += 1;
+        }
+        //TODO: Define Armor Class (armor rating + dex mod if light armor, +2 dex bonus if medium, 0 dex bonus if heavy)
+        //TODO: Attack bonus (str mod (melee) or dex mod (ranged) + proficiency bonus). Damage = weapon + str or dex mod
         return character;
     }
 

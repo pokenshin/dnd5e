@@ -11,6 +11,11 @@ public class Dice {
         return sides * (1 + rng.nextInt(sides)) ;
     }
 
+    public Dice(String dice){
+        this.rolls = Integer.parseInt(dice.split("d")[0]);
+        this.sides = Integer.parseInt(dice.split("d")[1]);
+    }
+
     public Dice(int sides, int rolls) {
         this.sides = sides;
         this.rolls = rolls;
