@@ -1,10 +1,8 @@
 package com.pokenshin.dnd5e.business;
 
 import com.pokenshin.dnd5e.controller.CharacterRaceController;
-import com.pokenshin.dnd5e.entity.CharacterAbility;
+import com.pokenshin.dnd5e.entity.*;
 import com.pokenshin.dnd5e.entity.Character;
-import com.pokenshin.dnd5e.entity.CharacterClass;
-import com.pokenshin.dnd5e.entity.Race;
 import com.pokenshin.dnd5e.util.JsonMapper;
 import org.junit.Before;
 import org.junit.jupiter.api.BeforeAll;
@@ -19,7 +17,7 @@ class CharacterBusinessTest {
 
     @BeforeEach
     void SetUp(){
-         business = new CharacterBusiness();
+        business = new CharacterBusiness();
     }
 
     @Test
@@ -93,5 +91,14 @@ class CharacterBusinessTest {
         character = business.applyCharacterClass(new Character(), fighter);
         assertEquals("Fighter", character.getCharacterClass().getName());
         assertEquals("1d10", character.getHitDice().toString());
+    }
+
+    @Test
+    void addCharacterSkillAdvantages(){
+        JsonMapper mapper = new JsonMapper();
+        CharacterSkills skills = mapper.getCharacterBackground("criminal.json").getSkillProficiencies();
+        character = business.addCharacterSkillAdvantages(new Character(), skills);
+        assertFalse(character.getSkills().getHistory().isAdvantage());
+        assertTrue(character.getSkills().getStealth().isAdvantage());
     }
 }

@@ -90,26 +90,54 @@ public class CharacterBusiness {
 
     }
 
+    /**
+     * Adds Skill advantages to a Character
+     * @param character
+     * @param skillProficiencies
+     * @return an updated Character Object
+     */
+
+
     public Character addCharacterSkillAdvantages(Character character, CharacterSkills skillProficiencies){
         //TODO: do this more gracefully
-        character.getSkills().getAcrobatics().setAdvantage(skillProficiencies.getAcrobatics().isAdvantage());
-        character.getSkills().getAnimalHandling().setAdvantage(skillProficiencies.getAnimalHandling().isAdvantage());
-        character.getSkills().getArcana().setAdvantage(skillProficiencies.getArcana().isAdvantage());
-        character.getSkills().getAthletics().setAdvantage((skillProficiencies.getAthletics().isAdvantage()));
-        character.getSkills().getDeception().setAdvantage(skillProficiencies.getDeception().isAdvantage());
-        character.getSkills().getHistory().setAdvantage(skillProficiencies.getHistory().isAdvantage());
-        character.getSkills().getInsight().setAdvantage(skillProficiencies.getInsight().isAdvantage());
-        character.getSkills().getIntimidation().setAdvantage(skillProficiencies.getInsight().isAdvantage());
-        character.getSkills().getInvestigation().setAdvantage(skillProficiencies.getInsight().isAdvantage());
-        character.getSkills().getMedicine().setAdvantage(skillProficiencies.getMedicine().isAdvantage());
-        character.getSkills().getNature().setAdvantage(skillProficiencies.getNature().isAdvantage());
-        character.getSkills().getPerception().setAdvantage(skillProficiencies.getPerception().isAdvantage());
-        character.getSkills().getPerformance().setAdvantage(skillProficiencies.getPerformance().isAdvantage());
-        character.getSkills().getPersuasion().setAdvantage(skillProficiencies.getPersuasion().isAdvantage());
-        character.getSkills().getReligion().setAdvantage(skillProficiencies.getReligion().isAdvantage());
-        character.getSkills().getSleightOfHand().setAdvantage(skillProficiencies.getSleightOfHand().isAdvantage());
-        character.getSkills().getStealth().setAdvantage(skillProficiencies.getStealth().isAdvantage());
-        character.getSkills().getSurvival().setAdvantage(skillProficiencies.getSurvival().isAdvantage());
+        if (!character.getSkills().getAcrobatics().isAdvantage() && skillProficiencies.getAcrobatics().isAdvantage())
+            character.getSkills().getAcrobatics().setAdvantage(true);
+        if (!character.getSkills().getAnimalHandling().isAdvantage() && skillProficiencies.getAnimalHandling().isAdvantage())
+            character.getSkills().getAnimalHandling().setAdvantage(true);
+        if (!character.getSkills().getArcana().isAdvantage() && skillProficiencies.getArcana().isAdvantage())
+            character.getSkills().getArcana().setAdvantage(true);
+        if (!character.getSkills().getAthletics().isAdvantage() && skillProficiencies.getAthletics().isAdvantage())
+            character.getSkills().getAthletics().setAdvantage(true);
+        if (!character.getSkills().getDeception().isAdvantage() && skillProficiencies.getDeception().isAdvantage())
+            character.getSkills().getDeception().setAdvantage(true);
+        if (!character.getSkills().getAcrobatics().isAdvantage() && skillProficiencies.getAcrobatics().isAdvantage())
+            character.getSkills().getAcrobatics().setAdvantage(true);
+        if (!character.getSkills().getHistory().isAdvantage() && skillProficiencies.getHistory().isAdvantage())
+            character.getSkills().getHistory().setAdvantage(true);
+        if (!character.getSkills().getInsight().isAdvantage() && skillProficiencies.getInsight().isAdvantage())
+            character.getSkills().getInsight().setAdvantage(true);
+        if (!character.getSkills().getIntimidation().isAdvantage() && skillProficiencies.getIntimidation().isAdvantage())
+            character.getSkills().getIntimidation().setAdvantage(true);
+        if (!character.getSkills().getInvestigation().isAdvantage() && skillProficiencies.getInvestigation().isAdvantage())
+            character.getSkills().getInvestigation().setAdvantage(true);
+        if (!character.getSkills().getMedicine().isAdvantage() && skillProficiencies.getMedicine().isAdvantage())
+            character.getSkills().getMedicine().setAdvantage(true);
+        if (!character.getSkills().getNature().isAdvantage() && skillProficiencies.getNature().isAdvantage())
+            character.getSkills().getNature().setAdvantage(true);
+        if (!character.getSkills().getPerception().isAdvantage() && skillProficiencies.getPerception().isAdvantage())
+            character.getSkills().getPerception().setAdvantage(true);
+        if (!character.getSkills().getPerformance().isAdvantage() && skillProficiencies.getPerformance().isAdvantage())
+            character.getSkills().getPerformance().setAdvantage(true);
+        if (!character.getSkills().getPersuasion().isAdvantage() && skillProficiencies.getPersuasion().isAdvantage())
+            character.getSkills().getPersuasion().setAdvantage(true);
+        if (!character.getSkills().getReligion().isAdvantage() && skillProficiencies.getReligion().isAdvantage())
+            character.getSkills().getReligion().setAdvantage(true);
+        if (!character.getSkills().getSleightOfHand().isAdvantage() && skillProficiencies.getSleightOfHand().isAdvantage())
+            character.getSkills().getSleightOfHand().setAdvantage(true);
+        if (!character.getSkills().getStealth().isAdvantage() && skillProficiencies.getStealth().isAdvantage())
+            character.getSkills().getStealth().setAdvantage(true);
+        if (!character.getSkills().getSurvival().isAdvantage() && skillProficiencies.getSurvival().isAdvantage())
+            character.getSkills().getSurvival().setAdvantage(true);
 
         return character;
     }
