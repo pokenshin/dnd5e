@@ -6,6 +6,7 @@ import com.pokenshin.dnd5e.entity.Dice;
 import com.pokenshin.dnd5e.entity.Race;
 import com.pokenshin.dnd5e.util.JsonMapper;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
@@ -55,5 +56,9 @@ public class Randomizer {
         Map<Integer, CharacterBackground> bgList = mapper.getAllCharacterBackgrounds();
         CharacterBackground background = bgList.get(ThreadLocalRandom.current().nextInt(1, bgList.size()));
         return background;
+    }
+
+    public String getRandomListItemString(List<String> list){
+        return list.get(ThreadLocalRandom.current().nextInt(0, list.size()));
     }
 }

@@ -3,8 +3,6 @@ package com.pokenshin.dnd5e.business;
 import com.pokenshin.dnd5e.entity.*;
 import com.pokenshin.dnd5e.entity.Character;
 
-import java.lang.reflect.Field;
-
 public class CharacterBusiness {
     /**
      * Resets a Character to its initial values
@@ -74,13 +72,18 @@ public class CharacterBusiness {
      */
 
     public void applyBackground(Character character, CharacterBackground background) {
+        CharacterCurrencyBusiness characterCurrencyBusiness = new CharacterCurrencyBusiness();
+        Randomizer rng = new Randomizer();
+
         character.setBackground(background.getName());
         character = this.addCharacterSkillAdvantages(character, background.getSkillProficiencies());
         character.getProficiencies().addAll(background.getToolProficiencies());
         character.getLanguages().addAll(background.getLanguages());
         character.getEquipment().addAll(background.getEquipment());
-        //this.addMoney(character, background.getStartingMoney());
+        character.setCurrency(characterCurrencyBusiness.addMoney(character.getCurrency(), background.getStartingMoney()));
         character.getFeatures().addAll(background.getFeatures());
+        character.getTraits().add(rng.getRandomListItemString(background.getPersonalityTraits()));
+
         //TODO: create a getRandomPersonalityTrait in Randomizer and call it here.
         //TODO: create a getRandomAdditionalTrait in Randomizer and call it here.
         //TODO: create a getRandomIdeal in Randomizer and call it here.
