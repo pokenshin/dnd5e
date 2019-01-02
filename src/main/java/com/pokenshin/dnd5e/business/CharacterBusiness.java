@@ -63,6 +63,8 @@ public class CharacterBusiness {
         this.applyRace(result, randomizer.getRandomRace());
         this.applyCharacterClass(result, randomizer.getRandomClass());
         this.applyBackground(result, randomizer.getRandomBackground());
+        result.setHeight(randomizer.getRandomHeight(result.getRace()));
+        result.setWeight(randomizer.getRandomWeight(result.getRace()));
 
         result = this.calculateNewCharacter(result);
         //TODO: Define spells if applicable. Based on class. Spell attack bonus = primary spellcasting stat + proficiency bonus.
@@ -95,12 +97,6 @@ public class CharacterBusiness {
         }
         character.setProficiencyBonus(this.calculateProficiencyBonus(character));
         character = this.calculateSkillValues(character);
-
-        character.getSkills().getAcrobatics().setValue(character.getDexterity().getModifier());
-        character.getSkills().getSurvival().setValue(character.getWisdom().getModifier());
-        character.getSkills().getStealth().setValue(character.getDexterity().getModifier());
-        character.getSkills().getSleightOfHand().setValue(character.getDexterity().getModifier());
-        character.getSkills().getReligion().setValue(character.getIntelligence().getModifier());
 
         //TODO: Define Armor Class (armors rating + dex mod if light armors, +2 dex bonus if medium, 0 dex bonus if heavy)
         //TODO: Attack bonus (str mod (melee) or dex mod (ranged) + proficiency bonus). Damage = weapon + str or dex mod
