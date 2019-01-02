@@ -1,0 +1,21 @@
+{
+  "id": 16,
+  "name": "Greatclub",
+  "category": "Simple Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 2,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 10,
+  "damage": {
+    "sides": 8,
+    "rolls": 1
+  },
+  "damageType": "Bludgeoning",
+  "properties":[
+    "Two-handed"
+  ]
+}

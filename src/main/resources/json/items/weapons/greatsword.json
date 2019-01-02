@@ -1,0 +1,22 @@
+{
+  "id": 33,
+  "name": "Great Sword",
+  "category": "Martial Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 50,
+    "platinum": 0
+  },
+  "weight": 6,
+  "damage": {
+    "sides": 6,
+    "rolls": 2
+  },
+  "damageType": "Slashing",
+  "properties":[
+    "Heavy",
+    "Two-Handed"
+  ]
+}

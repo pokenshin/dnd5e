@@ -1,0 +1,22 @@
+{
+  "id": 42,
+  "name": "Short Sword",
+  "category": "Martial Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 10,
+    "platinum": 0
+  },
+  "weight": 2,
+  "damage": {
+    "sides": 6,
+    "rolls": 1
+  },
+  "damageType": "Piercing",
+  "properties":[
+    "Finesse",
+    "Light"
+  ]
+}

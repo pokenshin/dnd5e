@@ -1,0 +1,16 @@
+{
+  "id": 2,
+  "name": "Leather Armor",
+  "category": "Light Armor",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 10,
+    "platinum": 0
+  },
+  "weight": 10,
+  "armorClass": 11,
+  "minStrength": 0,
+  "stealthDisavantage": false
+}

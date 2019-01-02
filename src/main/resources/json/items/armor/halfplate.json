@@ -1,0 +1,16 @@
+{
+  "id": 8,
+  "name": "Half Plate",
+  "category": "Medium Armor",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 750,
+    "platinum": 0
+  },
+  "weight": 40,
+  "armorClass": 15,
+  "minStrength": 0,
+  "stealthDisavantage": true
+}

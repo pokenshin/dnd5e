@@ -1,0 +1,21 @@
+{
+  "id": 36,
+  "name": "Longsword",
+  "category": "Martial Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 15,
+    "platinum": 0
+  },
+  "weight": 3,
+  "damage": {
+    "sides": 8,
+    "rolls": 1
+  },
+  "damageType": "Slashing",
+  "properties":[
+    "Versatile (1d10"
+  ]
+}

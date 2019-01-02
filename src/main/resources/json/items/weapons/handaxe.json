@@ -1,0 +1,22 @@
+{
+  "id": 17,
+  "name": "Handaxe",
+  "category": "Simple Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 5,
+    "platinum": 0
+  },
+  "weight": 2,
+  "damage": {
+    "sides": 6,
+    "rolls": 1
+  },
+  "damageType": "Slashing",
+  "properties":[
+    "Light",
+    "Thrown (20/60)"
+  ]
+}

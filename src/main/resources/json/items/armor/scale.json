@@ -1,0 +1,16 @@
+{
+  "id": 6,
+  "name": "Scale Mail",
+  "category": "Medium Armor",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 50,
+    "platinum": 0
+  },
+  "weight": 45,
+  "armorClass": 14,
+  "minStrength": 0,
+  "stealthDisavantage": true
+}

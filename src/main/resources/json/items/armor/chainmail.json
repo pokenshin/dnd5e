@@ -1,0 +1,16 @@
+{
+  "id": 10,
+  "name": "Chain Mail",
+  "category": "Heavy Armor",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 75,
+    "platinum": 0
+  },
+  "weight": 55,
+  "armorClass": 16,
+  "minStrength": 13,
+  "stealthDisavantage": true
+}

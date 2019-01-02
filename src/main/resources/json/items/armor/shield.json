@@ -1,0 +1,16 @@
+{
+  "id": 13,
+  "name": "Shield",
+  "category": "Shield",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 10,
+    "platinum": 0
+  },
+  "weight": 6,
+  "armorClass": 2,
+  "minStrength": 0,
+  "stealthDisavantage": false
+}

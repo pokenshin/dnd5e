@@ -1,0 +1,22 @@
+{
+  "id": 51,
+  "name": "Net",
+  "category": "Martial Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 1,
+    "platinum": 0
+  },
+  "weight": 2,
+  "damage": {
+    "sides": 0,
+    "rolls": 0
+  },
+  "damageType": "",
+  "properties":[
+    "Special",
+    "Thrown (5/15)"
+  ]
+}

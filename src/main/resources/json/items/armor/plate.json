@@ -1,0 +1,16 @@
+{
+  "id": 12,
+  "name": "Plate Mail",
+  "category": "Heavy Armor",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 1500,
+    "platinum": 0
+  },
+  "weight": 65,
+  "armorClass": 18,
+  "minStrength": 15,
+  "stealthDisavantage": true
+}

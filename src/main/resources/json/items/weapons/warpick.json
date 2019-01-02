@@ -1,0 +1,20 @@
+{
+  "id": 44,
+  "name": "War Pick",
+  "category": "Martial Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 5,
+    "platinum": 0
+  },
+  "weight": 2,
+  "damage": {
+    "sides": 8,
+    "rolls": 1
+  },
+  "damageType": "Piercing",
+  "properties":[
+  ]
+}

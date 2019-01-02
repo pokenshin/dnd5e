@@ -1,0 +1,21 @@
+{
+  "id": 18,
+  "name": "Javelin",
+  "category": "Simple Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 5,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 2,
+  "damage": {
+    "sides": 6,
+    "rolls": 1
+  },
+  "damageType": "Piercing",
+  "properties":[
+    "Thrown (30/120)"
+  ]
+}

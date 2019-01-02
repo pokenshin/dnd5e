@@ -1,0 +1,16 @@
+{
+  "id": 1,
+  "name": "Padded Armor",
+  "category": "Light Armor",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 5,
+    "platinum": 0
+  },
+  "weight": 8,
+  "armorClass": 11,
+  "minStrength": 0,
+  "stealthDisavantage": true
+}

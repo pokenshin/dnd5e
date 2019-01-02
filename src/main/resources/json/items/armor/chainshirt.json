@@ -1,0 +1,16 @@
+{
+  "id": 5,
+  "name": "Chain Shirt",
+  "category": "Medium Armor",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 50,
+    "platinum": 0
+  },
+  "weight": 20,
+  "armorClass": 13,
+  "minStrength": 0,
+  "stealthDisavantage": false
+}

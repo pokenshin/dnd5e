@@ -1,0 +1,22 @@
+{
+  "id": 23,
+  "name": "Spear",
+  "category": "Simple Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 1,
+    "platinum": 0
+  },
+  "weight": 3,
+  "damage": {
+    "sides": 6,
+    "rolls": 1
+  },
+  "damageType": "Piercing",
+  "properties":[
+    "Thrown (20/60)",
+    "Versatile (1d8)"
+  ]
+}

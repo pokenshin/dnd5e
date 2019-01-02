@@ -1,0 +1,16 @@
+{
+  "id": 11,
+  "name": "Splint Mail",
+  "category": "Heavy Armor",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 200,
+    "platinum": 0
+  },
+  "weight": 60,
+  "armorClass": 17,
+  "minStrength": 15,
+  "stealthDisavantage": true
+}

@@ -1,0 +1,22 @@
+{
+  "id": 37,
+  "name": "Maul",
+  "category": "Martial Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 10,
+    "platinum": 0
+  },
+  "weight": 10,
+  "damage": {
+    "sides": 6,
+    "rolls": 2
+  },
+  "damageType": "Bludgeoning",
+  "properties":[
+    "Heavy",
+    "Two-Handed"
+  ]
+}

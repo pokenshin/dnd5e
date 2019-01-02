@@ -1,0 +1,22 @@
+{
+  "id": 26,
+  "name": "Dart",
+  "category": "Simple Weapon",
+  "cost":{
+    "copper": 5,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 1,
+  "damage": {
+    "sides": 4,
+    "rolls": 1
+  },
+  "damageType": "Piercing",
+  "properties":[
+    "Finesse",
+    "Thrown (20/60"
+  ]
+}

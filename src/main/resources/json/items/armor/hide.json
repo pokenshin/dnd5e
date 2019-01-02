@@ -1,0 +1,16 @@
+{
+  "id": 4,
+  "name": "Hide Armor",
+  "category": "Medium Armor",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 10,
+    "platinum": 0
+  },
+  "weight": 12,
+  "armorClass": 12,
+  "minStrength": 0,
+  "stealthDisavantage": false
+}

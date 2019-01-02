@@ -1,0 +1,22 @@
+{
+  "id": 43,
+  "name": "Trident",
+  "category": "Martial Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 5,
+    "platinum": 0
+  },
+  "weight": 4,
+  "damage": {
+    "sides": 6,
+    "rolls": 1
+  },
+  "damageType": "Piercing",
+  "properties":[
+    "Thrown (20/60)",
+    "Versatile (1d8)"
+  ]
+}

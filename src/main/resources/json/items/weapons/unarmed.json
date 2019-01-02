@@ -1,0 +1,20 @@
+{
+  "id": 24,
+  "name": "Unarmed Strike",
+  "category": "Simple Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 3,
+  "damage": {
+    "sides": 1,
+    "rolls": 1
+  },
+  "damageType": "Bludgeoning",
+  "properties":[
+  ]
+}

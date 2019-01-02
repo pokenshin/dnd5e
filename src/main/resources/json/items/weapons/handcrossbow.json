@@ -1,0 +1,23 @@
+{
+  "id": 48,
+  "name": "Hand Crossbow",
+  "category": "Martial Weapon",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 75,
+    "platinum": 0
+  },
+  "weight": 3,
+  "damage": {
+    "sides": 6,
+    "rolls": 1
+  },
+  "damageType": "Piercing",
+  "properties":[
+    "Ammunition (30/120)",
+    "Light",
+    "Loading"
+  ]
+}
