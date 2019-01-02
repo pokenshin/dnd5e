@@ -71,17 +71,14 @@ public class CharacterBusiness {
     }
 
     public Character calculateNewCharacter(Character character){
-        DiceBusiness hitDice = new DiceBusiness(character.getHitDice());
         List<String> baseLanguages = character.getLanguages();
 
         //Initiative = dex modifier
         character.setInitiative(character.getDexterity().getModifier());
         //Passive Perception = 10 + wis modifier
         character.setPerception(10 + character.getWisdom().getModifier());
-        //HP = Hit Dice roll + con modifier
-        character.setHpMax(hitDice.getRoll() + character.getConstitution().getModifier());
-        if (character.getHpMax() < 1)
-            character.setHpMax(1);
+        //HP = Hit Dice + con modifier
+        character.setHpMax(character.getHitDice().getSides() + character.getConstitution().getModifier());
         //Languages = Common + Int Modifier
         character.setLanguages(new ArrayList<>());
         character.getLanguages().add("Common");
