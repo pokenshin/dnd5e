@@ -103,7 +103,7 @@ public class CharacterBusiness {
         character.getSkills().getSleightOfHand().setValue(character.getDexterity().getModifier());
         character.getSkills().getReligion().setValue(character.getIntelligence().getModifier());
 
-        //TODO: Define Armor Class (armor rating + dex mod if light armor, +2 dex bonus if medium, 0 dex bonus if heavy)
+        //TODO: Define Armor Class (armors rating + dex mod if light armors, +2 dex bonus if medium, 0 dex bonus if heavy)
         //TODO: Attack bonus (str mod (melee) or dex mod (ranged) + proficiency bonus). Damage = weapon + str or dex mod
         return character;
     }
