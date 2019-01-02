@@ -86,4 +86,18 @@ public class Randomizer {
 
         return character;
     }
+
+    public Weapon getRandomWeapon(){
+        JsonMapper mapper = new JsonMapper();
+        Map<Integer, Weapon> wpList = mapper.getAllWeapons();
+        Weapon weapon = wpList.get(ThreadLocalRandom.current().nextInt(1, wpList.size()));
+        return weapon;
+    }
+
+    public Armor getRandomArmor(){
+        JsonMapper mapper = new JsonMapper();
+        Map<Integer, Armor> arList = mapper.getAllArmors();
+        Armor armor = arList.get(ThreadLocalRandom.current().nextInt(1, arList.size()));
+        return armor;
+    }
 }

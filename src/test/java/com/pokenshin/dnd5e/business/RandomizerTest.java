@@ -2,6 +2,7 @@ package com.pokenshin.dnd5e.business;
 
 import com.pokenshin.dnd5e.entity.Race;
 import com.pokenshin.dnd5e.entity.Character;
+import com.pokenshin.dnd5e.entity.Weapon;
 import com.pokenshin.dnd5e.util.JsonMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -74,5 +75,15 @@ class RandomizerTest {
         assertTrue(character.getConstitution().getValue() > 0);
         assertTrue(character.getWisdom().getValue() > 0);
         assertTrue(character.getCharisma().getValue() > 0);
+    }
+
+    @Test
+    void getRandomWeapon(){
+        assertNotNull(randomizer.getRandomWeapon());
+    }
+
+    @Test
+    void getRandomArmor(){
+        assertNotNull(randomizer.getRandomArmor());
     }
 }
