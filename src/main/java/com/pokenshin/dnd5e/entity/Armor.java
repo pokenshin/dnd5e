@@ -25,4 +25,28 @@ public class Armor extends Item {
         this.minStrength = minStrength;
         this.stealthDisavantage = stealthDisavantage;
     }
+
+    public int getArmorClass() {
+        return armorClass;
+    }
+
+    public void setArmorClass(int armorClass) {
+        this.armorClass = armorClass;
+    }
+
+    public int getMinStrength() {
+        return minStrength;
+    }
+
+    public void setMinStrength(int minStrength) {
+        this.minStrength = minStrength;
+    }
+
+    public boolean isStealthDisavantage() {
+        return stealthDisavantage;
+    }
+
+    public void setStealthDisavantage(boolean stealthDisavantage) {
+        this.stealthDisavantage = stealthDisavantage;
+    }
 }

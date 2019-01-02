@@ -1,23 +1,23 @@
 package com.pokenshin.dnd5e.entity;
 
-public class Item {
+public abstract class Item {
     private int id;
-    private String nome;
+    private String name;
     private String category;
     private CharacterCurrency cost;
     private int weight;
 
     public Item() {
         this.id = 0;
-        this.nome = "";
+        this.name = "";
         this.category = "";
         this.cost = new CharacterCurrency();
         this.weight = 0;
     }
 
-    public Item(int id, String nome, String category, CharacterCurrency cost, int weight) {
+    public Item(int id, String name, String category, CharacterCurrency cost, int weight) {
         this.id = id;
-        this.nome = nome;
+        this.name = name;
         this.category = category;
         this.cost = cost;
         this.weight = weight;
@@ -31,12 +31,12 @@ public class Item {
         this.id = id;
     }
 
-    public String getNome() {
-        return nome;
+    public String getName() {
+        return name;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getCategory() {

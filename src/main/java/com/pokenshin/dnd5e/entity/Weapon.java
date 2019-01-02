@@ -28,4 +28,28 @@ public class Weapon extends Item {
         this.damageType = damageType;
         this.properties = properties;
     }
+
+    public Dice getDamage() {
+        return damage;
+    }
+
+    public void setDamage(Dice damage) {
+        this.damage = damage;
+    }
+
+    public String getDamageType() {
+        return damageType;
+    }
+
+    public void setDamageType(String damageType) {
+        this.damageType = damageType;
+    }
+
+    public List<String> getProperties() {
+        return properties;
+    }
+
+    public void setProperties(List<String> properties) {
+        this.properties = properties;
+    }
 }
