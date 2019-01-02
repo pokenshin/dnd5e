@@ -79,6 +79,7 @@ public class CharacterBusiness {
         character.setPerception(10 + character.getWisdom().getModifier());
         //HP = Hit Dice + con modifier
         character.setHpMax(character.getHitDice().getSides() + character.getConstitution().getModifier());
+        character.setHpCurrent(character.getHpMax());
         //Languages = Common + Int Modifier
         character.setLanguages(new ArrayList<>());
         character.getLanguages().add("Common");
