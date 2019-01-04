@@ -6,6 +6,7 @@ import com.pokenshin.dnd5e.entity.*;
 
 import java.io.File;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.Objects;
 
 public class JsonMapper {
@@ -158,6 +159,20 @@ public class JsonMapper {
             for (String fileName : fileList) {
                 CharacterBackground characterBackground = this.getCharacterBackground(fileName);
                 result.put(characterBackground.getId(), characterBackground);
+            }
+        }
+        return result;
+    }
+
+    public Map<Integer,Weapon> getAllWeaponsByCategory(String category) {
+        HashMap<Integer, Weapon> result = new HashMap<>();
+        ClassLoader classLoader = JsonMapper.class.getClassLoader();
+        String[] fileList = new File(Objects.requireNonNull(classLoader.getResource(basePath + itemPath + weaponPath)).getFile()).list();
+        if (fileList != null){
+            for (String fileName: fileList ) {
+                Weapon weapon = this.getWeapon(fileName);
+                if (weapon.getCategory().equals(category))
+                    result.put(weapon.getId(), weapon);
             }
         }
         return result;

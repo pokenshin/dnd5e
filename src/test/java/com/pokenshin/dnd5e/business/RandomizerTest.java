@@ -86,4 +86,10 @@ class RandomizerTest {
     void getRandomArmor(){
         assertNotNull(randomizer.getRandomArmor());
     }
+
+    @Test
+    void getRandomWeaponByCategory(){
+        Weapon weapon = randomizer.getRandomWeaponByCategory("Martial Weapon");
+        assertTrue(weapon.getCategory().equals("Martial Weapon"));
+    }
 }

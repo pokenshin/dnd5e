@@ -73,4 +73,9 @@ class JsonMapperTest {
     void getAllCharacterClasses() {
         assertTrue(mapper.getAllCharacterClasses().size() > 0);
     }
+
+    @Test
+    void getAllWeaponsByCategory(){
+        assertTrue(mapper.getAllWeaponsByCategory("Martial Weapon").size() > 0);
+    }
 }
