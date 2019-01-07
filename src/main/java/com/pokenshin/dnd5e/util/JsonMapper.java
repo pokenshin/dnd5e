@@ -17,6 +17,7 @@ public class JsonMapper {
     private String itemPath = "items/";
     private String weaponPath = "weapons/";
     private String armorPath = "armors/";
+    private String miscPath = "misc/";
     private ObjectMapper mapper;
 
     private void init(){
@@ -175,6 +176,21 @@ public class JsonMapper {
                     result.put(weapon.getId(), weapon);
             }
         }
+        return result;
+    }
+
+    public Item getMiscItem(String fileName) {
+        Item result = new Item();
+        ClassLoader classLoader = JsonMapper.class.getClassLoader();
+        this.init();
+        File file;
+        file = new File(Objects.requireNonNull(classLoader.getResource(basePath + itemPath + miscPath + fileName)).getFile());
+        try {
+            result = mapper.readValue(file, Item.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
         return result;
     }
 }

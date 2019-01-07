@@ -74,6 +74,9 @@ public class Randomizer {
 
         while(iteration < totalPoints){
             int position = ThreadLocalRandom.current().nextInt(0, 6);
+            while (values.get(position) > 17){
+                position = ThreadLocalRandom.current().nextInt(0, 6);
+            }
             values.set(position, values.get(position) + 1);
             iteration += 1;
         }
@@ -96,7 +99,7 @@ public class Randomizer {
 
     public Armor getRandomArmor(){
         JsonMapper mapper = new JsonMapper();
-        Object[] wpList = mapper.getAllWeapons().values().toArray();
+        Object[] wpList = mapper.getAllArmors().values().toArray();
         Armor armor = (Armor)wpList[ThreadLocalRandom.current().nextInt(0, wpList.length - 1)];
         return armor;
     }

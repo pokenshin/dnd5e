@@ -1,6 +1,6 @@
 package com.pokenshin.dnd5e.entity;
 
-public abstract class Item {
+public class Item {
     private int id;
     private String name;
     private String category;

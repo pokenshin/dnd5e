@@ -78,4 +78,10 @@ class JsonMapperTest {
     void getAllWeaponsByCategory(){
         assertTrue(mapper.getAllWeaponsByCategory("Martial Weapon").size() > 0);
     }
+
+    @Test
+    void getMiscItem() {
+        Item backpack = mapper.getMiscItem("backpack.json");
+        assertEquals("Backpack", backpack.getName());
+    }
 }

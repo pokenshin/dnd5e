@@ -1,0 +1,13 @@
+{
+  "id": 56,
+  "name": "Torch",
+  "category": "Misc",
+  "cost":{
+    "copper": 1,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 1
+}

@@ -1,0 +1,13 @@
+{
+  "id": 53,
+  "name": "Bedroll",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 1,
+    "platinum": 0
+  },
+  "weight": 7
+}

@@ -1,0 +1,13 @@
+{
+  "id": 54,
+  "name": "Mess Kit",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 2,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 6
+}

@@ -1,0 +1,13 @@
+{
+  "id": 58,
+  "name": "Waterskin",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 2,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 5
+}

@@ -1,0 +1,13 @@
+{
+  "id": 59,
+  "name": "Hempen Rope",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 1,
+    "platinum": 0
+  },
+  "weight": 10
+}
