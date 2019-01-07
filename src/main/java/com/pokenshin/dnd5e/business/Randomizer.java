@@ -110,4 +110,36 @@ public class Randomizer {
         Weapon weapon = (Weapon)wpList[ThreadLocalRandom.current().nextInt(0, wpList.length - 1)];
         return weapon;
     }
+
+    /**
+     * Generates a random level 1 Character object.
+     * @return A Character object with random values set to level 1.
+     */
+    public Character getRandomCharacter(int totalAbilityValues){
+        Character result = new Character();
+        CharacterBusiness characterBusiness = new CharacterBusiness();
+
+        result.setLevel(1);
+        result.setExperience(0);
+        result.setAlignment(this.getRandomAlignment());
+        result.setCharacterName("Random Character");
+        result.setPlayerName("The Computer");
+        result = this.generateBalancedAbilityScores(totalAbilityValues, result);
+        result.getStrength().setModifier(characterBusiness.getModifier(result.getStrength().getValue()));
+        result.getDexterity().setModifier(characterBusiness.getModifier(result.getDexterity().getValue()));
+        result.getConstitution().setModifier(characterBusiness.getModifier(result.getConstitution().getValue()));
+        result.getIntelligence().setModifier(characterBusiness.getModifier(result.getIntelligence().getValue()));
+        result.getWisdom().setModifier(characterBusiness.getModifier(result.getWisdom().getValue()));
+        result.getCharisma().setModifier(characterBusiness.getModifier(result.getCharisma().getValue()));
+        characterBusiness.applyRace(result, this.getRandomRace());
+        characterBusiness.applyCharacterClass(result, this.getRandomClass());
+        characterBusiness.applyBackground(result, this.getRandomBackground());
+        result.setHeight(this.getRandomHeight(result.getRace()));
+        result.setWeight(this.getRandomWeight(result.getRace()));
+
+        result = characterBusiness.calculateNewCharacter(result);
+        //TODO: Define spells if applicable. Based on class. Spell attack bonus = primary spellcasting stat + proficiency bonus.
+
+        return result;
+    }
 }

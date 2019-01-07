@@ -66,29 +66,6 @@ class CharacterBusinessTest {
 
 
     @Test
-    void generateRandomCharacter() {
-        character = business.generateRandomCharacter();
-        assertNotNull(character);
-        assertEquals(1, character.getLevel());
-        assertEquals(0, character.getExperience());
-        assertNotEquals("", character.getRace().getName());
-        assertNotEquals("", character.getCharacterClass().getName());
-        assertNotEquals("", character.getBackground());
-        assertTrue(character.getStrength().getValue() > 0);
-        assertTrue(character.getStrength().getValue() < 19);
-        assertTrue(character.getDexterity().getValue() > 0);
-        assertTrue(character.getDexterity().getValue() < 19);
-        assertTrue(character.getConstitution().getValue() > 0);
-        assertTrue(character.getConstitution().getValue() < 19);
-        assertTrue(character.getIntelligence().getValue() > 0);
-        assertTrue(character.getIntelligence().getValue() < 19);
-        assertTrue(character.getWisdom().getValue() > 0);
-        assertTrue(character.getWisdom().getValue() < 19);
-        assertTrue(character.getCharisma().getValue() > 0);
-        assertTrue(character.getCharisma().getValue() < 19);
-    }
-
-    @Test
     void applyRandomRace() {
         character = business.applyRandomRace(new Character());
         assertNotEquals(0, character.getRace().getId());

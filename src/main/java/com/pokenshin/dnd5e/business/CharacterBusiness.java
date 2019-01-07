@@ -39,38 +39,7 @@ public class CharacterBusiness {
         return character;
     }
 
-    /**
-     * Generates a random level 1 Character object.
-     * @return A Character object with random values set to level 1.
-     */
-    public Character generateRandomCharacter(){
-        Character result = new Character();
-        Randomizer randomizer = new Randomizer();
-        int totalAbilityValues = 72;
 
-        result.setLevel(1);
-        result.setExperience(0);
-        result.setAlignment(randomizer.getRandomAlignment());
-        result.setCharacterName("Random Character");
-        result.setPlayerName("The Computer");
-        result = randomizer.generateBalancedAbilityScores(totalAbilityValues, result);
-        result.getStrength().setModifier(this.getModifier(result.getStrength().getValue()));
-        result.getDexterity().setModifier(this.getModifier(result.getDexterity().getValue()));
-        result.getConstitution().setModifier(this.getModifier(result.getConstitution().getValue()));
-        result.getIntelligence().setModifier(this.getModifier(result.getIntelligence().getValue()));
-        result.getWisdom().setModifier(this.getModifier(result.getWisdom().getValue()));
-        result.getCharisma().setModifier(this.getModifier(result.getCharisma().getValue()));
-        this.applyRace(result, randomizer.getRandomRace());
-        this.applyCharacterClass(result, randomizer.getRandomClass());
-        this.applyBackground(result, randomizer.getRandomBackground());
-        result.setHeight(randomizer.getRandomHeight(result.getRace()));
-        result.setWeight(randomizer.getRandomWeight(result.getRace()));
-
-        result = this.calculateNewCharacter(result);
-        //TODO: Define spells if applicable. Based on class. Spell attack bonus = primary spellcasting stat + proficiency bonus.
-
-        return result;
-    }
 
     public Character calculateNewCharacter(Character character){
         List<String> baseLanguages = character.getLanguages();
