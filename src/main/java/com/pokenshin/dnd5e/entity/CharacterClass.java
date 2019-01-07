@@ -15,10 +15,9 @@ public class CharacterClass {
     private List<String> tools;
     private CharacterSavingThrows savingThrows;
     private CharacterSkills skills;
-    private CharacterCurrency startingMoney;
     private List<String> levelingPerks;
 
-    public CharacterClass(int id, String name, Dice hitDice, int startingHP, List<String> armorProficiency, List<String> weaponProficiency, List<String> tools, CharacterSavingThrows savingThrows, CharacterSkills skills, CharacterCurrency startingMoney, List<String> levelingPerks) {
+    public CharacterClass(int id, String name, Dice hitDice, int startingHP, List<String> armorProficiency, List<String> weaponProficiency, List<String> tools, CharacterSavingThrows savingThrows, CharacterSkills skills, List<String> levelingPerks) {
         this.id = id;
         this.name = name;
         this.hitDice = hitDice;
@@ -28,7 +27,6 @@ public class CharacterClass {
         this.tools = tools;
         this.savingThrows = savingThrows;
         this.skills = skills;
-        this.startingMoney = startingMoney;
         this.levelingPerks = levelingPerks;
     }
 
@@ -42,7 +40,6 @@ public class CharacterClass {
         this.tools = new ArrayList<>();
         this.savingThrows = new CharacterSavingThrows();
         this.skills = new CharacterSkills();
-        this.startingMoney = new CharacterCurrency();
         this.levelingPerks = new ArrayList<>();
     }
 
@@ -116,14 +113,6 @@ public class CharacterClass {
 
     public void setSkills(CharacterSkills skills) {
         this.skills = skills;
-    }
-
-    public CharacterCurrency getStartingMoney() {
-        return startingMoney;
-    }
-
-    public void setStartingMoney(CharacterCurrency startingMoney) {
-        this.startingMoney = startingMoney;
     }
 
     public List<String> getLevelingPerks() {

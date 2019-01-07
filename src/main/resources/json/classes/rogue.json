@@ -101,13 +101,6 @@
       "advantage": false
     }
   },
-  "startingMoney":{
-    "copper": 0,
-    "silver": 0,
-    "electrum": 0,
-    "gold": 0,
-    "platinum": 0
-  },
   "levelingPerks":[
     "Expertise, Sneak Attack, Thieves's Cant",
     "Cunning Action",

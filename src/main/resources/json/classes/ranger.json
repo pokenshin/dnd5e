@@ -96,13 +96,6 @@
       "advantage": true
     }
   },
-  "startingMoney":{
-    "copper": 0,
-    "silver": 0,
-    "electrum": 0,
-    "gold": 0,
-    "platinum": 0
-  },
   "levelingPerks":[
     "Favored Enemy, Natural Explorer",
     "Fighting Style, Spellcasting",

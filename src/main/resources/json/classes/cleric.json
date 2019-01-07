@@ -98,13 +98,6 @@
       "advantage": false
     }
   },
-  "startingMoney":{
-    "copper": 0,
-    "silver": 0,
-    "electrum": 0,
-    "gold": 0,
-    "platinum": 0
-  },
   "levelingPerks":[
     "Spellcasting, DIvine Domain",
     "Channel Divinity (1/rest), Divine Domain Feature",
