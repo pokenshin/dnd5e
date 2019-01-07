@@ -50,7 +50,7 @@ public class CharacterBackground {
         this.skillProficiencies = new CharacterSkills();
         this.toolProficiencies = new ArrayList<>();
         this.languages = new ArrayList<>();
-        this.equipment = new ArrayList<>();
+        this.equipment = new ArrayList<String>();
         this.startingMoney = new CharacterCurrency();
         this.features = new ArrayList<>();
         this.additionalTraits = new ArrayList<>();

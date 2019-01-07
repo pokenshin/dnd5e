@@ -1,11 +1,8 @@
 package com.pokenshin.dnd5e.business;
 
-import com.pokenshin.dnd5e.controller.CharacterRaceController;
 import com.pokenshin.dnd5e.entity.*;
 import com.pokenshin.dnd5e.entity.Character;
 import com.pokenshin.dnd5e.util.JsonMapper;
-import org.junit.Before;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -127,7 +124,6 @@ class CharacterBusinessTest {
         assertFalse(character.getSkills().getArcana().isAdvantage());
         assertTrue(character.getSkills().getAthletics().isAdvantage());
         assertTrue(character.getProficiencies().stream().anyMatch(str -> str.trim().equals("Musical Instrument")));
-        assertTrue(character.getEquipment().stream().anyMatch(str -> str.trim().equals("1 Staff")));
         assertEquals(10, character.getCurrency().getGold());
         assertTrue(character.getFeatures().stream().anyMatch(str -> str.trim().equals("Wanderer")));
         assertFalse(character.getTraits().isEmpty());

@@ -148,7 +148,8 @@ public class CharacterBusiness {
         character = this.addCharacterSkillAdvantages(character, background.getSkillProficiencies());
         character.getProficiencies().addAll(background.getToolProficiencies());
         character.getLanguages().addAll(background.getLanguages());
-        character.getEquipment().addAll(background.getEquipment());
+        //TODO: Get Equipment from CharacterBackgroundBusiness
+        character.getEquipment().addAll(new ArrayList<>());
         character.setCurrency(characterCurrencyBusiness.addMoney(character.getCurrency(), background.getStartingMoney()));
         character.getFeatures().addAll(background.getFeatures());
         character.getTraits().add(rng.getRandomListItemString(background.getPersonalityTraits()));
@@ -285,6 +286,7 @@ public class CharacterBusiness {
      * @param characterClass The CharacterClass that will be applied to the Character object
      * @return A Character object with the CharacterClass applied to it
      */
+    //TODO: Migrate this to CharacterClassBusiness
     public Character applyCharacterClass(Character character, CharacterClass characterClass){
         character.setCharacterClass(characterClass);
         character.setHitDice(characterClass.getHitDice());
