@@ -28,9 +28,4 @@ class CharacterClassBusinessTest {
         assertNotNull(optionB);
     }
 
-    @Test
-    void getItemPack(){
-        ArrayList<Item> result = business.getItemPack("Explorer");
-        assertEquals(26, result.size());
-    }
 }
