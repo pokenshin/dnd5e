@@ -1,5 +1,6 @@
 package com.pokenshin.dnd5e.business;
 
+import com.pokenshin.dnd5e.entity.CharacterClass;
 import com.pokenshin.dnd5e.entity.Race;
 import com.pokenshin.dnd5e.entity.Character;
 import com.pokenshin.dnd5e.entity.Weapon;
@@ -114,5 +115,16 @@ class RandomizerTest {
         assertTrue(character.getWisdom().getValue() < 19);
         assertTrue(character.getCharisma().getValue() > 0);
         assertTrue(character.getCharisma().getValue() < 19);
+    }
+
+    @Test
+    void getRandomStartingEquipment(){
+        Character character = new Character();
+        CharacterClass barbarian = new CharacterClass();
+        barbarian.setName("Barbarian");
+        character.setCharacterClass(barbarian);
+        character.setEquipment(randomizer.getRandomStartingEquipment(character));
+        assertTrue(character.getEquipment().size() > 0);
+
     }
 }

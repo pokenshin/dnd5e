@@ -136,9 +136,29 @@ public class Randomizer {
         characterBusiness.applyBackground(result, this.getRandomBackground());
         result.setHeight(this.getRandomHeight(result.getRace()));
         result.setWeight(this.getRandomWeight(result.getRace()));
+        result.setEquipment(this.getRandomStartingEquipment(result));
 
         result = characterBusiness.calculateNewCharacter(result);
         //TODO: Define spells if applicable. Based on class. Spell attack bonus = primary spellcasting stat + proficiency bonus.
+
+        return result;
+    }
+
+    /**
+     * Populates the equipment property of the Character class with a random set of starting equipment
+     * based on options set by the Character class and background
+     * @param character The character object with CharacterClass and CharacterBackground defined
+     * @return List<Item> of starting equipment
+     */
+    public List<Item> getRandomStartingEquipment(Character character) {
+        List<Item> result = new ArrayList<>();
+        //TODO add CharacterBackground items to the mix
+        CharacterClassBusiness characterClassBusiness = new CharacterClassBusiness();
+        ArrayList<ArrayList<Item>> characterClassItemOptions = characterClassBusiness.getStartingEquipmentOptions(character.getCharacterClass());
+        if (characterClassItemOptions.size() == 1)
+            result.addAll(characterClassItemOptions.get(0));
+        else if (characterClassItemOptions.size() > 1)
+            result.addAll(characterClassItemOptions.get(ThreadLocalRandom.current().nextInt(0, characterClassItemOptions.size())));
 
         return result;
     }
