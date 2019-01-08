@@ -87,6 +87,10 @@ public class CharacterClassBusiness {
         ArrayList<Item> optionC = new ArrayList<>();
         Randomizer rng = new Randomizer();
         JsonMapper mapper = new JsonMapper();
+        Weapon rapier = mapper.getWeapon("rapier.json");
+        Weapon longsword = mapper.getWeapon("longsword.json");
+        Weapon randomSimple = rng.getRandomWeaponByCategory("Simple Weapons");
+
         //- Rapier / Longsword / Any Simple
         //- Diplomat's Pack / Entertainer's Pack
         //- Lute / Any Musical

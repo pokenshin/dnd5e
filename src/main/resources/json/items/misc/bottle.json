@@ -1,0 +1,13 @@
+{
+  "id": 63,
+  "name": "Bottle",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 15,
+    "platinum": 0
+  },
+  "weight": 6
+}

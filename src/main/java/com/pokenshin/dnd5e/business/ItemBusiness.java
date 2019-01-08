@@ -28,6 +28,25 @@ public class ItemBusiness {
                 result.add(mapper.getMiscItem("waterskin.json"));
                 result.add(mapper.getMiscItem("hempenrope.json"));
                 break;
+
+            case "Diplomat":
+                result.add(mapper.getMiscItem("chest.json"));
+                for (int i = 0; i < 2; i++){
+                    result.add(mapper.getMiscItem("case.json"));
+                }
+                result.add(mapper.getMiscItem("finecloth.json"));
+                result.add(mapper.getMiscItem("inkbottle.json"));
+                result.add(mapper.getMiscItem("inkpen.json"));
+                result.add(mapper.getMiscItem("lamp.json"));
+                for (int i=0; i< 2; i++){
+                    result.add(mapper.getMiscItem("oilflask.json"));
+                }
+                for (int i=0; i<5; i++){
+                    result.add(mapper.getMiscItem("paper.json"));
+                }
+                result.add(mapper.getMiscItem("perfume.json"));
+                result.add(mapper.getMiscItem("sealingwax.json"));
+                break;
         }
 
         return result;

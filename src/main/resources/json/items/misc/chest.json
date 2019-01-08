@@ -1,0 +1,13 @@
+{
+  "id": 60,
+  "name": "Chest",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 5,
+    "platinum": 0
+  },
+  "weight": 25
+}

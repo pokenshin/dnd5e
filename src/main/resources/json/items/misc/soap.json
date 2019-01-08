@@ -1,0 +1,13 @@
+{
+  "id": 71,
+  "name": "Soap",
+  "category": "Misc",
+  "cost":{
+    "copper": 2,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 0
+}
