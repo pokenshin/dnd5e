@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.pokenshin.dnd5e.entity.*;
 
 import java.io.File;
+import java.time.chrono.JapaneseEra;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
@@ -19,6 +20,7 @@ public class JsonMapper {
     private String armorPath = "armors/";
     private String miscPath = "misc/";
     private ObjectMapper mapper;
+    private String toolPath = "tools/";
 
     private void init(){
         mapper = new ObjectMapper();
@@ -185,6 +187,35 @@ public class JsonMapper {
         this.init();
         File file;
         file = new File(Objects.requireNonNull(classLoader.getResource(basePath + itemPath + miscPath + fileName)).getFile());
+        try {
+            result = mapper.readValue(file, Item.class);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return result;
+    }
+
+    public Map<Integer,Item> getToolsByCategory(String category) {
+        HashMap<Integer, Item> result = new HashMap<>();
+        ClassLoader classLoader = JsonMapper.class.getClassLoader();
+        String[] fileList = new File(Objects.requireNonNull(classLoader.getResource(basePath + itemPath + toolPath)).getFile()).list();
+        if (fileList != null){
+            for (String fileName: fileList ) {
+                Item item = this.getTool(fileName);
+                if (item.getCategory().equals(category))
+                    result.put(item.getId(), item);
+            }
+        }
+        return result;
+    }
+
+    public Item getTool(String fileName) {
+        Item result = new Item();
+        ClassLoader classLoader = JsonMapper.class.getClassLoader();
+        this.init();
+        File file;
+        file = new File(Objects.requireNonNull(classLoader.getResource(basePath + itemPath + toolPath + fileName)).getFile());
         try {
             result = mapper.readValue(file, Item.class);
         } catch (Exception e) {

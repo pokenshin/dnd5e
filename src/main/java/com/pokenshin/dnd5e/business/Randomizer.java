@@ -162,4 +162,36 @@ public class Randomizer {
 
         return result;
     }
+
+    /**
+     * Returns a randomized list of starting equipment for the Bard class
+     * @return List<Item> of starting equipment
+     */
+    public ArrayList<Item> getRandomStartingEquipmentBard() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> weapons = new ArrayList<>();
+        ArrayList<Item> packs = new ArrayList<>();
+        ArrayList<Item> tools = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        weapons.add(mapper.getWeapon("rapier.json"));
+        weapons.add(mapper.getWeapon("longsword.json"));
+        weapons.add(this.getRandomWeaponByCategory("Simple Weapons"));
+        packs.addAll(itemBusiness.getItemPack("Diplomat"));
+        packs.addAll(itemBusiness.getItemPack("Entertainer"));
+        tools.add(mapper.getMiscItem("lute.json"));
+        tools.add(this.getRandomToolItemByCategory("Musical Instrument"));
+        //- Rapier / Longsword / Any Simple
+        //- Diplomat's Pack / Entertainer's Pack
+        //- Lute / Any Musical
+        //- Leather Armor and Dagger
+
+        return null;
+    }
+
+    public Item getRandomToolItemByCategory(String category) {
+        JsonMapper mapper = new JsonMapper();
+        Object[] itemList = mapper.getToolsByCategory(category).values().toArray();
+        Item item = (Item)itemList[ThreadLocalRandom.current().nextInt(0, itemList.length - 1)];
+        return item;
+    }
 }

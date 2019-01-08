@@ -1,9 +1,7 @@
 package com.pokenshin.dnd5e.business;
 
-import com.pokenshin.dnd5e.entity.CharacterClass;
-import com.pokenshin.dnd5e.entity.Race;
+import com.pokenshin.dnd5e.entity.*;
 import com.pokenshin.dnd5e.entity.Character;
-import com.pokenshin.dnd5e.entity.Weapon;
 import com.pokenshin.dnd5e.util.JsonMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -126,5 +124,12 @@ class RandomizerTest {
         character.setEquipment(randomizer.getRandomStartingEquipment(character));
         assertTrue(character.getEquipment().size() > 0);
 
+    }
+
+    @Test
+    void getRandomMusicalInstrument(){
+        Item instrument = randomizer.getRandomToolItemByCategory("Musical Instrument");
+        assertNotNull(instrument);
+        assertTrue(instrument.getCategory().equals("Musical Instrument"));
     }
 }

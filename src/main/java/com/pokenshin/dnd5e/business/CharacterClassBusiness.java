@@ -72,32 +72,13 @@ public class CharacterClassBusiness {
             case "Barbarian":
                 return getStartingEquipmentBarbarian();
             case "Bard":
-                return getStartingEquipmentBard();
 
             default:
                 return new ArrayList<>();
         }
     }
 
-    private ArrayList<ArrayList<Item>> getStartingEquipmentBard() {
-        ItemBusiness itemBusiness = new ItemBusiness();
-        ArrayList<ArrayList<Item>> options = new ArrayList<>();
-        ArrayList<Item> optionA = new ArrayList<>();
-        ArrayList<Item> optionB = new ArrayList<>();
-        ArrayList<Item> optionC = new ArrayList<>();
-        Randomizer rng = new Randomizer();
-        JsonMapper mapper = new JsonMapper();
-        Weapon rapier = mapper.getWeapon("rapier.json");
-        Weapon longsword = mapper.getWeapon("longsword.json");
-        Weapon randomSimple = rng.getRandomWeaponByCategory("Simple Weapons");
 
-        //- Rapier / Longsword / Any Simple
-        //- Diplomat's Pack / Entertainer's Pack
-        //- Lute / Any Musical
-        //- Leather Armor and Dagger
-
-        return options;
-    }
 
 
     private ArrayList<ArrayList<Item>> getStartingEquipmentBarbarian() {
