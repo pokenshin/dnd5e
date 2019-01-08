@@ -5,12 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a579165-5d0e-45b6-b2b1-a37abf8f77a4" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/misc/candle.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/misc/costume.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/misc/disguisekit.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/tools/bagpipes.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/tools/drum.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/tools/dulcimer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/tools/flute.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/tools/horn.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/tools/lute.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/tools/lyre.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/tools/panflute.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/tools/shawn.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/tools/viol.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/ItemBusinessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/ItemBusinessTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/json/items/misc/disguisekit.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/json/items/tools/disguisekit.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -68,7 +74,7 @@
       <file leaf-file-name="CharacterClassBusiness.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterClassBusiness.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
+            <state relative-caret-position="748">
               <caret line="127" column="27" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,38 +83,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ItemBusiness.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="60" column="67" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ItemBusinessTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/ItemBusinessTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sealingwax.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/sealingwax.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="costume.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/costume.json">
+      <file leaf-file-name="flute.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/flute.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
@@ -116,8 +92,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="candle.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/candle.json">
+      <file leaf-file-name="lyre.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/lyre.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
@@ -125,11 +101,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="disguisekit.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/disguisekit.json">
+      <file leaf-file-name="horn.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/horn.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="panflute.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/panflute.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shawn.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/shawn.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="viol.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/viol.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -171,16 +174,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/backpack.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/bedroll.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/messkit.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/tinderbox.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/torch.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/ration.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/waterskin.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/hempenrope.json" />
-        <option value="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/util/JsonMapperTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/util/JsonMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/entity/CharacterBackground.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/entity/Character.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterBusiness.java" />
@@ -222,6 +215,16 @@
         <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/disguisekit.json" />
         <option value="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/ItemBusinessTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/lute.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/tools/bagpipes.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/tools/drum.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/tools/dulcimer.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/tools/flute.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/tools/lyre.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/tools/horn.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/tools/panflute.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/tools/shawn.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/tools/viol.json" />
       </list>
     </option>
   </component>
@@ -364,6 +367,16 @@
               <item name="dnd5e" type="b2602c69:ProjectViewProjectNode" />
               <item name="dnd5e" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="json" type="462c0819:PsiDirectoryNode" />
+              <item name="items" type="462c0819:PsiDirectoryNode" />
+              <item name="tools" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dnd5e" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dnd5e" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -420,16 +433,18 @@
       <recent name="com.pokenshin.dnd5e.character.races" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\temp\java\dnd5e\src\main\resources\json\items\tools" />
+      <recent name="C:\temp\java\dnd5e\src\main\resources\json\items\musical" />
       <recent name="C:\temp\java\dnd5e\src\main\resources\json\classes" />
       <recent name="C:\temp\java\dnd5e\src\main\resources\json\races" />
       <recent name="C:\temp\java\dnd5e\src\main\resources\json" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\temp\java\dnd5e\src\main\resources\json\items\tools" />
       <recent name="C:\temp\java\dnd5e\src\main\resources\json\items\misc" />
       <recent name="C:\temp\java\dnd5e\src\main\resources\json\items\weapons" />
       <recent name="C:\temp\java\dnd5e\src\main\resources\json\items\armor" />
       <recent name="E:\Code\Java\Spring\dnd5e\src\main\resources\json\backgrounds" />
-      <recent name="C:\temp\java\dnd5e\src\main\resources\json\backgrounds" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.pokenshin.dnd5e.entity" />
@@ -652,13 +667,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537877674605</updated>
-    </task>
-    <task id="LOCAL-00006" summary="JsonMapper class created and tested with a CharacterRace generation">
-      <created>1539189306864</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1539189306864</updated>
     </task>
     <task id="LOCAL-00007" summary="CharacterRaceController testes with Mocked DAO created">
       <created>1539609816640</created>
@@ -996,13 +1004,17 @@
       <option name="project" value="LOCAL" />
       <updated>1546953316990</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="Added the Entertainer's Pack to the ItemBusiness class, added separate tests for all 3 currently created packs and created the pack's items jsons.">
+      <created>1546954172038</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1546954172038</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RandomizerTest_getRandomStartingEquipment - 2019.01.07 at 16h 45m 35s.xml">
-      <configuration name="RandomizerTest.getRandomStartingEquipment" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RandomizerTest_getRandomStartingEquipment - 2019.01.07 at 16h 46m 25s.xml">
       <configuration name="RandomizerTest.getRandomStartingEquipment" configurationId="JUnit" />
     </history-entry>
@@ -1030,6 +1042,9 @@
     <history-entry file="All_Tests - 2019.01.07 at 18h 07m 52s.xml">
       <configuration name="All Tests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ItemBusinessTest - 2019.01.08 at 11h 28m 44s.xml">
+      <configuration name="ItemBusinessTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1046,6 +1061,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32913387" />
+      <window_info anchor="bottom" id="Messages" order="9" weight="0.32755905" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
@@ -1063,11 +1079,10 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49853587" weight="0.30393702" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49853587" visible="true" weight="0.30393702" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" visible="true" weight="0.24597365" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="9" weight="0.32755905" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -1114,7 +1129,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created getRandomListItemString on Randomizer" />
     <MESSAGE value="Created applyBackground on CharacterBusiness" />
     <MESSAGE value="Created getRandomAlignment in Randomizer" />
     <MESSAGE value="Created calculateNewCharacter in CharacterBusiness and added a new constructor to Dice to use &quot;XdY&quot; notation." />
@@ -1139,7 +1153,8 @@
     <MESSAGE value="Refactored getItemPack from CharacterClassBusiness to ItemBusiness" />
     <MESSAGE value="Created a getStartingMoney on CharacterClassBusiness and refactored jsons/entity to remove the old startingMoney field." />
     <MESSAGE value="Added the Diplomat's Pack to the ItemBusiness class and created the pack's items jsons." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added the Diplomat's Pack to the ItemBusiness class and created the pack's items jsons." />
+    <MESSAGE value="Added the Entertainer's Pack to the ItemBusiness class, added separate tests for all 3 currently created packs and created the pack's items jsons." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added the Entertainer's Pack to the ItemBusiness class, added separate tests for all 3 currently created packs and created the pack's items jsons." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1158,91 +1173,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/entity/Item.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/util/JsonMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2992">
-          <caret line="185" column="18" selection-start-line="185" selection-start-column="18" selection-end-line="185" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/json/backgrounds/acolyte.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="86" column="20" lean-forward="true" selection-start-line="86" selection-start-column="20" selection-end-line="86" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/entity/Character.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="12" selection-end-line="38" selection-end-column="22" />
-          <folding>
-            <element signature="e#9274#9275#0" expanded="true" />
-            <element signature="e#9309#9310#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/entity/CharacterBackground.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-697">
-          <caret line="20" column="25" lean-forward="true" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/controller/CharacterController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="49" lean-forward="true" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/CharacterBusinessTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="67" selection-start-line="67" selection-end-line="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/RandomizerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="126" column="56" lean-forward="true" selection-start-line="126" selection-start-column="56" selection-end-line="126" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/Randomizer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="158" column="60" lean-forward="true" selection-start-line="158" selection-start-column="60" selection-end-line="158" selection-end-column="60" />
-          <folding>
-            <element signature="e#354#355#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterBusiness.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="10" selection-start-line="69" selection-start-column="10" selection-end-line="69" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#addCharacterSkillAdvantages#0;class#CharacterBusiness#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/CharacterClassBusinessTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
@@ -1480,16 +1410,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterClassBusiness.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="127" column="27" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/lamp.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -1518,27 +1438,107 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/disguisekit.json">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/disguisekit.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterClassBusiness.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="60" column="67" selection-start-line="60" selection-start-column="67" selection-end-line="60" selection-end-column="67" />
+        <state relative-caret-position="748">
+          <caret line="127" column="27" selection-start-line="127" selection-start-column="27" selection-end-line="127" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/lute.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/ItemBusinessTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
+        <state relative-caret-position="204">
           <caret line="26" column="63" selection-start-line="26" selection-start-column="63" selection-end-line="26" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/bagpipes.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="true" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/drum.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/dulcimer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/flute.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/lyre.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/horn.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/panflute.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/shawn.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/tools/viol.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" lean-forward="true" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
         </state>
       </provider>
     </entry>

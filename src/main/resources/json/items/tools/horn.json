@@ -1,0 +1,13 @@
+{
+  "id": 80,
+  "name": "Horn",
+  "category": "Musical Instrument",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 3,
+    "platinum": 0
+  },
+  "weight": 2
+}

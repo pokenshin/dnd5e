@@ -1,0 +1,13 @@
+{
+  "id": 75,
+  "name": "Bagpipes",
+  "category": "Musical Instrument",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 30,
+    "platinum": 0
+  },
+  "weight": 6
+}

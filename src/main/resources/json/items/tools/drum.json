@@ -1,0 +1,13 @@
+{
+  "id": 76,
+  "name": "Drum",
+  "category": "Musical Instrument",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 6,
+    "platinum": 0
+  },
+  "weight": 3
+}
