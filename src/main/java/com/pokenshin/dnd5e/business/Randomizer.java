@@ -170,22 +170,24 @@ public class Randomizer {
     public ArrayList<Item> getRandomStartingEquipmentBard() {
         ItemBusiness itemBusiness = new ItemBusiness();
         ArrayList<Item> weapons = new ArrayList<>();
-        ArrayList<Item> packs = new ArrayList<>();
+        ArrayList<ArrayList<Item>> packs = new ArrayList<>();
         ArrayList<Item> tools = new ArrayList<>();
         JsonMapper mapper = new JsonMapper();
         weapons.add(mapper.getWeapon("rapier.json"));
         weapons.add(mapper.getWeapon("longsword.json"));
-        weapons.add(this.getRandomWeaponByCategory("Simple Weapons"));
-        packs.addAll(itemBusiness.getItemPack("Diplomat"));
-        packs.addAll(itemBusiness.getItemPack("Entertainer"));
-        tools.add(mapper.getMiscItem("lute.json"));
+        weapons.add(this.getRandomWeaponByCategory("Simple Weapon"));
+        packs.add(itemBusiness.getItemPack("Diplomat"));
+        packs.add(itemBusiness.getItemPack("Entertainer"));
+        tools.add(mapper.getTool("lute.json"));
         tools.add(this.getRandomToolItemByCategory("Musical Instrument"));
-        //- Rapier / Longsword / Any Simple
-        //- Diplomat's Pack / Entertainer's Pack
-        //- Lute / Any Musical
-        //- Leather Armor and Dagger
+        ArrayList<Item> equipment = new ArrayList<Item>();
+        equipment.add(weapons.get(ThreadLocalRandom.current().nextInt(0, weapons.size())));
+        equipment.addAll(packs.get(ThreadLocalRandom.current().nextInt(0, packs.size())));
+        equipment.add(tools.get(ThreadLocalRandom.current().nextInt(0, tools.size())));
+        equipment.add(mapper.getWeapon("dagger.json"));
+        equipment.add(mapper.getArmor("leather.json"));
 
-        return null;
+        return equipment;
     }
 
     public Item getRandomToolItemByCategory(String category) {

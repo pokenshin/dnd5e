@@ -132,4 +132,11 @@ class RandomizerTest {
         assertNotNull(instrument);
         assertTrue(instrument.getCategory().equals("Musical Instrument"));
     }
+
+    @Test
+    void getRandomStartingEquipmentBard(){
+        ArrayList<Item> result = randomizer.getRandomStartingEquipmentBard();
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
 }

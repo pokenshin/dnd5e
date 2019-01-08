@@ -58,7 +58,7 @@ public class ItemBusiness {
                     result.add(mapper.getMiscItem("ration.json"));
                 }
                 result.add(mapper.getMiscItem("waterskin.json"));
-                result.add(mapper.getMiscItem("disguisekit.json"));
+                result.add(mapper.getTool("disguisekit.json"));
                 break;
 
         }
