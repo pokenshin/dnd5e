@@ -1,0 +1,13 @@
+{
+  "id": 73,
+  "name": "Disguise Kit",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 25,
+    "platinum": 0
+  },
+  "weight": 3
+}

@@ -47,6 +47,20 @@ public class ItemBusiness {
                 result.add(mapper.getMiscItem("perfume.json"));
                 result.add(mapper.getMiscItem("sealingwax.json"));
                 break;
+
+            case "Entertainer":
+                result.add(mapper.getMiscItem("backpack.json"));
+                result.add(mapper.getMiscItem("bedroll.json"));
+                for (int i=0; i<2; i++){
+                    result.add(mapper.getMiscItem("costume.json"));
+                }
+                for (int i=0; i<5; i++){
+                    result.add(mapper.getMiscItem("ration.json"));
+                }
+                result.add(mapper.getMiscItem("waterskin.json"));
+                result.add(mapper.getMiscItem("disguisekit.json"));
+                break;
+
         }
 
         return result;

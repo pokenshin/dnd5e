@@ -17,8 +17,20 @@ class ItemBusinessTest {
     }
 
     @Test
-    void getItemPack(){
+    void getExplorerPack(){
         ArrayList<Item> result = business.getItemPack("Explorer");
+        assertTrue(result.size() > 0);
+    }
+
+    @Test
+    void getDiplomatPack(){
+        ArrayList<Item> result = business.getItemPack("Diplomat");
+        assertTrue(result.size() > 0);
+    }
+
+    @Test
+    void getEntertainerPack(){
+        ArrayList<Item> result = business.getItemPack("Entertainer");
         assertTrue(result.size() > 0);
     }
 }
