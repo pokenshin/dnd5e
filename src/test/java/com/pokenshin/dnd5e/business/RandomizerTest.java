@@ -116,14 +116,12 @@ class RandomizerTest {
     }
 
     @Test
-    void getRandomStartingEquipment(){
-        Character character = new Character();
+    void getRandomStartingEquipmentBarbarian(){
         CharacterClass barbarian = new CharacterClass();
         barbarian.setName("Barbarian");
-        character.setCharacterClass(barbarian);
-        character.setEquipment(randomizer.getRandomStartingEquipment(character));
-        assertTrue(character.getEquipment().size() > 0);
-
+        ArrayList<Item> result = randomizer.getRandomStartingEquipment(barbarian);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
     }
 
     @Test
@@ -135,7 +133,9 @@ class RandomizerTest {
 
     @Test
     void getRandomStartingEquipmentBard(){
-        ArrayList<Item> result = randomizer.getRandomStartingEquipmentBard();
+        CharacterClass bard = new CharacterClass();
+        bard.setName("Bard");
+        ArrayList<Item> result = randomizer.getRandomStartingEquipment(bard);
         assertNotNull(result);
         assertTrue(result.size() > 0);
     }

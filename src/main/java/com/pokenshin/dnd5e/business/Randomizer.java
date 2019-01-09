@@ -136,29 +136,10 @@ public class Randomizer {
         characterBusiness.applyBackground(result, this.getRandomBackground());
         result.setHeight(this.getRandomHeight(result.getRace()));
         result.setWeight(this.getRandomWeight(result.getRace()));
-        result.setEquipment(this.getRandomStartingEquipment(result));
+        result.setEquipment(this.getRandomStartingEquipment(result.getCharacterClass()));
 
         result = characterBusiness.calculateNewCharacter(result);
         //TODO: Define spells if applicable. Based on class. Spell attack bonus = primary spellcasting stat + proficiency bonus.
-
-        return result;
-    }
-
-    /**
-     * Populates the equipment property of the Character class with a random set of starting equipment
-     * based on options set by the Character class and background
-     * @param character The character object with CharacterClass and CharacterBackground defined
-     * @return List<Item> of starting equipment
-     */
-    public List<Item> getRandomStartingEquipment(Character character) {
-        List<Item> result = new ArrayList<>();
-        //TODO add CharacterBackground items to the mix
-        CharacterClassBusiness characterClassBusiness = new CharacterClassBusiness();
-        ArrayList<ArrayList<Item>> characterClassItemOptions = characterClassBusiness.getStartingEquipmentOptions(character.getCharacterClass());
-        if (characterClassItemOptions.size() == 1)
-            result.addAll(characterClassItemOptions.get(0));
-        else if (characterClassItemOptions.size() > 1)
-            result.addAll(characterClassItemOptions.get(ThreadLocalRandom.current().nextInt(0, characterClassItemOptions.size())));
 
         return result;
     }
@@ -195,5 +176,53 @@ public class Randomizer {
         Object[] itemList = mapper.getToolsByCategory(category).values().toArray();
         Item item = (Item)itemList[ThreadLocalRandom.current().nextInt(0, itemList.length - 1)];
         return item;
+    }
+
+    /**
+     * Returns a randomized list of starting equipment for the Barbarian class
+     * @return ArrayList<Item> of starting equipment
+     */
+    private ArrayList<Item> getRandomStartingEquipmentBarbarian() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> result = new ArrayList<>();
+        ArrayList<Item> weaponsA = new ArrayList<>();
+        ArrayList<Item> weaponsB = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        Weapon greataxe = mapper.getWeapon("greataxe.json");
+        Weapon handaxe = mapper.getWeapon("handaxe.json");
+        Weapon randomMartial = this.getRandomWeaponByCategory("Martial Weapon");
+        Weapon randomSimple = this.getRandomWeaponByCategory("Simple Weapon");
+        Weapon javelin = mapper.getWeapon("javelin.json");
+        weaponsA.add(greataxe);
+        weaponsA.add(randomMartial);
+        weaponsB.add(handaxe);
+        weaponsB.add(randomSimple);
+        result.add(weaponsA.get(ThreadLocalRandom.current().nextInt(0, weaponsA.size())));
+        result.add(weaponsB.get(ThreadLocalRandom.current().nextInt(0, weaponsB.size())));
+        if (result.get(1).getName().equals("Handaxe")){
+            result.add(handaxe);
+        }
+        for(int i = 0; i< 4; i++){
+            result.add(javelin);
+        }
+        result.addAll(itemBusiness.getItemPack("Explorer"));
+        return result;
+    }
+
+    /**
+     * Returns a list of random equipment options for the Class/Background combo
+     * @param characterClass
+     * @return
+     */
+    public ArrayList<Item> getRandomStartingEquipment(CharacterClass characterClass){
+        switch (characterClass.getName()){
+            case "Barbarian":
+                return this.getRandomStartingEquipmentBarbarian();
+            case "Bard":
+                return this.getRandomStartingEquipmentBard();
+
+            default:
+                return new ArrayList<>();
+        }
     }
 }

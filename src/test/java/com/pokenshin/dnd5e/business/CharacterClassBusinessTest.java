@@ -19,17 +19,6 @@ class CharacterClassBusinessTest {
     }
 
     @Test
-    void getStartingEquipmentOptions() {
-        CharacterClass barbarian = new CharacterClass();
-        barbarian.setName("Barbarian");
-        ArrayList<ArrayList<Item>> options = business.getStartingEquipmentOptions(barbarian);
-        ArrayList<Item> optionA = options.get(0);
-        ArrayList<Item> optionB = options.get(1);
-        assertNotNull(optionA);
-        assertNotNull(optionB);
-    }
-
-    @Test
     void getStartingMoney(){
         CharacterClass fighter = new CharacterClass();
         fighter.setName("Fighter");

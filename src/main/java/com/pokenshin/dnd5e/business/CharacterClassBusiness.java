@@ -67,53 +67,6 @@ public class CharacterClassBusiness {
         return result;
     }
 
-    public ArrayList<ArrayList<Item>> getStartingEquipmentOptions(CharacterClass characterClass){
-        switch (characterClass.getName()){
-            case "Barbarian":
-                return getStartingEquipmentBarbarian();
-            case "Bard":
-
-            default:
-                return new ArrayList<>();
-        }
-    }
-
-
-
-
-    private ArrayList<ArrayList<Item>> getStartingEquipmentBarbarian() {
-        ItemBusiness itemBusiness = new ItemBusiness();
-        ArrayList<ArrayList<Item>> options = new ArrayList<>();
-        ArrayList<Item> optionA = new ArrayList<>();
-        ArrayList<Item> optionB = new ArrayList<>();
-        Randomizer rng = new Randomizer();
-        JsonMapper mapper = new JsonMapper();
-        Weapon greataxe = mapper.getWeapon("greataxe.json");
-        Weapon handaxe = mapper.getWeapon("handaxe.json");
-        Weapon randomMartial = rng.getRandomWeaponByCategory("Martial Weapon");
-        Weapon randomSimple = rng.getRandomWeaponByCategory("Simple Weapon");
-        Weapon javelin = mapper.getWeapon("javelin.json");
-        //Option A (1 Great Axe + 2 Hand Axes)
-        optionA.add(greataxe);
-        for(int i = 0; i< 2; i++){
-            optionA.add(handaxe);
-        }
-        //Option B (1 Random Martial + 1 Random Simple)
-        optionB.add(randomMartial);
-        optionB.add(randomSimple);
-        //All options (Explorer's Pack)
-        optionA.addAll(itemBusiness.getItemPack("Explorer"));
-        optionB.addAll(itemBusiness.getItemPack("Explorer"));
-        for(int i = 0; i< 4; i++){
-            optionA.add(javelin);
-            optionB.add(javelin);
-        }
-
-        options.add(optionA);
-        options.add(optionB);
-
-        return options;
-    }
 
 
 }
