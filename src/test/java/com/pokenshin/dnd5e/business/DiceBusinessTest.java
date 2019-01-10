@@ -22,4 +22,10 @@ class DiceBusinessTest {
         assertTrue(diceBusiness.getRoll() > 0);
         assertTrue(diceBusiness.getRoll() < 12);
     }
+
+    @Test
+    void getRollZero(){
+        diceBusiness = new DiceBusiness(null);
+        assertTrue(diceBusiness.getRoll() == 0);
+    }
 }

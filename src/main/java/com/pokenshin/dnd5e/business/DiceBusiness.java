@@ -7,14 +7,6 @@ import java.util.concurrent.ThreadLocalRandom;
 public class DiceBusiness {
     private Dice dice;
 
-    public Dice getDice() {
-        return dice;
-    }
-
-    public void setDice(Dice dice) {
-        this.dice = dice;
-    }
-
     public DiceBusiness(Dice dice){
         this.dice = dice;
     }
