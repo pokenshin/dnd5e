@@ -81,12 +81,89 @@ class CharacterBusinessTest {
     }
 
     @Test
-    void addCharacterSkillAdvantages(){
-        JsonMapper mapper = new JsonMapper();
-        CharacterSkills skills = mapper.getCharacterBackground("criminal.json").getSkillProficiencies();
+    void addCharacterSkillAdvantagesTrue(){
+        CharacterSkills skills = new CharacterSkills();
+        character = new Character();
+        skills.getAcrobatics().setAdvantage(true);
+        skills.getPersuasion().setAdvantage(true);
+        skills.getReligion().setAdvantage(true);
+        skills.getArcana().setAdvantage(true);
+        skills.getAthletics().setAdvantage(true);
+        skills.getHistory().setAdvantage(true);
+        skills.getStealth().setAdvantage(true);
+        skills.getAnimalHandling().setAdvantage(true);
+        skills.getDeception().setAdvantage(true);
+        skills.getInsight().setAdvantage(true);
+        skills.getIntimidation().setAdvantage(true);
+        skills.getInvestigation().setAdvantage(true);
+        skills.getMedicine().setAdvantage(true);
+        skills.getNature().setAdvantage(true);
+        skills.getPerception().setAdvantage(true);
+        skills.getSleightOfHand().setAdvantage(true);
+        skills.getSurvival().setAdvantage(true);
+        skills.getPerformance().setAdvantage(true);
         character = business.addCharacterSkillAdvantages(new Character(), skills);
-        assertFalse(character.getSkills().getHistory().isAdvantage());
+        assertTrue(character.getSkills().getAcrobatics().isAdvantage());
+        assertTrue(character.getSkills().getPersuasion().isAdvantage());
+        assertTrue(character.getSkills().getReligion().isAdvantage());
+        assertTrue(character.getSkills().getArcana().isAdvantage());
+        assertTrue(character.getSkills().getAthletics().isAdvantage());
+        assertTrue(character.getSkills().getHistory().isAdvantage());
         assertTrue(character.getSkills().getStealth().isAdvantage());
+        assertTrue(character.getSkills().getAnimalHandling().isAdvantage());
+        assertTrue(character.getSkills().getDeception().isAdvantage());
+        assertTrue(character.getSkills().getInsight().isAdvantage());
+        assertTrue(character.getSkills().getIntimidation().isAdvantage());
+        assertTrue(character.getSkills().getInvestigation().isAdvantage());
+        assertTrue(character.getSkills().getMedicine().isAdvantage());
+        assertTrue(character.getSkills().getNature().isAdvantage());
+        assertTrue(character.getSkills().getPerception().isAdvantage());
+        assertTrue(character.getSkills().getSleightOfHand().isAdvantage());
+        assertTrue(character.getSkills().getSurvival().isAdvantage());
+        assertTrue(character.getSkills().getPerformance().isAdvantage());
+    }
+
+    @Test
+    void addCharacterSkillAdvantagesFalse(){
+        CharacterSkills skills = new CharacterSkills();
+        character = new Character();
+        skills.getAcrobatics().setAdvantage(false);
+        skills.getPersuasion().setAdvantage(false);
+        skills.getReligion().setAdvantage(false);
+        skills.getArcana().setAdvantage(false);
+        skills.getAthletics().setAdvantage(false);
+        skills.getHistory().setAdvantage(false);
+        skills.getStealth().setAdvantage(false);
+        skills.getAnimalHandling().setAdvantage(false);
+        skills.getDeception().setAdvantage(false);
+        skills.getInsight().setAdvantage(false);
+        skills.getIntimidation().setAdvantage(false);
+        skills.getInvestigation().setAdvantage(false);
+        skills.getMedicine().setAdvantage(false);
+        skills.getNature().setAdvantage(false);
+        skills.getPerception().setAdvantage(false);
+        skills.getSleightOfHand().setAdvantage(false);
+        skills.getSurvival().setAdvantage(false);
+        skills.getPerformance().setAdvantage(false);
+        character = business.addCharacterSkillAdvantages(new Character(), skills);
+        assertFalse(character.getSkills().getAcrobatics().isAdvantage());
+        assertFalse(character.getSkills().getPersuasion().isAdvantage());
+        assertFalse(character.getSkills().getReligion().isAdvantage());
+        assertFalse(character.getSkills().getArcana().isAdvantage());
+        assertFalse(character.getSkills().getAthletics().isAdvantage());
+        assertFalse(character.getSkills().getHistory().isAdvantage());
+        assertFalse(character.getSkills().getStealth().isAdvantage());
+        assertFalse(character.getSkills().getAnimalHandling().isAdvantage());
+        assertFalse(character.getSkills().getDeception().isAdvantage());
+        assertFalse(character.getSkills().getInsight().isAdvantage());
+        assertFalse(character.getSkills().getIntimidation().isAdvantage());
+        assertFalse(character.getSkills().getInvestigation().isAdvantage());
+        assertFalse(character.getSkills().getMedicine().isAdvantage());
+        assertFalse(character.getSkills().getNature().isAdvantage());
+        assertFalse(character.getSkills().getPerception().isAdvantage());
+        assertFalse(character.getSkills().getSleightOfHand().isAdvantage());
+        assertFalse(character.getSkills().getSurvival().isAdvantage());
+        assertFalse(character.getSkills().getPerformance().isAdvantage());
     }
 
     @Test
@@ -176,5 +253,16 @@ class CharacterBusinessTest {
         character.setLevel(1);
         character.setProficiencyBonus(business.calculateProficiencyBonus(character));
         assertEquals(2, character.getProficiencyBonus());
+    }
+
+    @Test
+    void calculateNewCharacterAddAnyLanguage(){
+        Character character = new Character();
+        character.getLanguages().add("Placeholder");
+        CharacterAbility intelligence = new CharacterAbility();
+        intelligence.setModifier(4);
+        character.setIntelligence(intelligence);
+        business.calculateNewCharacter(character);
+        assertEquals(4, character.getLanguages().size());
     }
 }

@@ -165,8 +165,6 @@ public class CharacterBusiness {
             character.getSkills().getAthletics().setAdvantage(true);
         if (!character.getSkills().getDeception().isAdvantage() && skillProficiencies.getDeception().isAdvantage())
             character.getSkills().getDeception().setAdvantage(true);
-        if (!character.getSkills().getAcrobatics().isAdvantage() && skillProficiencies.getAcrobatics().isAdvantage())
-            character.getSkills().getAcrobatics().setAdvantage(true);
         if (!character.getSkills().getHistory().isAdvantage() && skillProficiencies.getHistory().isAdvantage())
             character.getSkills().getHistory().setAdvantage(true);
         if (!character.getSkills().getInsight().isAdvantage() && skillProficiencies.getInsight().isAdvantage())
