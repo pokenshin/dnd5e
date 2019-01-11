@@ -60,6 +60,11 @@ class RandomizerTest {
     }
 
     @Test
+    void getRandomListItemStringNull(){
+        assertNull(randomizer.getRandomListItemString(new ArrayList<>()));
+    }
+
+    @Test
     void getRandomAlignment(){
         assertNotNull(randomizer.getRandomAlignment());
     }
@@ -138,5 +143,29 @@ class RandomizerTest {
         ArrayList<Item> result = randomizer.getRandomStartingEquipment(bard);
         assertNotNull(result);
         assertTrue(result.size() > 0);
+    }
+
+    @Test
+    void generateBalancedAbilityScoresWithLessThanSix(){
+        Character character = new Character();
+        character = randomizer.generateBalancedAbilityScores(2, character);
+        assertEquals(1, character.getStrength().getValue());
+        assertEquals(1, character.getDexterity().getValue());
+        assertEquals(1, character.getIntelligence().getValue());
+        assertEquals(1, character.getConstitution().getValue());
+        assertEquals(1, character.getWisdom().getValue());
+        assertEquals(1, character.getCharisma().getValue());
+    }
+
+    @Test
+    void generateBalancedAbilityScoresWithAHighValue(){
+        Character character = new Character();
+        character = randomizer.generateBalancedAbilityScores(150, character);
+        assertTrue(character.getStrength().getValue() > 0 );
+        assertTrue(character.getDexterity().getValue() > 0 );
+        assertTrue(character.getIntelligence().getValue() > 0 );
+        assertTrue(character.getConstitution().getValue() > 0 );
+        assertTrue(character.getWisdom().getValue() > 0 );
+        assertTrue(character.getCharisma().getValue() > 0 );
     }
 }

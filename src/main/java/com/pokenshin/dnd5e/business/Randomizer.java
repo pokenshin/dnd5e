@@ -74,9 +74,6 @@ public class Randomizer {
 
         while(iteration < totalPoints){
             int position = ThreadLocalRandom.current().nextInt(0, 6);
-            while (values.get(position) > 17){
-                position = ThreadLocalRandom.current().nextInt(0, 6);
-            }
             values.set(position, values.get(position) + 1);
             iteration += 1;
         }
