@@ -4,9 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/dao/CharacterRaceDao.java" line="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a579165-5d0e-45b6-b2b1-a37abf8f77a4" name="Default" comment="">
+    <list default="true" id="9a579165-5d0e-45b6-b2b1-a37abf8f77a4" name="Default" comment="Increased the code coverage of unit tests for the CharacterBusiness class to 98%">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterBusiness.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/CharacterBusinessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/CharacterBusinessTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,7 +27,7 @@
     <SUITE FILE_PATH="coverage/dnd5e$JsonMapperTest.ic" NAME="JsonMapperTest Coverage Results" MODIFIED="1545618640690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.pokenshin.dnd5e.util.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/dnd5e$All_Tests.ic" NAME="All Tests Coverage Results" MODIFIED="1547147316091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/dnd5e$All_Tests.ic" NAME="All Tests Coverage Results" MODIFIED="1547205548775" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/dnd5e$CharacterBusinessTest_addCharacterSkillAdvantages.ic" NAME="CharacterBusinessTest.addCharacterSkillAdvantages Coverage Results" MODIFIED="1546026939037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.pokenshin.dnd5e.business.*</FILTER>
     </SUITE>
@@ -74,42 +73,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CharacterBusiness.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CharacterBusiness.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterBusiness.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="127" column="31" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
+            <state relative-caret-position="8">
+              <caret line="110" column="36" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="36" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CharacterBusinessTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CharacterBusinessTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/CharacterBusinessTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="121">
-              <caret line="258" column="4" lean-forward="true" selection-start-line="258" selection-start-column="4" selection-end-line="258" selection-end-column="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CharacterSkills.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/entity/CharacterSkills.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-              <folding>
-                <element signature="e#2861#2862#0" expanded="true" />
-                <element signature="e#2894#2895#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ValueAdvantage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/entity/ValueAdvantage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="533">
+              <caret line="206" column="33" lean-forward="true" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -135,6 +112,7 @@
       <find>ideal[Evil</find>
       <find>idealLawful</find>
       <find>hp</find>
+      <find>ideals</find>
     </findStrings>
     <replaceStrings>
       <replace>getRace(&quot;</replace>
@@ -226,7 +204,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -330,8 +308,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -591,13 +569,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537877674605</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Barbarian and Bard classes jsons created">
-      <created>1540238037059</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1540238037059</updated>
     </task>
     <task id="LOCAL-00013" summary="All classes added as jsons">
       <created>1542659552539</created>
@@ -935,13 +906,17 @@
       <option name="project" value="LOCAL" />
       <updated>1547118922574</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Increased the code coverage of unit tests for the CharacterBusiness class to 98%">
+      <created>1547149894821</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1547149894821</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="CharacterBusinessTest - 2019.01.10 at 11h 31m 55s.xml">
-      <configuration name="CharacterBusinessTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="CharacterBusinessTest_addCharacterSkillAdvantagesFalse - 2019.01.10 at 11h 33m 26s.xml">
       <configuration name="CharacterBusinessTest.addCharacterSkillAdvantagesFalse" configurationId="JUnit" />
     </history-entry>
@@ -969,6 +944,9 @@
     <history-entry file="All_Tests - 2019.01.10 at 17h 08m 41s.xml">
       <configuration name="All Tests" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_Tests - 2019.01.11 at 09h 13m 55s.xml">
+      <configuration name="All Tests" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -992,12 +970,12 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5014641" side_tool="true" weight="0.30393702" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32913387" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32755905" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32755905" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.24597365" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32913387" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2979502" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3601757" />
       <window_info id="Learn" order="5" weight="0.329429" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
@@ -1053,7 +1031,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created a method to generate a random Character in CharacterController and fixed several business bugs" />
     <MESSAGE value="Created a calculateProficiencyBonus on CharacterBusiness" />
     <MESSAGE value="Created generateBalancedAbilityScores in Randomizer to improve random AbilityScore generation" />
     <MESSAGE value="Mapped armor and weapons jsons" />
@@ -1078,7 +1055,8 @@
     <MESSAGE value="Added a getRandomStartingEquipmentBard on Randomizer" />
     <MESSAGE value="Refactored the method getStartingEquipmentOptions to getRandomStartingEquipmentOptions and moved it to the Randomizer class." />
     <MESSAGE value="Increased code coverage of unit tests on CharacterClassBusiness to 100%" />
-    <option name="LAST_COMMIT_MESSAGE" value="Increased code coverage of unit tests on CharacterClassBusiness to 100%" />
+    <MESSAGE value="Increased the code coverage of unit tests for the CharacterBusiness class to 98%" />
+    <option name="LAST_COMMIT_MESSAGE" value="Increased the code coverage of unit tests for the CharacterBusiness class to 98%" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1444,17 +1422,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/CharacterBusinessTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterBusiness.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="121">
-          <caret line="258" column="4" lean-forward="true" selection-start-line="258" selection-start-column="4" selection-end-line="258" selection-end-column="4" />
+        <state relative-caret-position="8">
+          <caret line="110" column="36" selection-start-line="110" selection-start-column="21" selection-end-line="110" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterBusiness.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/CharacterBusinessTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="127" column="31" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
+        <state relative-caret-position="533">
+          <caret line="206" column="33" lean-forward="true" selection-start-line="206" selection-start-column="33" selection-end-line="206" selection-end-column="33" />
         </state>
       </provider>
     </entry>

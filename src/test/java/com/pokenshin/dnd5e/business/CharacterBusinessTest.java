@@ -188,6 +188,26 @@ class CharacterBusinessTest {
     }
 
     @Test
+    void applyBackgroundLawfulEvil() {
+        JsonMapper mapper = new JsonMapper();
+        CharacterBackground background = mapper.getCharacterBackground("outlander.json");
+        character = new Character();
+        character.setAlignment("Lawful Evil");
+        character = business.applyBackground(character, background);
+        assertTrue(character.getIdeals().size() > 0);
+    }
+
+    @Test
+    void applyBackgroundChaoticEvil() {
+        JsonMapper mapper = new JsonMapper();
+        CharacterBackground background = mapper.getCharacterBackground("outlander.json");
+        character = new Character();
+        character.setAlignment("ChaoticEvil");
+        character = business.applyBackground(character, background);
+        assertTrue(character.getIdeals().size() > 0);
+    }
+
+    @Test
     void calculateNewCharacter(){
         character = new Character();
         character.getStrength().setValue(10);
@@ -265,4 +285,6 @@ class CharacterBusinessTest {
         business.calculateNewCharacter(character);
         assertEquals(4, character.getLanguages().size());
     }
+
+
 }
