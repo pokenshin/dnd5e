@@ -1,0 +1,13 @@
+{
+  "id": 91,
+  "name": "Piton",
+  "category": "Misc",
+  "cost":{
+    "copper": 5,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 0
+}

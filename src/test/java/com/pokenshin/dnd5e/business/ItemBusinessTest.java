@@ -39,4 +39,10 @@ class ItemBusinessTest {
         ArrayList<Item> result = business.getItemPack("Priest");
         assertTrue(result.size() > 0);
     }
+
+    @Test
+    void getDungeoneerPack(){
+        ArrayList<Item> result = business.getItemPack("Dungeoneer");
+        assertTrue(result.size() > 0);
+    }
 }

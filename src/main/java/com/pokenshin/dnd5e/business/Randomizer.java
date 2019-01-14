@@ -222,7 +222,7 @@ public class Randomizer {
             case "Druid":
                 return this.getRandomStartingEquipmentDruid();
             case "Fighter":
-                return null;
+                return getRandomStartingEquipmentFighter();
             case "Monk":
                 return null;
             case "Paladin":
@@ -289,11 +289,55 @@ public class Randomizer {
         ArrayList<Item> groupTwo = new ArrayList<>();
         groupOne.add(mapper.getWeapon("scimitar.json"));
         groupOne.add(this.getRandomWeaponByCategory("Simple Weapon"));
+        result.add(groupOne.get(ThreadLocalRandom.current().nextInt(0, groupOne.size())));
         groupTwo.add(mapper.getArmor("shield.json"));
         groupTwo.add(this.getRandomWeaponByCategory("Simple Weapon"));
+        result.add(groupTwo.get(ThreadLocalRandom.current().nextInt(0, groupTwo.size())));
         result.add(mapper.getArmor("leather.json"));
         result.addAll(itemBusiness.getItemPack("Explorer"));
         result.add(mapper.getMiscItem("druidicfocus.json"));
+
+        return result;
+    }
+
+    /**
+     * Returns a randomized list of starting equipment for the Fighter class
+     * @return ArrayList<Item> of starting equipment
+     */
+    private ArrayList<Item> getRandomStartingEquipmentFighter() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        ArrayList<Item> groupOne = new ArrayList<>();
+        ArrayList<Item> groupTwo = new ArrayList<>();
+        ArrayList<Item> groupThree = new ArrayList<>();
+        ArrayList<ArrayList<Item>> groupFour = new ArrayList<>();
+        groupOne.add(mapper.getArmor("chainmail.json"));
+        groupOne.add(mapper.getArmor("leather.json"));
+        result.add(groupOne.get(ThreadLocalRandom.current().nextInt(0, groupOne.size())));
+        if (result.get(0).getName().equals("Leather Armor")){
+            result.add(mapper.getWeapon("longbow.json"));
+            Item arrow = mapper.getMiscItem("arrow.json");
+            arrow.setQuantity(20);
+            result.add(arrow);
+        }
+        groupTwo.add(mapper.getArmor("shield.json"));
+        groupTwo.add(this.getRandomWeaponByCategory("Martial Weapon"));
+        result.add(groupTwo.get(ThreadLocalRandom.current().nextInt(0, groupTwo.size())));
+        result.add(this.getRandomWeaponByCategory("Martial Weapon"));
+        groupThree.add(mapper.getWeapon("lightcrossbow.json"));
+        groupThree.add(mapper.getWeapon("handaxe.json"));
+        result.add(groupThree.get(ThreadLocalRandom.current().nextInt(0, groupThree.size())));
+        if (result.get(result.size() - 1).getName().equals("Light Crossbow")){
+            Item bolt = mapper.getMiscItem("bolt.json");
+            bolt.setQuantity(20);
+            result.add(bolt);
+        } else{
+            result.get(result.size()-1).setQuantity(2);
+        }
+        groupFour.add(itemBusiness.getItemPack("Dungeoneer"));
+        groupFour.add(itemBusiness.getItemPack("Explorer"));
+        result.addAll(groupFour.get(ThreadLocalRandom.current().nextInt(0, groupFour.size())));
 
         return result;
     }

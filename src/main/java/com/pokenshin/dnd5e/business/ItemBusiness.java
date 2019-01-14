@@ -70,6 +70,22 @@ public class ItemBusiness {
                 result.add(rationPriest);
                 result.add(mapper.getMiscItem("waterskin.json"));
                 break;
+
+            case "Dungeoneer":
+                result.add(mapper.getMiscItem("backpack.json"));
+                result.add(mapper.getMiscItem("crowbar.json"));
+                result.add(mapper.getMiscItem("hammer.json"));
+                Item pitonDungeoneer = mapper.getMiscItem("piton.json");
+                pitonDungeoneer.setQuantity(10);
+                Item torchDungeoneer = mapper.getMiscItem("torch.json");
+                torchDungeoneer.setQuantity(10);
+                result.add(mapper.getMiscItem("tinderbox.json"));
+                Item rationDungeoneer = mapper.getMiscItem("ration.json");
+                rationDungeoneer.setQuantity(10);
+                result.add(mapper.getMiscItem("waterskin.json"));
+                result.add(mapper.getMiscItem("hempenrope.json"));
+
+
         }
 
         return result;
