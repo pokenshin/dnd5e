@@ -224,7 +224,7 @@ public class Randomizer {
             case "Fighter":
                 return getRandomStartingEquipmentFighter();
             case "Monk":
-                return null;
+                return getRandomStartingEquipmentMonk();
             case "Paladin":
                 return null;
             case "Ranger":
@@ -241,6 +241,29 @@ public class Randomizer {
             default:
                 return new ArrayList<>();
         }
+    }
+
+    /**
+     * Returns a randomized list of starting equipment for the Monk class
+     * @return ArrayList<Item> of starting equipment
+     */
+    private ArrayList<Item> getRandomStartingEquipmentMonk() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        ArrayList<Item> groupOne = new ArrayList<>();
+        ArrayList<ArrayList<Item>> groupTwo = new ArrayList<>();
+        Weapon dart = mapper.getWeapon("dart.json");
+        dart.setQuantity(10);
+        groupOne.add(mapper.getWeapon("shortsword.json"));
+        groupOne.add(this.getRandomWeaponByCategory("Simple Weapon"));
+        result.add(groupOne.get(ThreadLocalRandom.current().nextInt(0, groupOne.size())));
+        groupTwo.add(itemBusiness.getItemPack("Dungeoneer"));
+        groupTwo.add(itemBusiness.getItemPack("Explorer"));
+        result.addAll(groupTwo.get(ThreadLocalRandom.current().nextInt(0, groupTwo.size())));
+        result.add(dart);
+
+        return result;
     }
 
     /**

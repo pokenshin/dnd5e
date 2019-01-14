@@ -195,4 +195,13 @@ class RandomizerTest {
         assertNotNull(result);
         assertTrue(result.size() > 0);
     }
+
+    @Test
+    void getRandomStartingEquipmentMonk(){
+        CharacterClass monk = new CharacterClass();
+        monk.setName("Monk");
+        ArrayList<Item> result = randomizer.getRandomStartingEquipment(monk);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
 }
