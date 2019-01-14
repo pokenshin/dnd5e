@@ -177,4 +177,13 @@ class RandomizerTest {
         assertNotNull(result);
         assertTrue(result.size() > 0);
     }
+
+    @Test
+    void getRandomStartingEquipmentDruid(){
+        CharacterClass druid = new CharacterClass();
+        druid.setName("Druid");
+        ArrayList<Item> result = randomizer.getRandomStartingEquipment(druid);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
 }

@@ -220,7 +220,7 @@ public class Randomizer {
             case "Cleric":
                 return this.getRandomStartingEquipmentCleric();
             case "Druid":
-                return null;
+                return this.getRandomStartingEquipmentDruid();
             case "Fighter":
                 return null;
             case "Monk":
@@ -274,6 +274,27 @@ public class Randomizer {
             bolt.setQuantity(20);
             result.add(bolt);
         }
+        return result;
+    }
+
+    /**
+     * Returns a randomized list of starting equipment for the Druid class
+     * @return ArrayList<Item> of starting equipment
+     */
+    private ArrayList<Item> getRandomStartingEquipmentDruid() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        ArrayList<Item> groupOne = new ArrayList<>();
+        ArrayList<Item> groupTwo = new ArrayList<>();
+        groupOne.add(mapper.getWeapon("scimitar.json"));
+        groupOne.add(this.getRandomWeaponByCategory("Simple Weapon"));
+        groupTwo.add(mapper.getArmor("shield.json"));
+        groupTwo.add(this.getRandomWeaponByCategory("Simple Weapon"));
+        result.add(mapper.getArmor("leather.json"));
+        result.addAll(itemBusiness.getItemPack("Explorer"));
+        result.add(mapper.getMiscItem("druidicfocus.json"));
+
         return result;
     }
 }
