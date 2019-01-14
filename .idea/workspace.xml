@@ -5,8 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9a579165-5d0e-45b6-b2b1-a37abf8f77a4" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/misc/ballbearings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/misc/bell.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/misc/hoodedlantern.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/json/items/misc/string.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/Randomizer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/Randomizer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/ItemBusinessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/ItemBusinessTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/RandomizerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/RandomizerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -28,7 +34,7 @@
     <SUITE FILE_PATH="coverage/dnd5e$JsonMapperTest.ic" NAME="JsonMapperTest Coverage Results" MODIFIED="1545618640690" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.pokenshin.dnd5e.util.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/dnd5e$All_Tests.ic" NAME="All Tests Coverage Results" MODIFIED="1547479381284" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/dnd5e$All_Tests.ic" NAME="All Tests Coverage Results" MODIFIED="1547482998676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/dnd5e$CharacterBusinessTest_addCharacterSkillAdvantages.ic" NAME="CharacterBusinessTest.addCharacterSkillAdvantages Coverage Results" MODIFIED="1546026939037" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>com.pokenshin.dnd5e.business.*</FILTER>
     </SUITE>
@@ -86,8 +92,8 @@
       <file leaf-file-name="Randomizer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/Randomizer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="250" column="61" selection-start-line="250" selection-start-column="28" selection-end-line="250" selection-end-column="61" />
+            <state relative-caret-position="281">
+              <caret line="271" column="76" selection-start-line="271" selection-start-column="76" selection-end-line="271" selection-end-column="76" />
               <folding>
                 <element signature="e#7080#7086#0" expanded="true" />
               </folding>
@@ -95,11 +101,38 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="ItemBusiness.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="106" column="66" selection-start-line="106" selection-start-column="66" selection-end-line="106" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ItemBusinessTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/ItemBusinessTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="RandomizerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/RandomizerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="499">
-              <caret line="211" column="78" selection-start-line="211" selection-start-column="78" selection-end-line="211" selection-end-column="78" />
+            <state relative-caret-position="281">
+              <caret line="229" column="78" lean-forward="true" selection-start-line="229" selection-start-column="78" selection-end-line="229" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonMapper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/util/JsonMapper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="219">
+              <caret line="94" selection-start-line="94" selection-end-line="94" />
             </state>
           </provider>
         </entry>
@@ -145,10 +178,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/json/classes/ranger.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/json/classes/rogue.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/json/classes/sorcerer.json" />
-        <option value="$PROJECT_DIR$/src/main/resources/json/classes/warlock.json" />
         <option value="$PROJECT_DIR$/src/main/resources/json/classes/wizard.json" />
         <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/chest.json" />
         <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/case.json" />
@@ -189,10 +218,14 @@
         <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/blanket.json" />
         <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/druidicfocus.json" />
         <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/arrow.json" />
-        <option value="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java" />
         <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/crowbar.json" />
         <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/hammer.json" />
         <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/piton.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/ballbearings.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/string.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/bell.json" />
+        <option value="$PROJECT_DIR$/src/main/resources/json/items/misc/hoodedlantern.json" />
+        <option value="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/ItemBusinessTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/Randomizer.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/RandomizerTest.java" />
@@ -425,7 +458,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.RandomizerTest.getRandomStartingEquipmentPaladin">
+  <component name="RunManager" selected="JUnit.All Tests">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -445,52 +478,6 @@
         <value defaultName="singleModule" />
       </option>
       <dir value="$PROJECT_DIR$/src/test" />
-      <patterns />
-    </configuration>
-    <configuration name="ItemBusinessTest.getDungeoneerPack" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dnd5e" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.pokenshin.dnd5e.business.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.pokenshin.dnd5e.business" />
-      <option name="MAIN_CLASS_NAME" value="com.pokenshin.dnd5e.business.ItemBusinessTest" />
-      <option name="METHOD_NAME" value="getDungeoneerPack" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration name="RandomizerTest.getRandomStartingEquipmentDruid" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="dnd5e" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.pokenshin.dnd5e.business.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.pokenshin.dnd5e.business" />
-      <option name="MAIN_CLASS_NAME" value="com.pokenshin.dnd5e.business.RandomizerTest" />
-      <option name="METHOD_NAME" value="getRandomStartingEquipmentDruid" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
       <patterns />
     </configuration>
     <configuration name="RandomizerTest.getRandomStartingEquipmentFighter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -562,6 +549,52 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="RandomizerTest.getRandomStartingEquipmentRanger" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dnd5e" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pokenshin.dnd5e.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.pokenshin.dnd5e.business" />
+      <option name="MAIN_CLASS_NAME" value="com.pokenshin.dnd5e.business.RandomizerTest" />
+      <option name="METHOD_NAME" value="getRandomStartingEquipmentRanger" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="RandomizerTest.getRandomStartingEquipmentRogue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="dnd5e" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pokenshin.dnd5e.business.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.pokenshin.dnd5e.business" />
+      <option name="MAIN_CLASS_NAME" value="com.pokenshin.dnd5e.business.RandomizerTest" />
+      <option name="METHOD_NAME" value="getRandomStartingEquipmentRogue" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -602,19 +635,19 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All Tests" />
-      <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentDruid" />
-      <item itemvalue="JUnit.ItemBusinessTest.getDungeoneerPack" />
       <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentFighter" />
       <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentMonk" />
       <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentPaladin" />
+      <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentRanger" />
+      <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentRogue" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentRogue" />
+        <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentRanger" />
         <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentPaladin" />
         <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentMonk" />
         <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentFighter" />
-        <item itemvalue="JUnit.ItemBusinessTest.getDungeoneerPack" />
-        <item itemvalue="JUnit.RandomizerTest.getRandomStartingEquipmentDruid" />
       </list>
     </recent_temporary>
   </component>
@@ -628,20 +661,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1537877674605</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Created Unit Tests for 100% of the methods on CharacterBusiness">
-      <created>1545304968142</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1545304968142</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Fixed a bug on the getRandomRace and getRandomClass methods that were sometimes returning null objects">
-      <created>1545311766033</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1545311766033</updated>
     </task>
     <task id="LOCAL-00021" summary="The generateRandomCharacter method on CharacterBusiness class now calls applyCharacterClass on a random CharacterClass.">
       <created>1545314731872</created>
@@ -972,19 +991,24 @@
       <option name="project" value="LOCAL" />
       <updated>1547479739723</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Created getRandomStartingEquipmentPaladin on Randomizer">
+      <created>1547480255805</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1547480255805</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Created getRandomStartingEquipmentRanger on Randomizer">
+      <created>1547481326420</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1547481326420</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RandomizerTest_getRandomStartingEquipmentCleric - 2019.01.14 at 09h 22m 42s.xml">
-      <configuration name="RandomizerTest.getRandomStartingEquipmentCleric" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="All_Tests - 2019.01.14 at 09h 23m 30s.xml">
-      <configuration name="All Tests" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="RandomizerTest_getRandomStartingEquipmentDruid - 2019.01.14 at 09h 41m 24s.xml">
-      <configuration name="RandomizerTest.getRandomStartingEquipmentDruid" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="RandomizerTest_getRandomStartingEquipmentDruid - 2019.01.14 at 09h 42m 14s.xml">
       <configuration name="RandomizerTest.getRandomStartingEquipmentDruid" configurationId="JUnit" />
     </history-entry>
@@ -1005,6 +1029,15 @@
     </history-entry>
     <history-entry file="RandomizerTest_getRandomStartingEquipmentMonk - 2019.01.14 at 13h 28m 40s.xml">
       <configuration name="RandomizerTest.getRandomStartingEquipmentMonk" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomizerTest_getRandomStartingEquipmentPaladin - 2019.01.14 at 13h 37m 20s.xml">
+      <configuration name="RandomizerTest.getRandomStartingEquipmentPaladin" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomizerTest_getRandomStartingEquipmentRanger - 2019.01.14 at 13h 54m 34s.xml">
+      <configuration name="RandomizerTest.getRandomStartingEquipmentRanger" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="RandomizerTest_getRandomStartingEquipmentRanger - 2019.01.14 at 13h 54m 56s.xml">
+      <configuration name="RandomizerTest.getRandomStartingEquipmentRanger" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -1041,7 +1074,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49853587" weight="0.34330708" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49853587" visible="true" weight="0.34330708" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
@@ -1091,8 +1124,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Corrected the HP calculation to get the HitDice sides and add the Constitution modifier" />
-    <MESSAGE value="Made it so when creating a random character, the currentHp will always be the MaxHP" />
     <MESSAGE value="Corrected the number of total Hit Dice when generating a random Character" />
     <MESSAGE value="Randomized the height and weight based on races when generating a random character" />
     <MESSAGE value="Created getAllWeaponsByCategory on Randomizer and created CharacterClassBusiness with getStartingEquipmentOptions for Barbarian" />
@@ -1116,7 +1147,9 @@
     <MESSAGE value="Created getRandomStartingEquipmentDruid on Randomizer and created the Druidic Focus item." />
     <MESSAGE value="Created getRandomStartingEquipmentFighter on Randomizer, added Dungeoneer Pack and created some missing items" />
     <MESSAGE value="Created getRandomStartingEquipmentMonk on Randomizer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Created getRandomStartingEquipmentMonk on Randomizer" />
+    <MESSAGE value="Created getRandomStartingEquipmentPaladin on Randomizer" />
+    <MESSAGE value="Created getRandomStartingEquipmentRanger on Randomizer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created getRandomStartingEquipmentRanger on Randomizer" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1135,34 +1168,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/chest.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/case.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/finecloth.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" lean-forward="true" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/bottle.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/inkpen.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1419,13 +1424,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/util/JsonMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="219">
-          <caret line="94" selection-start-line="94" selection-end-line="94" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/druidicfocus.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1468,24 +1466,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/ballbearings.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/string.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/bell.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/hoodedlantern.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/util/JsonMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="94" selection-start-line="94" selection-end-line="94" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/ItemBusinessTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="44" column="65" selection-start-line="44" selection-start-column="65" selection-end-line="44" selection-end-column="65" />
+        <state relative-caret-position="281">
+          <caret line="49" column="19" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/ItemBusiness.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="85" column="66" selection-start-line="85" selection-start-column="66" selection-end-line="85" selection-end-column="66" />
+        <state relative-caret-position="400">
+          <caret line="106" column="66" selection-start-line="106" selection-start-column="66" selection-end-line="106" selection-end-column="66" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/Randomizer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="250" column="61" selection-start-line="250" selection-start-column="28" selection-end-line="250" selection-end-column="61" />
+        <state relative-caret-position="281">
+          <caret line="271" column="76" selection-start-line="271" selection-start-column="76" selection-end-line="271" selection-end-column="76" />
           <folding>
             <element signature="e#7080#7086#0" expanded="true" />
           </folding>
@@ -1494,8 +1527,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/RandomizerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="211" column="78" selection-start-line="211" selection-start-column="78" selection-end-line="211" selection-end-column="78" />
+        <state relative-caret-position="281">
+          <caret line="229" column="78" lean-forward="true" selection-start-line="229" selection-start-column="78" selection-end-line="229" selection-end-column="78" />
         </state>
       </provider>
     </entry>

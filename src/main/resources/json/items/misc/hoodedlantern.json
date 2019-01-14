@@ -1,0 +1,13 @@
+{
+  "id": 94,
+  "name": "Hooded Lantern",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 5,
+    "platinum": 0
+  },
+  "weight": 2
+}

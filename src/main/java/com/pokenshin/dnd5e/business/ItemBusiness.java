@@ -84,6 +84,28 @@ public class ItemBusiness {
                 rationDungeoneer.setQuantity(10);
                 result.add(mapper.getMiscItem("waterskin.json"));
                 result.add(mapper.getMiscItem("hempenrope.json"));
+                break;
+
+            case "Burglar":
+                result.add(mapper.getMiscItem("backpack.json"));
+                result.add(mapper.getMiscItem("ballbearings.json"));
+                result.add(mapper.getMiscItem("string.json"));
+                result.add(mapper.getMiscItem("bell.json"));
+                result.add(mapper.getMiscItem("candle.json"));
+                result.get(result.size()-1).setQuantity(5);
+                result.add(mapper.getMiscItem("crowbar.json"));
+                result.add(mapper.getMiscItem("hammer.json"));
+                result.add(mapper.getMiscItem("piton.json"));
+                result.get(result.size()-1).setQuantity(10);
+                result.add(mapper.getMiscItem("hoodedlantern.json"));
+                result.add(mapper.getMiscItem("oilflask.json"));
+                result.get(result.size()-1).setQuantity(2);
+                result.add(mapper.getMiscItem("ration.json"));
+                result.get(result.size()-1).setQuantity(5);
+                result.add(mapper.getMiscItem("tinderbox.json"));
+                result.add(mapper.getMiscItem("waterskin.json"));
+                result.add(mapper.getMiscItem("hempenrope.json"));
+                break;
 
 
         }

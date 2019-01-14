@@ -1,0 +1,13 @@
+{
+  "id": 91,
+  "name": "Ball Bearings (Bag of 1000)",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 1,
+    "platinum": 0
+  },
+  "weight": 2
+}

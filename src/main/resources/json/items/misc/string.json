@@ -1,0 +1,13 @@
+{
+  "id": 92,
+  "name": "String (10ft)",
+  "category": "Misc",
+  "cost":{
+    "copper": 1,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 0
+}

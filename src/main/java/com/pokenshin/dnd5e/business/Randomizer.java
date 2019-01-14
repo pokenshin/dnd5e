@@ -231,7 +231,7 @@ public class Randomizer {
             case "Ranger":
                 return getRandomStartingEquipmentRanger();
             case "Rogue":
-                return null;
+                return getRandomStartingEquipmentRogue();
             case "Sorcerer":
                 return null;
             case "Warlock":
@@ -242,6 +242,36 @@ public class Randomizer {
             default:
                 return new ArrayList<>();
         }
+    }
+
+    /**
+     * Returns a randomized list of starting equipment for the Rogue class
+     * @return ArrayList<Item> of starting equipment
+     */
+    private ArrayList<Item> getRandomStartingEquipmentRogue() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        ArrayList<Item> groupOne = new ArrayList<>();
+        ArrayList<Item> groupTwo = new ArrayList<>();
+        ArrayList<ArrayList<Item>> packs = new ArrayList<>();
+        groupOne.add(mapper.getWeapon("rapier.json"));
+        groupOne.add(mapper.getWeapon("shortsword.json"));
+        result.add(groupOne.get(ThreadLocalRandom.current().nextInt(0, groupOne.size())));
+        groupTwo.add(mapper.getWeapon("shortbow.json"));
+        groupTwo.add(mapper.getWeapon("shortsword.json"));
+        result.add(groupTwo.get(ThreadLocalRandom.current().nextInt(0, groupTwo.size())));
+        if (result.get(result.size() - 1).getName().equals("Short Bow")){
+            Item arrow = mapper.getMiscItem("arrow.json");
+            arrow.setQuantity(20);
+            result.add(arrow);
+        }
+        packs.add(itemBusiness.getItemPack("Burglar"));
+        packs.add(itemBusiness.getItemPack("Dungeoneer"));
+        packs.add(itemBusiness.getItemPack("Explorer"));
+        result.addAll(packs.get(ThreadLocalRandom.current().nextInt(0, packs.size())));
+
+        return result;
     }
 
     /**

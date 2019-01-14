@@ -222,4 +222,13 @@ class RandomizerTest {
         assertNotNull(result);
         assertTrue(result.size() > 0);
     }
+
+    @Test
+    void getRandomStartingEquipmentRogue(){
+        CharacterClass rogue = new CharacterClass();
+        rogue.setName("Rogue");
+        ArrayList<Item> result = randomizer.getRandomStartingEquipment(rogue);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
 }
