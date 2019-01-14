@@ -240,4 +240,15 @@ class RandomizerTest {
         assertNotNull(result);
         assertTrue(result.size() > 0);
     }
+
+    @Test
+    void getRandomStartingEquipmentWarlock(){
+        CharacterClass warlock = new CharacterClass();
+        warlock.setName("Warlock");
+        ArrayList<Item> result = randomizer.getRandomStartingEquipment(warlock);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
+
+
 }
