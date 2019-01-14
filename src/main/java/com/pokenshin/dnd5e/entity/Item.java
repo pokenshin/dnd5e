@@ -1,11 +1,15 @@
 package com.pokenshin.dnd5e.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public class Item {
     private int id;
     private String name;
     private String category;
     private CharacterCurrency cost;
     private int weight;
+    @JsonIgnore
+    private int quantity;
 
     public Item() {
         this.id = 0;
@@ -61,5 +65,18 @@ public class Item {
 
     public void setWeight(int weight) {
         this.weight = weight;
+    }
+
+    @Override
+    public String toString(){
+        return this.getName();
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
     }
 }

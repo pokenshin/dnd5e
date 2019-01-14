@@ -17,33 +17,31 @@ public class ItemBusiness {
                 result.add(mapper.getMiscItem("bedroll.json"));
                 result.add(mapper.getMiscItem("messkit.json"));
                 result.add(mapper.getMiscItem("tinderbox.json"));
-                Item torch = mapper.getMiscItem("torch.json");
-                for (int i = 0; i < 10; i++){
-                    result.add(torch);
-                }
-                Item ration = mapper.getMiscItem("ration.json");
-                for (int i = 0; i < 10; i++){
-                    result.add(ration);
-                }
+                Item torchExplorer = mapper.getMiscItem("torch.json");
+                torchExplorer.setQuantity(10);
+                result.add(torchExplorer);
+                Item rationExplorer = mapper.getMiscItem("ration.json");
+                rationExplorer.setQuantity(10);
+                result.add(rationExplorer);
                 result.add(mapper.getMiscItem("waterskin.json"));
                 result.add(mapper.getMiscItem("hempenrope.json"));
                 break;
 
             case "Diplomat":
                 result.add(mapper.getMiscItem("chest.json"));
-                for (int i = 0; i < 2; i++){
-                    result.add(mapper.getMiscItem("case.json"));
-                }
+                Item caseDiplomat = mapper.getMiscItem("case.json");
+                caseDiplomat.setQuantity(2);
+                result.add(caseDiplomat);
                 result.add(mapper.getMiscItem("finecloth.json"));
                 result.add(mapper.getMiscItem("inkbottle.json"));
                 result.add(mapper.getMiscItem("inkpen.json"));
                 result.add(mapper.getMiscItem("lamp.json"));
-                for (int i=0; i< 2; i++){
-                    result.add(mapper.getMiscItem("oilflask.json"));
-                }
-                for (int i=0; i<5; i++){
-                    result.add(mapper.getMiscItem("paper.json"));
-                }
+                Item oilDiplomat = mapper.getMiscItem("oilflask.json");
+                oilDiplomat.setQuantity(2);
+                result.add(oilDiplomat);
+                Item paperDiplomat = mapper.getMiscItem("paper.json");
+                paperDiplomat.setQuantity(5);
+                result.add(paperDiplomat);
                 result.add(mapper.getMiscItem("perfume.json"));
                 result.add(mapper.getMiscItem("sealingwax.json"));
                 break;
@@ -51,16 +49,27 @@ public class ItemBusiness {
             case "Entertainer":
                 result.add(mapper.getMiscItem("backpack.json"));
                 result.add(mapper.getMiscItem("bedroll.json"));
-                for (int i=0; i<2; i++){
-                    result.add(mapper.getMiscItem("costume.json"));
-                }
-                for (int i=0; i<5; i++){
-                    result.add(mapper.getMiscItem("ration.json"));
-                }
+                Item costume = mapper.getMiscItem("costume.json");
+                costume.setQuantity(2);
+                Item rationEntertainer = mapper.getMiscItem("ration.json");
+                rationEntertainer.setQuantity(5);
+                result.add(rationEntertainer);
                 result.add(mapper.getMiscItem("waterskin.json"));
                 result.add(mapper.getTool("disguisekit.json"));
                 break;
 
+            case "Priest":
+                result.add(mapper.getMiscItem("backpack.json"));
+                result.add(mapper.getMiscItem("blanket.json"));
+                Item candle = mapper.getMiscItem("candle.json");
+                candle.setQuantity(10);
+                result.add(candle);
+                result.add(mapper.getMiscItem("tinderbox.json"));
+                Item rationPriest = mapper.getMiscItem("ration.json");
+                rationPriest.setQuantity(2);
+                result.add(rationPriest);
+                result.add(mapper.getMiscItem("waterskin.json"));
+                break;
         }
 
         return result;

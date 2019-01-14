@@ -217,9 +217,63 @@ public class Randomizer {
                 return this.getRandomStartingEquipmentBarbarian();
             case "Bard":
                 return this.getRandomStartingEquipmentBard();
+            case "Cleric":
+                return this.getRandomStartingEquipmentCleric();
+            case "Druid":
+                return null;
+            case "Fighter":
+                return null;
+            case "Monk":
+                return null;
+            case "Paladin":
+                return null;
+            case "Ranger":
+                return null;
+            case "Rogue":
+                return null;
+            case "Sorcerer":
+                return null;
+            case "Warlock":
+                return null;
+            case "Wizard":
+                return null;
 
             default:
                 return new ArrayList<>();
         }
+    }
+
+    /**
+     * Returns a randomized list of starting equipment for the Cleric class
+     * @return ArrayList<Item> of starting equipment
+     */
+    private ArrayList<Item> getRandomStartingEquipmentCleric() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        ArrayList<Item> weapons = new ArrayList<>();
+        ArrayList<Item> armor = new ArrayList<>();
+        ArrayList<Item> extra = new ArrayList<>();
+        ArrayList<ArrayList<Item>> packs = new ArrayList<>();
+        weapons.add(mapper.getWeapon("mace.json"));
+        weapons.add(mapper.getWeapon("warhammer.json"));
+        armor.add(mapper.getArmor("scale.json"));
+        armor.add(mapper.getArmor("leather.json"));
+        armor.add(mapper.getArmor("chainmail.json"));
+        extra.add(mapper.getWeapon("lightcrossbow.json"));
+        extra.add(this.getRandomWeaponByCategory("Simple Weapon"));
+        packs.add(itemBusiness.getItemPack("Priest"));
+        packs.add(itemBusiness.getItemPack("Explorer"));
+        result.add(mapper.getArmor("shield.json"));
+        result.add(mapper.getMiscItem("holysymbol.json"));
+        result.add(weapons.get(ThreadLocalRandom.current().nextInt(0, weapons.size())));
+        result.add(armor.get(ThreadLocalRandom.current().nextInt(0, armor.size())));
+        result.add(extra.get(ThreadLocalRandom.current().nextInt(0, extra.size())));
+        if (result.get(result.size() - 1).getName().equals("Light Crossbow")){
+            Item bolt = mapper.getMiscItem("bolt.json");
+            bolt.setQuantity(20);
+            result.add(bolt);
+        }
+        return result;
     }
 }

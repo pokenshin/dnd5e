@@ -168,4 +168,13 @@ class RandomizerTest {
         assertTrue(character.getWisdom().getValue() > 0 );
         assertTrue(character.getCharisma().getValue() > 0 );
     }
+
+    @Test
+    void getRandomStartingEquipmentCleric(){
+        CharacterClass cleric = new CharacterClass();
+        cleric.setName("Cleric");
+        ArrayList<Item> result = randomizer.getRandomStartingEquipment(cleric);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
 }
