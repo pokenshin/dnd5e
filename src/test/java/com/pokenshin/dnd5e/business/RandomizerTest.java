@@ -213,4 +213,13 @@ class RandomizerTest {
         assertNotNull(result);
         assertTrue(result.size() > 0);
     }
+
+    @Test
+    void getRandomStartingEquipmentRanger(){
+        CharacterClass ranger = new CharacterClass();
+        ranger.setName("Ranger");
+        ArrayList<Item> result = randomizer.getRandomStartingEquipment(ranger);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
 }

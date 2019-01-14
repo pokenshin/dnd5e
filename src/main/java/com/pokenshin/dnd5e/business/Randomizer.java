@@ -229,7 +229,7 @@ public class Randomizer {
             case "Paladin":
                 return getRandomStartingEquipmentPaladin();
             case "Ranger":
-                return null;
+                return getRandomStartingEquipmentRanger();
             case "Rogue":
                 return null;
             case "Sorcerer":
@@ -242,6 +242,41 @@ public class Randomizer {
             default:
                 return new ArrayList<>();
         }
+    }
+
+    /**
+     * Returns a randomized list of starting equipment for the Ranger class
+     * @return ArrayList<Item> of starting equipment
+     */
+    private ArrayList<Item> getRandomStartingEquipmentRanger() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        ArrayList<Item> groupOne = new ArrayList<>();
+        ArrayList<Item> groupTwo = new ArrayList<>();
+        ArrayList<ArrayList<Item>> groupThree = new ArrayList<>();
+        groupOne.add(mapper.getArmor("scale.json"));
+        groupOne.add(mapper.getArmor("leather.json"));
+        result.add(groupOne.get(ThreadLocalRandom.current().nextInt(0, groupOne.size())));
+        Weapon shortsword = mapper.getWeapon("shortsword.json");
+        Weapon simpleWeapon = this.getRandomWeaponByCategory("Simple Weapon");
+        groupTwo.add(shortsword);
+        groupTwo.add(simpleWeapon);
+        result.add(groupTwo.get(ThreadLocalRandom.current().nextInt(0, groupTwo.size())));
+        if (result.get(result.size() - 1).getName().equals("Short Sword")){
+            result.get(result.size()-1).setQuantity(2);
+        } else {
+            result.add(this.getRandomWeaponByCategory("Simple Weapon"));
+        }
+        groupThree.add(itemBusiness.getItemPack("Dungeoneer"));
+        groupThree.add(itemBusiness.getItemPack("Explorer"));
+        result.addAll(groupThree.get(ThreadLocalRandom.current().nextInt(0, groupThree.size())));
+        result.add(mapper.getWeapon("longbow.json"));
+        Item arrow = mapper.getMiscItem("arrow.json");
+        arrow.setQuantity(20);
+        result.add(arrow);
+
+        return result;
     }
 
     /**
