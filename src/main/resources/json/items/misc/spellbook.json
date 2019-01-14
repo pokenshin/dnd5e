@@ -1,0 +1,13 @@
+{
+  "id": 98,
+  "name": "Spellbook",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 50,
+    "platinum": 0
+  },
+  "weight": 3
+}

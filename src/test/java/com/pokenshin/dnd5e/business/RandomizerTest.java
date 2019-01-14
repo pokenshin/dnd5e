@@ -250,5 +250,14 @@ class RandomizerTest {
         assertTrue(result.size() > 0);
     }
 
+    @Test
+    void getRandomStartingEquipmentWizard(){
+        CharacterClass wizard = new CharacterClass();
+        wizard.setName("Wizard");
+        ArrayList<Item> result = randomizer.getRandomStartingEquipment(wizard);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
+
 
 }

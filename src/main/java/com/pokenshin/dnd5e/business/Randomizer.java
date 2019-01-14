@@ -237,11 +237,36 @@ public class Randomizer {
             case "Warlock":
                 return getRandomStartingEquipmentWarlock();
             case "Wizard":
-                return null;
+                return getRandomStartingEquipmentWizard();
 
             default:
                 return new ArrayList<>();
         }
+    }
+
+    /**
+     * Returns a randomized list of starting equipment for the Wizard class
+     * @return ArrayList<Item> of starting equipment
+     */
+    private ArrayList<Item> getRandomStartingEquipmentWizard() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        ArrayList<Item> groupOne = new ArrayList<>();
+        ArrayList<Item> groupTwo = new ArrayList<>();
+        ArrayList<ArrayList<Item>> packs = new ArrayList<>();
+        groupOne.add(mapper.getWeapon("quarterstaff.json"));
+        groupOne.add(mapper.getWeapon("dagger.json"));
+        result.add(groupOne.get(ThreadLocalRandom.current().nextInt(0, groupOne.size())));
+        groupTwo.add(mapper.getMiscItem("componentpouch.json"));
+        groupTwo.add(mapper.getMiscItem("arcanefocus.json"));
+        result.add(groupOne.get(ThreadLocalRandom.current().nextInt(0, groupOne.size())));
+        packs.add(itemBusiness.getItemPack("Scholar"));
+        packs.add(itemBusiness.getItemPack("Explorer"));
+        result.addAll(packs.get(ThreadLocalRandom.current().nextInt(0, packs.size())));
+        result.add(mapper.getMiscItem("spellbook.json"));
+
+        return result;
     }
 
     /**
