@@ -19,8 +19,8 @@ public class Armor extends Item {
         this.stealthDisavantage = stealthDisavantage;
     }
 
-    public Armor(int id, String nome, String category, CharacterCurrency cost, int weight, int armorClass, int minStrength, boolean stealthDisavantage) {
-        super(id, nome, category, cost, weight);
+    public Armor(int id, String nome, String category, CharacterCurrency cost, int weight, int armorClass, int minStrength, boolean stealthDisavantage, int quantity) {
+        super(id, nome, category, cost, weight, quantity);
         this.armorClass = armorClass;
         this.minStrength = minStrength;
         this.stealthDisavantage = stealthDisavantage;

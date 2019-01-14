@@ -8,7 +8,6 @@ public class Item {
     private String category;
     private CharacterCurrency cost;
     private int weight;
-    @JsonIgnore
     private int quantity;
 
     public Item() {
@@ -17,14 +16,16 @@ public class Item {
         this.category = "";
         this.cost = new CharacterCurrency();
         this.weight = 0;
+        this.quantity = 1;
     }
 
-    public Item(int id, String name, String category, CharacterCurrency cost, int weight) {
+    public Item(int id, String name, String category, CharacterCurrency cost, int weight, int quantity) {
         this.id = id;
         this.name = name;
         this.category = category;
         this.cost = cost;
         this.weight = weight;
+        this.quantity = quantity;
     }
 
     public int getId() {

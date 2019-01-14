@@ -22,8 +22,8 @@ public class Weapon extends Item {
         this.properties = properties;
     }
 
-    public Weapon(int id, String nome, String category, CharacterCurrency cost, int weight, Dice damage, String damageType, List<String> properties) {
-        super(id, nome, category, cost, weight);
+    public Weapon(int id, String nome, String category, CharacterCurrency cost, int weight, Dice damage, String damageType, List<String> properties, int quantity) {
+        super(id, nome, category, cost, weight, quantity);
         this.damage = damage;
         this.damageType = damageType;
         this.properties = properties;

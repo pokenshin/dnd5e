@@ -285,6 +285,4 @@ class CharacterBusinessTest {
         business.calculateNewCharacter(character);
         assertEquals(4, character.getLanguages().size());
     }
-
-
 }
