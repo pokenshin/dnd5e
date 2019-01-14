@@ -15,7 +15,7 @@ public class DiceBusiness {
         if (this.dice != null){
             int result = 0;
             for (int i= 0; i<dice.getRolls(); i++){
-                result = result + ThreadLocalRandom.current().nextInt(1,dice.getSides() + 1);
+                result = result + ThreadLocalRandom.current().nextInt(1,dice.getSides());
             }
             return result;
         }

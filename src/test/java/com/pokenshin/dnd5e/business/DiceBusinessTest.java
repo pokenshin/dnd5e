@@ -19,8 +19,8 @@ class DiceBusinessTest {
         dice = new Dice(6, 2);
         diceBusiness = new DiceBusiness(dice);
         int result = diceBusiness.getRoll();
-        assertTrue(diceBusiness.getRoll() > 0);
-        assertTrue(diceBusiness.getRoll() < 12);
+        assertTrue(result >= 2);
+        assertTrue(result <= 12);
     }
 
     @Test

@@ -1,0 +1,13 @@
+{
+  "id": 95,
+  "name": "Thieves' Tools",
+  "category": "Tools",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 25,
+    "platinum": 0
+  },
+  "weight": 2
+}

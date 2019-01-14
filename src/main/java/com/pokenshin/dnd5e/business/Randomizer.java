@@ -233,7 +233,7 @@ public class Randomizer {
             case "Rogue":
                 return getRandomStartingEquipmentRogue();
             case "Sorcerer":
-                return null;
+                return getRandomStartingEquipmentSorcerer();
             case "Warlock":
                 return null;
             case "Wizard":
@@ -242,6 +242,36 @@ public class Randomizer {
             default:
                 return new ArrayList<>();
         }
+    }
+
+    /**
+     * Returns a randomized list of starting equipment for the Sorcerer class
+     * @return ArrayList<Item> of starting equipment
+     */
+    private ArrayList<Item> getRandomStartingEquipmentSorcerer() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        ArrayList<Item> groupOne = new ArrayList<>();
+        ArrayList<Item> groupTwo = new ArrayList<>();
+        ArrayList<ArrayList<Item>> packs = new ArrayList<>();
+        groupOne.add(mapper.getWeapon("lightcrossbow.json"));
+        groupOne.add(this.getRandomWeaponByCategory("Simple Weapon"));
+        result.add(groupOne.get(ThreadLocalRandom.current().nextInt(0, groupOne.size())));
+        if (result.get(result.size()-1).getName().equals("Light Crossbow")){
+            result.add(mapper.getMiscItem("bolt.json"));
+            result.get(result.size()-1).setQuantity(20);
+        }
+        groupTwo.add(mapper.getMiscItem("componentpouch.json"));
+        groupTwo.add(mapper.getMiscItem("arcanefocus.json"));
+        result.add(groupOne.get(ThreadLocalRandom.current().nextInt(0, groupOne.size())));
+        packs.add(itemBusiness.getItemPack("Dungeoneer"));
+        packs.add(itemBusiness.getItemPack("Explorer"));
+        result.addAll(packs.get(ThreadLocalRandom.current().nextInt(0, packs.size())));
+        result.add(mapper.getWeapon("dagger.json"));
+        result.get(result.size()-1).setQuantity(2);
+
+        return result;
     }
 
     /**
@@ -270,6 +300,11 @@ public class Randomizer {
         packs.add(itemBusiness.getItemPack("Dungeoneer"));
         packs.add(itemBusiness.getItemPack("Explorer"));
         result.addAll(packs.get(ThreadLocalRandom.current().nextInt(0, packs.size())));
+        result.add(mapper.getArmor("leather.json"));
+        Weapon dagger = mapper.getWeapon("dagger.json");
+        dagger.setQuantity(2);
+        result.add(dagger);
+        result.add(mapper.getTool("thievestools.json"));
 
         return result;
     }

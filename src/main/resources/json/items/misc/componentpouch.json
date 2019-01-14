@@ -1,0 +1,13 @@
+{
+  "id": 96,
+  "name": "Component Pouch",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 25,
+    "platinum": 0
+  },
+  "weight": 2
+}
