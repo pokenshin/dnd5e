@@ -4,6 +4,7 @@ import com.pokenshin.dnd5e.entity.*;
 import com.pokenshin.dnd5e.entity.Character;
 import com.pokenshin.dnd5e.util.JsonMapper;
 
+import java.lang.reflect.Array;
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 import java.util.prefs.BackingStoreException;
@@ -226,7 +227,7 @@ public class Randomizer {
             case "Monk":
                 return getRandomStartingEquipmentMonk();
             case "Paladin":
-                return null;
+                return getRandomStartingEquipmentPaladin();
             case "Ranger":
                 return null;
             case "Rogue":
@@ -241,6 +242,35 @@ public class Randomizer {
             default:
                 return new ArrayList<>();
         }
+    }
+
+    /**
+     * Returns a randomized list of starting equipment for the Paladin class
+     * @return ArrayList<Item> of starting equipment
+     */
+    private ArrayList<Item> getRandomStartingEquipmentPaladin() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        ArrayList<Item> groupOne = new ArrayList<>();
+        ArrayList<Item> groupTwo = new ArrayList<>();
+        ArrayList<ArrayList<Item>> groupThree = new ArrayList<>();
+        groupOne.add(this.getRandomWeaponByCategory("Martial Weapon"));
+        groupOne.add(mapper.getArmor("shield.json"));
+        result.add(groupOne.get(ThreadLocalRandom.current().nextInt(0, groupOne.size())));
+        result.add((this.getRandomWeaponByCategory("Martial Weapon")));
+        Weapon javelin = mapper.getWeapon("javelin.json");
+        javelin.setQuantity(10);
+        groupTwo.add(javelin);
+        groupTwo.add(this.getRandomWeaponByCategory("Simple Weapon"));
+        result.add(groupTwo.get(ThreadLocalRandom.current().nextInt(0, groupTwo.size())));
+        groupThree.add(itemBusiness.getItemPack("Priest"));
+        groupThree.add(itemBusiness.getItemPack("Explorer"));
+        result.addAll(groupThree.get(ThreadLocalRandom.current().nextInt(0, groupThree.size())));
+        result.add(mapper.getArmor("chainmail.json"));
+        result.add(mapper.getMiscItem("holysymbol.json"));
+
+        return result;
     }
 
     /**

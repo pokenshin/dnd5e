@@ -204,4 +204,13 @@ class RandomizerTest {
         assertNotNull(result);
         assertTrue(result.size() > 0);
     }
+
+    @Test
+    void getRandomStartingEquipmentPaladin(){
+        CharacterClass paladin = new CharacterClass();
+        paladin.setName("Paladin");
+        ArrayList<Item> result = randomizer.getRandomStartingEquipment(paladin);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
 }
