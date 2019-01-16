@@ -68,6 +68,5 @@ public class CharacterClassBusiness {
         return result;
     }
 
-
-
+    //TODO: create a function that defines the rules for the starting equipament options for each class, probably with a ArrayList<ArrayList<ArrayList<Item>>>
 }

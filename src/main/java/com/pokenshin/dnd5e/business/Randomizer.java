@@ -200,9 +200,8 @@ public class Randomizer {
         if (result.get(1).getName().equals("Handaxe")){
             result.add(handaxe);
         }
-        for(int i = 0; i< 4; i++){
-            result.add(javelin);
-        }
+        javelin.setQuantity(4);
+        result.add(javelin);
         result.addAll(itemBusiness.getItemPack("Explorer"));
         return result;
     }
