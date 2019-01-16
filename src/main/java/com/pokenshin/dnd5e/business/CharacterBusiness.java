@@ -241,7 +241,7 @@ public class CharacterBusiness {
         character.getCharisma().setValue(character.getCharisma().getValue() + race.getAbilityIncrease().get(5));
         character.getCharisma().setModifier(this.getModifier(character.getCharisma().getValue()));
         character.setSize(race.getSize());
-        character.getTraits().addAll(race.getOtherTraits());
+        character.getFeatures().addAll(race.getOtherTraits());
         character.getLanguages().addAll(race.getLanguages());
 
         return character;
@@ -261,6 +261,7 @@ public class CharacterBusiness {
         character.getProficiencies().addAll(characterClass.getArmorProficiency());
         character.getProficiencies().addAll(characterClass.getWeaponProficiency());
         character.getProficiencies().addAll(characterClass.getTools());
+        character.getFeatures().add(characterClass.getLevelingPerks().get(character.getLevel() - 1));
         character.setSavingThrows(characterClass.getSavingThrows());
         return character;
    }
