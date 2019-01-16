@@ -135,6 +135,7 @@ public class Randomizer {
         result.setHeight(this.getRandomHeight(result.getRace()));
         result.setWeight(this.getRandomWeight(result.getRace()));
         result.setEquipment(this.getRandomStartingEquipment(result.getCharacterClass()));
+        result.setAge(ThreadLocalRandom.current().nextInt(12, result.getRace().getAgeMax()));
 
         result = characterBusiness.calculateNewCharacter(result);
         //TODO: Define spells if applicable. Based on class. Spell attack bonus = primary spellcasting stat + proficiency bonus.
