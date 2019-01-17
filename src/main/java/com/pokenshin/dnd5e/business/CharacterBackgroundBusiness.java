@@ -17,8 +17,23 @@ public class CharacterBackgroundBusiness {
                 return this.getStartingItemsCriminal();
             case "Entertainer":
                 return this.getStartingItemsEntertainer();
+            case "Folk Hero":
+                return this.getStartingItemsFolkHero();
         }
         return null;
+    }
+
+    private ArrayList<Item> getStartingItemsFolkHero() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        Randomizer rng = new Randomizer();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        result.add(rng.getRandomToolItemByCategory("Artisan's Tools"));
+        result.add(mapper.getMiscItem("shovel.json"));
+        result.add(mapper.getMiscItem("ironpot.json"));
+        result.add(mapper.getMiscItem("commoncloth.json"));
+        result.add(mapper.getMiscItem("pouch.json"));
+        return result;
     }
 
     private ArrayList<Item> getStartingItemsEntertainer() {

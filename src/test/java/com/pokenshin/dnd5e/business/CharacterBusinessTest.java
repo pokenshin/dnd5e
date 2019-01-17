@@ -53,8 +53,7 @@ class CharacterBusinessTest {
         assertEquals(13, character.getCharisma().getValue());
         assertEquals("Medium", character.getSize());
         assertEquals(30, character.getSpeed());
-        assertEquals(1, character.getTraits().size());
-        assertEquals(1, character.getLanguages().size());
+        assertEquals(1, character.getFeatures().size());
     }
 
     @Test
@@ -174,7 +173,6 @@ class CharacterBusinessTest {
         character.setAlignment("Neutral Good");
         character = business.applyBackground(character, background);
 
-        assertEquals("Outlander", character.getBackground());
         assertFalse(character.getSkills().getArcana().isAdvantage());
         assertTrue(character.getSkills().getAthletics().isAdvantage());
         assertTrue(character.getProficiencies().stream().anyMatch(str -> str.trim().equals("Musical Instrument")));
