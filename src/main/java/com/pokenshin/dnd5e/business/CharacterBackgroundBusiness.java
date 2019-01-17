@@ -15,12 +15,24 @@ public class CharacterBackgroundBusiness {
                 return this.getStartingItemsCharlatan();
             case "Criminal":
                 return this.getStartingItemsCriminal();
+            case "Entertainer":
+                return this.getStartingItemsEntertainer();
         }
         return null;
     }
 
-    private ArrayList<Item> getStartingItemsCriminal() {
+    private ArrayList<Item> getStartingItemsEntertainer() {
         ItemBusiness itemBusiness = new ItemBusiness();
+        Randomizer rng = new Randomizer();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        result.add(rng.getRandomToolItemByCategory("Musical Instrument"));
+        result.add(mapper.getMiscItem("costume.json"));
+        result.add(mapper.getMiscItem("pouch.json"));
+        return result;
+    }
+
+    private ArrayList<Item> getStartingItemsCriminal() {
         ArrayList<Item> result = new ArrayList<>();
         JsonMapper mapper = new JsonMapper();
         result.add(mapper.getMiscItem("crowbar.json"));

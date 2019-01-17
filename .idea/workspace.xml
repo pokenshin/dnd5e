@@ -4,7 +4,8 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/dao/CharacterRaceDao.java" line="7" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9a579165-5d0e-45b6-b2b1-a37abf8f77a4" name="Default" comment="">
+    <list default="true" id="9a579165-5d0e-45b6-b2b1-a37abf8f77a4" name="Default" comment="Added getStartingItemsCriminal">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterBackgroundBusiness.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterBackgroundBusiness.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/CharacterBackgroundBusinessTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/CharacterBackgroundBusinessTest.java" afterDir="false" />
     </list>
@@ -97,11 +98,23 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="criminal.json" pinned="false" current-in-tab="true">
+            <file leaf-file-name="criminal.json" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/src/main/resources/json/backgrounds/criminal.json">
                 <provider selected="true" editor-type-id="text-editor">
                   <state relative-caret-position="578">
                     <caret line="107" column="14" lean-forward="true" selection-start-line="107" selection-start-column="14" selection-end-line="107" selection-end-column="14" />
+                    <folding>
+                      <element signature="n#!!block;n#skillProficiencies#0;n#!!top" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="entertainer.json" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/main/resources/json/backgrounds/entertainer.json">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state relative-caret-position="51">
+                    <caret line="3" selection-start-line="3" selection-end-line="3" />
                     <folding>
                       <element signature="n#!!block;n#skillProficiencies#0;n#!!top" />
                     </folding>
@@ -119,8 +132,8 @@
       <file leaf-file-name="CharacterBackgroundBusiness.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterBackgroundBusiness.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+            <state relative-caret-position="221">
+              <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -131,8 +144,8 @@
       <file leaf-file-name="CharacterBackgroundBusinessTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/CharacterBackgroundBusinessTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+            <state relative-caret-position="274">
+              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -629,13 +642,6 @@
       <option name="presentableId" value="Default" />
       <updated>1537877674605</updated>
     </task>
-    <task id="LOCAL-00032" summary="Created getRandomAlignment in Randomizer">
-      <created>1546031642650</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1546031642650</updated>
-    </task>
     <task id="LOCAL-00033" summary="Created calculateNewCharacter in CharacterBusiness and added a new constructor to Dice to use &quot;XdY&quot; notation.">
       <created>1546033709571</created>
       <option name="number" value="00033" />
@@ -972,13 +978,17 @@
       <option name="project" value="LOCAL" />
       <updated>1547722643086</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Added getStartingItemsCriminal">
+      <created>1547722946246</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1547722946246</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DiceBusinessTest_getRoll - 2019.01.14 at 15h 05m 55s.xml">
-      <configuration name="DiceBusinessTest.getRoll" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="DiceBusinessTest_getRoll - 2019.01.14 at 15h 12m 58s.xml">
       <configuration name="DiceBusinessTest.getRoll" configurationId="JUnit" />
     </history-entry>
@@ -1006,6 +1016,9 @@
     <history-entry file="CharacterBackgroundBusinessTest - 2019.01.17 at 08h 56m 38s.xml">
       <configuration name="CharacterBackgroundBusinessTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CharacterBackgroundBusinessTest_getBackgroundStartingItemCriminal - 2019.01.17 at 09h 02m 12s.xml">
+      <configuration name="CharacterBackgroundBusinessTest.getBackgroundStartingItemCriminal" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1029,7 +1042,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5014641" side_tool="true" weight="0.30393702" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32913387" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32755905" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32755905" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32913387" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="3" />
@@ -1040,7 +1053,7 @@
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="6" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49853587" visible="true" weight="0.34330708" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49853587" weight="0.34330708" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="right" id="Coverage" order="0" side_tool="true" weight="0.24597365" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1091,7 +1104,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Created the jsons for all musical instruments and moved disguise kit to the kit directory." />
     <MESSAGE value="Refactored the method to get random starting equipments to the Randomizer class and created getRandomMusicalInstrument" />
     <MESSAGE value="Added a getRandomStartingEquipmentBard on Randomizer" />
     <MESSAGE value="Refactored the method getStartingEquipmentOptions to getRandomStartingEquipmentOptions and moved it to the Randomizer class." />
@@ -1116,7 +1128,8 @@
     <MESSAGE value="Corrected random characters getting multiple &quot;Common&quot; languages" />
     <MESSAGE value="Created the CharacterBackgroundBusiness class and the methods getBackgroundStartingItems with getStartingItemsAcolyte" />
     <MESSAGE value="Added getStartingItemsCharlatan" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added getStartingItemsCharlatan" />
+    <MESSAGE value="Added getStartingItemsCriminal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added getStartingItemsCriminal" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1127,13 +1140,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/druidicfocus.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/json/items/misc/bolt.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1477,10 +1483,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/json/backgrounds/entertainer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+          <folding>
+            <element signature="n#!!block;n#skillProficiencies#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/pokenshin/dnd5e/business/CharacterBackgroundBusiness.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
+        <state relative-caret-position="221">
+          <caret line="29" column="55" selection-start-line="29" selection-start-column="55" selection-end-line="29" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1489,8 +1505,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/pokenshin/dnd5e/business/CharacterBackgroundBusinessTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="40" column="36" selection-start-line="40" selection-start-column="36" selection-end-line="40" selection-end-column="36" />
+        <state relative-caret-position="274">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
         </state>
       </provider>
     </entry>

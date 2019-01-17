@@ -43,4 +43,13 @@ class CharacterBackgroundBusinessTest {
         assertNotNull(result);
         assertTrue(result.size() > 0);
     }
+
+    @Test
+    void getBackgroundStartingItemEntertainer() {
+        CharacterBackground background = new CharacterBackground();
+        background.setName("Entertainer");
+        ArrayList<Item> result = business.getBackgroundStartingItems(background);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
 }
