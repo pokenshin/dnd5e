@@ -122,7 +122,9 @@ public class CharacterBusiness {
         character.setCurrency(characterCurrencyBusiness.addMoney(character.getCurrency(), background.getStartingMoney()));
         character.getFeatures().addAll(background.getFeatures());
         character.getTraits().add(rng.getRandomListItemString(background.getPersonalityTraits()));
-        character.getTraits().add(rng.getRandomListItemString(background.getAdditionalTraits()));
+        if (background.getAdditionalTraits().size() > 0){
+            character.setBackground(character.getBackground() + " - " + rng.getRandomListItemString(background.getAdditionalTraits()));
+        }
 
         if (character.getAlignment().contains("Lawful"))
             possibleIdeals.add((background.getIdealLawful()));

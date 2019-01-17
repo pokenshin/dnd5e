@@ -1,0 +1,13 @@
+{
+  "id": 100,
+  "name": "Common Clothes",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 5,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 3
+}

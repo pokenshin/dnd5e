@@ -1,0 +1,13 @@
+{
+  "id": 101,
+  "name": "Pouch",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 5,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 1
+}

@@ -83,14 +83,6 @@
     "Any",
     "Any"
   ],
-  "equipment":[
-    "1 Holy Symbol",
-    "1 Prayer Book or 1 Prayer Wheel",
-    "5 Sticks of Incense",
-    "1 Vestiment",
-    "1 Set of Common Clothes",
-    "1 Belt Pouch"
-  ],
   "startingMoney":{
     "copper": 0,
     "silver": 0,

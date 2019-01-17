@@ -6,10 +6,11 @@ import java.util.List;
 public class Character {
     private int id;
     private String characterName;
+    private CharacterClass characterClass;
+    private Race race;
     private int level;
     private String background;
     private String playerName;
-    private Race race;
     private String alignment;
     private int experience;
     private CharacterAbility strength;
@@ -52,13 +53,12 @@ public class Character {
     private List<String> allies;
     private String backstory;
     private List<Item> treasure;
-    private CharacterSpellcastingClass spellcasting;
     private String size;
     private List<String> languages;
-    private CharacterClass characterClass;
+
     private List<String> resistances;
 
-    public Character(int id, String characterName, int level, String background, String playerName, Race race, String alignment, int experience, CharacterAbility strength, CharacterAbility dexterity, CharacterAbility constitution, CharacterAbility intelligence, CharacterAbility wisdom, CharacterAbility charisma, int inspiration, int proficiencyBonus, CharacterSavingThrows savingThrows, CharacterSkills skills, int perception, List<String> proficiencies, int armorClass, int initiative, int speed, int hpCurrent, int hpMax, int hpTemporary, Dice hitDice, int totalHitDice, int deathSavesSuccess, int deathSavesFailures, List<CharacterAttack> attacks, CharacterCurrency currency, List<Item> equipment, List<String> traits, List<String> ideals, List<String> bonds, List<String> flaws, List<String> features, int age, int height, int weight, String eyes, String skin, String hair, String appearance, List<String> allies, String backstory, List<Item> treasure, CharacterSpellcastingClass spellcasting, String size, List<String> languages, CharacterClass characterClass, List<String> resistances) {
+    public Character(int id, String characterName, int level, String background, String playerName, Race race, String alignment, int experience, CharacterAbility strength, CharacterAbility dexterity, CharacterAbility constitution, CharacterAbility intelligence, CharacterAbility wisdom, CharacterAbility charisma, int inspiration, int proficiencyBonus, CharacterSavingThrows savingThrows, CharacterSkills skills, int perception, List<String> proficiencies, int armorClass, int initiative, int speed, int hpCurrent, int hpMax, int hpTemporary, Dice hitDice, int totalHitDice, int deathSavesSuccess, int deathSavesFailures, List<CharacterAttack> attacks, CharacterCurrency currency, List<Item> equipment, List<String> traits, List<String> ideals, List<String> bonds, List<String> flaws, List<String> features, int age, int height, int weight, String eyes, String skin, String hair, String appearance, List<String> allies, String backstory, List<Item> treasure, String size, List<String> languages, CharacterClass characterClass, List<String> resistances) {
         this.id = id;
         this.characterName = characterName;
         this.level = level;
@@ -107,7 +107,6 @@ public class Character {
         this.allies = allies;
         this.backstory = backstory;
         this.treasure = treasure;
-        this.spellcasting = spellcasting;
         this.size = size;
         this.languages = languages;
         this.characterClass = characterClass;
@@ -163,7 +162,6 @@ public class Character {
         this.allies = new ArrayList<>();
         this.backstory = "";
         this.treasure = new ArrayList<>();
-        this.spellcasting = new CharacterSpellcastingClass();
         this.size = "";
         this.languages = new ArrayList<>();
         this.characterClass = new CharacterClass();
@@ -586,11 +584,4 @@ public class Character {
         this.treasure = treasure;
     }
 
-    public CharacterSpellcastingClass getSpellcasting() {
-        return spellcasting;
-    }
-
-    public void setSpellcasting(CharacterSpellcastingClass spellcasting) {
-        this.spellcasting = spellcasting;
-    }
 }
