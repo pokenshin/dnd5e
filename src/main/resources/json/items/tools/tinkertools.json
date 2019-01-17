@@ -1,0 +1,13 @@
+{
+  "id": 116,
+  "name": "Tinker's Tools",
+  "category": "Artisan's Tools",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 50,
+    "platinum": 0
+  },
+  "weight": 10
+}

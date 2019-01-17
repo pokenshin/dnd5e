@@ -1,0 +1,13 @@
+{
+  "id": 110,
+  "name": "Jeweler's Tools",
+  "category": "Artisan's Tools",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 25,
+    "platinum": 0
+  },
+  "weight": 2
+}

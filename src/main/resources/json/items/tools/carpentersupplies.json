@@ -1,0 +1,13 @@
+{
+  "id": 105,
+  "name": "Carpenter's Supplies",
+  "category": "Artisan's Tools",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 8,
+    "platinum": 0
+  },
+  "weight": 6
+}

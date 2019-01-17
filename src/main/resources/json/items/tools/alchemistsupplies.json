@@ -1,0 +1,13 @@
+{
+  "id": 102,
+  "name": "Alchemist's Supplies",
+  "category": "Artisan's Tools",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 50,
+    "platinum": 0
+  },
+  "weight": 8
+}

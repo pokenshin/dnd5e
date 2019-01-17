@@ -1,0 +1,13 @@
+{
+  "id": 112,
+  "name": "Mason's Tools",
+  "category": "Artisan's Tools",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 10,
+    "platinum": 0
+  },
+  "weight": 8
+}

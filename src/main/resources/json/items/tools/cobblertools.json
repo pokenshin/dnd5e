@@ -1,0 +1,13 @@
+{
+  "id": 107,
+  "name": "Cobbler's Tools",
+  "category": "Artisan's Tools",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 5,
+    "platinum": 0
+  },
+  "weight": 5
+}
