@@ -13,8 +13,20 @@ public class CharacterBackgroundBusiness {
                 return this.getStartingItemsAcolyte();
             case "Charlatan":
                 return this.getStartingItemsCharlatan();
+            case "Criminal":
+                return this.getStartingItemsCriminal();
         }
         return null;
+    }
+
+    private ArrayList<Item> getStartingItemsCriminal() {
+        ItemBusiness itemBusiness = new ItemBusiness();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        result.add(mapper.getMiscItem("crowbar.json"));
+        result.add(mapper.getMiscItem("commoncloth.json"));
+        result.add(mapper.getMiscItem("pouch.json"));
+        return result;
     }
 
     private ArrayList<Item> getStartingItemsAcolyte() {

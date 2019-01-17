@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import static org.junit.jupiter.api.Assertions.*;
 
 class CharacterBackgroundBusinessTest {
-    CharacterBackgroundBusiness business;
+    private CharacterBackgroundBusiness business;
 
     @BeforeEach
     void setUp() {
@@ -30,6 +30,15 @@ class CharacterBackgroundBusinessTest {
     void getBackgroundStartingItemsCharlatan() {
         CharacterBackground background = new CharacterBackground();
         background.setName("Charlatan");
+        ArrayList<Item> result = business.getBackgroundStartingItems(background);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
+
+    @Test
+    void getBackgroundStartingItemCriminal() {
+        CharacterBackground background = new CharacterBackground();
+        background.setName("Criminal");
         ArrayList<Item> result = business.getBackgroundStartingItems(background);
         assertNotNull(result);
         assertTrue(result.size() > 0);
