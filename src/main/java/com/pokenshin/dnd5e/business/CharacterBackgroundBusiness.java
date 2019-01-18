@@ -19,12 +19,102 @@ public class CharacterBackgroundBusiness {
                 return this.getStartingItemsEntertainer();
             case "Folk Hero":
                 return this.getStartingItemsFolkHero();
+            case "Guild Artisan":
+                return this.getStartingItemsGuildArtisan();
+            case "Hermit":
+                return this.getStartingItemsHermit();
+            case "Noble":
+                return this.getStartingItemsNoble();
+            case "Outlander":
+                return this.getStartingItemsOutlander();
+            case "Sage":
+                return this.getStartingItemsSage();
+            case "Sailor":
+                return this.getStartingItemsSailor();
+            case "Soldier":
+                return this.getStartingItemsSoldier();
+            case "Urchin":
+                return this.getStartingItemsUrchin();
         }
         return null;
     }
 
+    private ArrayList<Item> getStartingItemsUrchin() {
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        result.add(mapper.getMiscItem("commoncloth.json"));
+        result.add(mapper.getMiscItem("pouch.json"));
+        return result;
+    }
+
+    private ArrayList<Item> getStartingItemsSoldier() {
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        result.add(mapper.getTool("gamingset.json"));
+        result.add(mapper.getMiscItem("commoncloth.json"));
+        result.add(mapper.getMiscItem("pouch.json"));
+        return result;
+    }
+
+    private ArrayList<Item> getStartingItemsSailor() {
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        result.add(mapper.getMiscItem("belayingpin.json"));
+        result.add(mapper.getMiscItem("silkrope.json"));
+        result.add(mapper.getMiscItem("commoncloth.json"));
+        result.add(mapper.getMiscItem("pouch.json"));
+        return result;
+    }
+
+    private ArrayList<Item> getStartingItemsSage() {
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        result.add(mapper.getMiscItem("inkbottle.json"));
+        result.add(mapper.getMiscItem("commoncloth.json"));
+        result.add(mapper.getMiscItem("pouch.json"));
+        return result;
+    }
+
+    private ArrayList<Item> getStartingItemsOutlander() {
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        result.add(mapper.getMiscItem("staff.json"));
+        result.add(mapper.getMiscItem("huntingtrap.json"));
+        result.add(mapper.getMiscItem("travellercloth.json"));
+        result.add(mapper.getMiscItem("pouch.json"));
+        return result;
+    }
+
+    private ArrayList<Item> getStartingItemsNoble() {
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        result.add(mapper.getMiscItem("finecloth.json"));
+        result.add(mapper.getMiscItem("signetring.json"));
+        result.add(mapper.getMiscItem("pouch.json"));
+        return result;
+    }
+
+    private ArrayList<Item> getStartingItemsHermit() {
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        result.add(mapper.getMiscItem("case.json"));
+        result.add(mapper.getMiscItem("blanket.json"));
+        result.add(mapper.getMiscItem("commoncloth.json"));
+        result.add(mapper.getTool("herbalismkit.json"));
+        return result;
+    }
+
+    private ArrayList<Item> getStartingItemsGuildArtisan() {
+        Randomizer rng = new Randomizer();
+        ArrayList<Item> result = new ArrayList<>();
+        JsonMapper mapper = new JsonMapper();
+        result.add(rng.getRandomToolItemByCategory("Artisan's Tools"));
+        result.add(mapper.getMiscItem("travellercloth.json"));
+        result.add(mapper.getMiscItem("pouch.json"));
+        return result;
+    }
+
     private ArrayList<Item> getStartingItemsFolkHero() {
-        ItemBusiness itemBusiness = new ItemBusiness();
         Randomizer rng = new Randomizer();
         ArrayList<Item> result = new ArrayList<>();
         JsonMapper mapper = new JsonMapper();
@@ -37,7 +127,6 @@ public class CharacterBackgroundBusiness {
     }
 
     private ArrayList<Item> getStartingItemsEntertainer() {
-        ItemBusiness itemBusiness = new ItemBusiness();
         Randomizer rng = new Randomizer();
         ArrayList<Item> result = new ArrayList<>();
         JsonMapper mapper = new JsonMapper();
@@ -57,7 +146,6 @@ public class CharacterBackgroundBusiness {
     }
 
     private ArrayList<Item> getStartingItemsAcolyte() {
-        ItemBusiness itemBusiness = new ItemBusiness();
         ArrayList<Item> result = new ArrayList<>();
         JsonMapper mapper = new JsonMapper();
         result.add(mapper.getMiscItem("holysymbol.json"));
@@ -72,7 +160,6 @@ public class CharacterBackgroundBusiness {
     }
 
     private ArrayList<Item> getStartingItemsCharlatan() {
-        ItemBusiness itemBusiness = new ItemBusiness();
         ArrayList<Item> result = new ArrayList<>();
         JsonMapper mapper = new JsonMapper();
         result.add(mapper.getMiscItem("finecloth.json"));

@@ -1,0 +1,13 @@
+{
+  "id": 126,
+  "name": "Silk Rope (50ft)",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 10,
+    "platinum": 0
+  },
+  "weight": 5
+}

@@ -81,12 +81,6 @@
   "languages": [
     "Any"
   ],
-  "equipment":[
-    "1 Set of Fine Clothes",
-    "1 Signet Ring",
-    "1 Scroll of Pedigree",
-    "1 Purse"
-  ],
   "startingMoney":{
     "copper": 0,
     "silver": 0,

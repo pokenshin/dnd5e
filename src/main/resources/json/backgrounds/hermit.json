@@ -81,12 +81,6 @@
   "languages": [
     "Any"
   ],
-  "equipment":[
-    "1 Scroll Case",
-    "1 Winter Blanket",
-    "1 Set of Common Clothes",
-    "1 Herbalism Kit"
-  ],
   "startingMoney":{
     "copper": 0,
     "silver": 0,

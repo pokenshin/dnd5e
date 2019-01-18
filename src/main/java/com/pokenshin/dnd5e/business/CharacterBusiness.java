@@ -263,7 +263,9 @@ public class CharacterBusiness {
         character.getProficiencies().addAll(characterClass.getArmorProficiency());
         character.getProficiencies().addAll(characterClass.getWeaponProficiency());
         character.getProficiencies().addAll(characterClass.getTools());
-        character.getFeatures().add(characterClass.getLevelingPerks().get(character.getLevel() - 1));
+        if (characterClass.getLevelingPerks().size() > 0){
+            character.getFeatures().add(characterClass.getLevelingPerks().get(character.getLevel() - 1));
+        }
         character.setSavingThrows(characterClass.getSavingThrows());
         return character;
    }

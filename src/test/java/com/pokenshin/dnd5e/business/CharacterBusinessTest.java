@@ -74,7 +74,9 @@ class CharacterBusinessTest {
     void applyCharacterClass() {
         JsonMapper mapper = new JsonMapper();
         CharacterClass fighter = mapper.getCharacterClass("fighter.json");
-        character = business.applyCharacterClass(new Character(), fighter);
+        character = new Character();
+        character.setLevel(1);
+        character = business.applyCharacterClass(character, fighter);
         assertEquals("Fighter", character.getCharacterClass().getName());
         assertEquals("1d10", character.getHitDice().toString());
     }

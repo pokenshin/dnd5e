@@ -1,0 +1,13 @@
+{
+  "id": 121,
+  "name": "Herbalism Kit",
+  "category": "Tool",
+  "cost":{
+    "copper": 0,
+    "silver": 0,
+    "electrum": 0,
+    "gold": 5,
+    "platinum": 0
+  },
+  "weight": 3
+}

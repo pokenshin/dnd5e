@@ -61,4 +61,77 @@ class CharacterBackgroundBusinessTest {
         assertNotNull(result);
         assertTrue(result.size() > 0);
     }
+
+    @Test
+    void getBackgroundStartingItemGuildArtisan() {
+        CharacterBackground background = new CharacterBackground();
+        background.setName("Guild Artisan");
+        ArrayList<Item> result = business.getBackgroundStartingItems(background);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
+
+    @Test
+    void getBackgroundStartingItemGuildHermit() {
+        CharacterBackground background = new CharacterBackground();
+        background.setName("Hermit");
+        ArrayList<Item> result = business.getBackgroundStartingItems(background);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
+
+    @Test
+    void getBackgroundStartingItemNoble() {
+        CharacterBackground background = new CharacterBackground();
+        background.setName("Noble");
+        ArrayList<Item> result = business.getBackgroundStartingItems(background);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
+
+    @Test
+    void getBackgroundStartingItemOutlander() {
+        CharacterBackground background = new CharacterBackground();
+        background.setName("Outlander");
+        ArrayList<Item> result = business.getBackgroundStartingItems(background);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
+
+    @Test
+    void getBackgroundStartingItemSage() {
+        CharacterBackground background = new CharacterBackground();
+        background.setName("Sage");
+        ArrayList<Item> result = business.getBackgroundStartingItems(background);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
+
+    @Test
+    void getBackgroundStartingItemSailor() {
+        CharacterBackground background = new CharacterBackground();
+        background.setName("Sailor");
+        ArrayList<Item> result = business.getBackgroundStartingItems(background);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
+
+    @Test
+    void getBackgroundStartingItemSoldier() {
+        CharacterBackground background = new CharacterBackground();
+        background.setName("Soldier");
+        ArrayList<Item> result = business.getBackgroundStartingItems(background);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
+
+    @Test
+    void getBackgroundStartingItemUrchin() {
+        CharacterBackground background = new CharacterBackground();
+        background.setName("Urchin");
+        ArrayList<Item> result = business.getBackgroundStartingItems(background);
+        assertNotNull(result);
+        assertTrue(result.size() > 0);
+    }
+
 }

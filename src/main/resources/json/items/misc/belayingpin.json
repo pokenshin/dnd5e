@@ -1,0 +1,13 @@
+{
+  "id": 125,
+  "name": "Belaying Pin",
+  "category": "Misc",
+  "cost":{
+    "copper": 0,
+    "silver": 2,
+    "electrum": 0,
+    "gold": 0,
+    "platinum": 0
+  },
+  "weight": 0
+}

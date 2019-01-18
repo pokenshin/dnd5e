@@ -81,12 +81,6 @@
   "languages": [
     "Any"
   ],
-  "equipment":[
-    "1 Set of Artisan Tools",
-    "1 Letter of Introduction from Guild",
-    "1 Set of Traveller Clothes",
-    "1 Belt Pouch"
-  ],
   "startingMoney":{
     "copper": 0,
     "silver": 0,
